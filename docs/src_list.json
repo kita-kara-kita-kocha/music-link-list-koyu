@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Song Title 1",
+        "artist": "Artist 1",
+        "url_date_sets": [
+            {
+                "url": "http://example.com/song1",
+                "date": "2019/01/01"
+            },
+            {
+                "url": "http://example.com/song1_v2",
+                "date": "2019/01/02"
+            }
+        ]
+    },
+    {
+        "title": "Song Title 2",
+        "artist": "Artist 2",
+        "url_date_sets": [
+            {
+                "url": "http://example.com/song2",
+                "date": "2019/01/01"
+            }
+        ]
+    }
+]

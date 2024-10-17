@@ -1,0 +1,79 @@
+/* デフォルトスタイルをリセット */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* h1をよもぎフォントに設定 */
+h1, li {
+    font-family: "Kiwi Maru";
+}
+
+/* class="music-list"内のli内のaタグを非表示 */
+.music-list li a {
+    display: none;
+}
+
+/* li要素にマウスオーバーでaタグを表示 */
+li:hover a {
+    display: block;
+}
+
+/* ボディの背景色とフォントを設定 */
+body {
+    background-color: #ffe4e1; /* 薄ピンク */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* メインコンテナのスタイル */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダーのスタイル */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ff69b4; /* ショッキングピンク */
+}
+
+/* リンクリストのスタイル */
+ul.music-links {
+    margin-top: 20px;
+}
+
+ul.music-links li {
+    background: #50c878; /* エメラルド色 */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+ul.music-links li:hover {
+    background: #45b76b; /* 少し濃いエメラルド色 */
+}
+
+ul.music-links li a {
+    color: #ff69b4; /* ショッキングピンク */
+    font-size: 1.2em;
+    display: block;
+}
+
+/* セクション間のスペースを追加 */
+section {
+    margin-bottom: 20px;
+}
