@@ -1,6 +1,12 @@
 // Type: JavaScript
 // Description: フォーム送信を処理するスクリプト
 
+// UTF-8をBase64にエンコードする関数
+function utf8ToBase64(str) {
+    const utf8Bytes = new TextEncoder().encode(str);
+    const base64String = btoa(String.fromCharCode(...utf8Bytes));
+    return base64String;
+}
 
 // フォーム送信を処理する関数
 function handleFormSubmission(event) {
