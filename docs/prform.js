@@ -58,11 +58,10 @@ function handleFormSubmission(event) {
         })
         // 現在のSHAを取得
         .then(updatedList => {
-            return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
+            return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json?ref=add/music-list-pr', {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/vnd.github+json',
-                    'Authorization': `Bearer ${token}`,
                     'X-GitHub-Api-Version': '2022-11-28'
                 }
             })
@@ -72,19 +71,20 @@ function handleFormSubmission(event) {
                 })
                 // 更新されたリストをhttps://github.com/kita-kara-kita-kocha/music-link-list-koyu/blob/add/music-list-pr/docs/src_list.jsonにpush
                 .then(sha => {
-                    const updatedListJson = JSON.stringify(updatedList, null, 4);
-                    const base64Content = btoa(encodeURIComponent(updatedListJson)); // Base64エンコード
+                    // updatedListをBase64エンコード
+                    const base64Content = btoa(JSON.stringify(updatedList, null, 2));
                     return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
                         method: 'PUT',
                         headers: {
                             'Accept': 'application/vnd.github+json',
                             'Authorization': `Bearer ${token}`,
-                            'X-GitHub-Api-Version': '2022-11-28'
+                            'X-GitHub-Api-Version': '2022-11-28',
                         },
                         body: JSON.stringify({
                             message: 'Add a new entry',
                             content: base64Content,
-                            sha: sha
+                            sha: sha,
+                            branch: 'add/music-list-pr'
                         })
                     });
                 });
