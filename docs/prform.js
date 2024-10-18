@@ -72,7 +72,7 @@ function handleFormSubmission(event) {
                 // 更新されたリストをhttps://github.com/kita-kara-kita-kocha/music-link-list-koyu/blob/add/music-list-pr/docs/src_list.jsonにpush
                 .then(sha => {
                     // updatedListをBase64エンコード
-                    const base64Content = btoa(JSON.stringify(updatedList, null, 2));
+                    const base64Content = utf8ToBase64(JSON.stringify(updatedList, null, 2));
                     return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
                         method: 'PUT',
                         headers: {
