@@ -1,15 +1,11 @@
 [
     {
-        "title": "Song Title 1",
-        "artist": "Artist 1",
+        "title": "シル・ヴ・プレジデント",
+        "artist": "P丸様。",
         "url_date_sets": [
             {
-                "url": "http://example.com/song1",
-                "date": "2019/01/01"
-            },
-            {
-                "url": "http://example.com/song1_v2",
-                "date": "2019/01/02"
+                "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=333s",
+                "date": "2021/08/22"
             }
         ]
     },
