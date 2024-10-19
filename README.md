@@ -1,8 +1,10 @@
 # music-link-list-koyu
 星降こゆの歌った楽曲リストとリンク
+[ページリンク](https://kita-kara-kita-kocha.github.io/music-link-list-koyu/)
 
 やること
 - [x] html+cssでページ作成
 - [x] Pagesで公開
-- [ ] htmlにjs追加してフォーム作成
-- [ ] 追加情報の投稿をPRへ流す機能を付ける(js)
+- [x] htmlにjs追加してフォーム作成
+- [x] 追加情報の投稿をPRへ流す機能を付ける(js)
+- [ ] 最新の配信（歌枠）までの情報を入力
