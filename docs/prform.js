@@ -1,29 +1,46 @@
 // Type: JavaScript
 // Description: フォーム送信を処理するスクリプト
 
-// youtubeリンクから動画の投稿日を取得する関数
-function getVideoPublishedAt(url) {
-    const videoId = url.split('v=')[1];
-    if (!videoId) {
-        console.error('Invalid YouTube URL:', url);
-        return Promise.resolve('Invalid URL');
-    }
-
-    return fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${process.env.YOUTUBE_API_KEY}&part=snippet`)
-        .then(response => response.json())
-        .then(data => {
-            if (!data.items || !data.items.length) {
-                console.error('No items found in the response:', data);
-                return 'No items found';
-            }
-            // 日付はyyyy-mm-ddの形式で返される
-            return data.items[0].snippet.publishedAt.split('T')[0];
-        })
-        .catch(error => {
-            console.error('Error fetching the video data:', error);
-            return 'Error fetching the video data';
-        });
+// UTF-8をBase64にエンコードする関数
+function utf8ToBase64(str) {
+    const utf8Bytes = new TextEncoder().encode(str);
+    const base64String = btoa(String.fromCharCode(...utf8Bytes));
+    return base64String;
 }
+
+// Base64をUTF-8にデコードする関数
+function base64ToUtf8(base64String) {
+    const binaryString = atob(base64String);
+    const bytes = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+    }
+    const utf8String = new TextDecoder().decode(bytes);
+    return utf8String;
+}
+
+// 更新されたリストをhttps://github.com/kita-kara-kita-kocha/music-link-list-koyu/blob/add/music-list-pr/docs/src_list.jsonにpushする関数
+// 引数: 更新されたリスト, トークン
+function pushUpdatedList(updatedList, token, sha) {
+    // updatedListをBase64エンコード
+    const base64Content = utf8ToBase64(JSON.stringify(updatedList, null, 2));
+    // 更新されたリストをpush
+    return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${token}`,
+            'X-GitHub-Api-Version': '2022-11-28',
+        },
+        body: JSON.stringify({
+            message: 'Add a new entry',
+            content: base64Content,
+            sha: sha,
+            branch: 'add/music-list-pr'
+        })
+    });
+}
+
 
 // フォーム送信を処理する関数
 function handleFormSubmission(event) {
@@ -33,6 +50,8 @@ function handleFormSubmission(event) {
     const title = document.getElementById('title').value;
     const artist = document.getElementById('artist').value;
     const url = document.getElementById('url').value;
+    const date = document.getElementById('date').value;
+    const token = document.getElementById('token').value;
 
     // 新しいエントリを作成
     const newEntry = {
@@ -41,96 +60,94 @@ function handleFormSubmission(event) {
         url: url
     };
 
-    // ./src_list.jsonから既存のデータを読み取る
-    // 既存リストにtitle, artistの一致があった場合は、そのエントリのurl_date_setsに新しいURLを追加
-    // 一致するエントリがない場合は、新しいエントリをリストに追加
-    // {title: str, artist: str, url_date_sets: [{url: str, date: str}]}の形式で追加
-    // 追加後、リストを./src_list.jsonに書き込む
-    fetch('./src_list.json')
+    // ./src_list.jsonから既存のデータを読み取る（music-list-prブランチ）
+    fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json?ref=add/music-list-pr', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28'
+        }
+    })
         .then(response => response.json())
+        // src_list.jsonのデータ構造は以下の通り
+        // [
+        //     {
+        //         "title": str,
+        //         "artist": str,
+        //         "url_date_sets": [
+        //             {
+        //                 "url": str,
+        //                 "date": date
+        //             }
+        //         ]
+        //     }
+        // ]
+        // 既存リストにtitle, artistの一致があった場合は、そのエントリのurl_date_setsに新しいsetsを追加{url: str, date: str}
+        // 一致するエントリがない場合は、新しいエントリをリストに追加{title: str, artist: str, url_date_sets: [{url: str, date: str}]}
         .then(data => {
-            let found = false;
-            data.forEach(item => {
-                if (item.title === title && item.artist === artist) {
-                    if (!item.url_date_sets) {
-                        item.url_date_sets = [];
-                    }
-                    item.url_date_sets.push({url: url, date: 'Loading...'});
-                    found = true;
+            const datajson = JSON.parse(base64ToUtf8(data.content));
+            let updatedList = datajson;
+            let isMatched = false;
+            updatedList.forEach(entry => {
+                if (entry.title === title && entry.artist === artist) {
+                    isMatched = true;
                 }
             });
-            if (!found) {
-                data.push({
+            // 一致するエントリがない場合
+            if (!isMatched) {
+                // 新しいエントリをリストに追加
+                updatedList.push({
                     title: title,
                     artist: artist,
-                    url_date_sets: [{url: url, date: 'Loading...'}]
+                    url_date_sets: [{url: url, date: date}]
                 });
-            }
-            return data;
-        })
-        .then(data => {
-            return fetch('./src_list.json', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-        })
-        .then(response => {
-            if (!response.ok) {
-                console.error('Error writing the JSON:', response);
-            }
-            return response.json();
-        })
-        .then(data => {
-            // リストの更新が成功したら、動画の投稿日を取得してリストを更新
-            const newEntryIndex = data.findIndex(item => item.title === title && item.artist === artist);
-            getVideoPublishedAt(url).then(date => {
-                data[newEntryIndex].url_date_sets[data[newEntryIndex].url_date_sets.length - 1].date = date;
-                return data;
-            });
-            return data;
-        })
-        .then(data => {
-            return fetch('./src_list.json', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-        })
-        .then(response => {
-            if (!response.ok) {
-                console.error('Error writing the JSON:', response);
-            }
-            return response.json();
-        })
-        .then(data => {
-            // リストの更新が成功したら、リストを再描画
-            const musicList = document.querySelector('ul.music-list');
-            if (!musicList) {
-                console.error('ul.music-list element not found');
-                return;
-            }
-            musicList.innerHTML = '';
-            data.forEach(item => {
-                const li = document.createElement('li');
-                li.innerHTML = `${item.title}/${item.artist}`;
-                if (item.url_date_sets) {
-                    item.url_date_sets.forEach(set => {
-                        const a = document.createElement('a');
-                        a.href = set.url;
-                        a.textContent = set.date;
-                        li.appendChild(a);
+                // 通知
+                console.log('New entry added');
+            // 一致するエントリがある場合
+            } else {
+                // 一致するdateがある場合は、urlを更新
+                if (entry.url_date_sets.some(set => set.date === date)) {
+                    updatedList = updatedList.map(entry => {
+                        entry.url_date_sets = entry.url_date_sets.map(set => {
+                            set.url = url;
+                            return set;
+                        });
+                        // 通知
+                        console.log('updated url');
+                        return entry;
+                    });
+                } else {
+                    // 既存のエントリに新しいsetsを追加
+                    updatedList = updatedList.map(entry => {
+                        // dateが一致するエントリがある場合は、urlを更新
+                        if (entry.title === title && entry.artist === artist) {
+                            entry.url_date_sets.push({url: url, date: date});
+                        }
+                        // 通知
+                        console.log('updated entry');
+                        return entry;
                     });
                 }
-                musicList.appendChild(li);
-            });
+            }
+            return pushUpdatedList(updatedList, token, data.sha);
         })
-        .catch(error => console.error('Error fetching the JSON:', error));
+        // 更新が成功した場合は、成功メッセージを表示
+        .then(response => {
+            if (response.ok) {
+                alert('Successfully submitted the form!');
+                document.getElementById('musicForm').reset();
+            } else {
+                alert('Failed to submit the form.');
+            }
+        })
+        // エラーが発生した場合は、エラーメッセージを表示
+        .catch(error => {
+            console.error(error);
+            alert('Failed to submit the form.');
+        });
 }
 
 // フォームにイベントリスナーを追加
-document.getElementById('musicForm').addEventListener('submit', handleFormSubmission);
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('musicForm').addEventListener('submit', handleFormSubmission);
+});
