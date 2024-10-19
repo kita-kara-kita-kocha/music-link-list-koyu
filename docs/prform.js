@@ -8,6 +8,40 @@ function utf8ToBase64(str) {
     return base64String;
 }
 
+// Base64をUTF-8にデコードする関数
+function base64ToUtf8(base64String) {
+    const binaryString = atob(base64String);
+    const bytes = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+    }
+    const utf8String = new TextDecoder().decode(bytes);
+    return utf8String;
+}
+
+// 更新されたリストをhttps://github.com/kita-kara-kita-kocha/music-link-list-koyu/blob/add/music-list-pr/docs/src_list.jsonにpushする関数
+// 引数: 更新されたリスト, トークン
+function pushUpdatedList(updatedList, token, sha) {
+    // updatedListをBase64エンコード
+    alert(base64Content);
+    const base64Content = utf8ToBase64(JSON.stringify(updatedList, null, 2));
+    return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${token}`,
+            'X-GitHub-Api-Version': '2022-11-28',
+        },
+        body: JSON.stringify({
+            message: 'Add a new entry',
+            content: base64Content,
+            sha: sha,
+            branch: 'add/music-list-pr'
+        })
+    });
+}
+
+
 // フォーム送信を処理する関数
 function handleFormSubmission(event) {
     event.preventDefault();
@@ -26,8 +60,15 @@ function handleFormSubmission(event) {
         url: url
     };
 
-    // ./src_list.jsonから既存のデータを読み取る
-    fetch('./src_list.json')
+    // ./src_list.jsonから既存のデータを読み取る（music-list-prブランチ）
+    fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json?ref=add/music-list-pr', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': '2022-11-28'
+        }
+    })
+        .then(response => response.json())
         // src_list.jsonのデータ構造は以下の通り
         // [
         //     {
@@ -41,64 +82,41 @@ function handleFormSubmission(event) {
         //         ]
         //     }
         // ]
-        .then(response => response.json())
         // 既存リストにtitle, artistの一致があった場合は、そのエントリのurl_date_setsに新しいsetsを追加{url: str, date: str}
         // 一致するエントリがない場合は、新しいエントリをリストに追加{title: str, artist: str, url_date_sets: [{url: str, date: str}]}
         .then(data => {
-            let updatedList = data;
+            const datajson = JSON.parse(base64ToUtf8(data.content));
+            let updatedList = datajson;
             let isMatched = false;
             updatedList.forEach(entry => {
                 if (entry.title === title && entry.artist === artist) {
                     isMatched = true;
-                    entry.url_date_sets.push({url: url, date: date});
                 }
             });
             if (!isMatched) {
+                // 新しいエントリをリストに追加
                 updatedList.push({
                     title: title,
                     artist: artist,
                     url_date_sets: [{url: url, date: date}]
                 });
-            }
-            return updatedList;
-        })
-        // 現在のSHAを取得
-        .then(updatedList => {
-            return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json?ref=add/music-list-pr', {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github+json',
-                    'X-GitHub-Api-Version': '2022-11-28'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    return data.sha;
-                })
-                // 更新されたリストをhttps://github.com/kita-kara-kita-kocha/music-link-list-koyu/blob/add/music-list-pr/docs/src_list.jsonにpush
-                .then(sha => {
-                    // updatedListをBase64エンコード
-                    const base64Content = utf8ToBase64(JSON.stringify(updatedList, null, 2));
-                    return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
-                        method: 'PUT',
-                        headers: {
-                            'Accept': 'application/vnd.github+json',
-                            'Authorization': `Bearer ${token}`,
-                            'X-GitHub-Api-Version': '2022-11-28',
-                        },
-                        body: JSON.stringify({
-                            message: 'Add a new entry',
-                            content: base64Content,
-                            sha: sha,
-                            branch: 'add/music-list-pr'
-                        })
-                    });
+                // 通知
+                console.log('New entry has been added.');
+            } else {
+                // 既存のエントリに新しいsetsを追加
+                updatedList = updatedList.map(entry => {
+                    if (entry.title === title && entry.artist === artist) {
+                        entry.url_date_sets.push({url: url, date: date});
+                    }
                 });
+            }
+            return pushUpdatedList(updatedList, token, data.sha);
         })
         // 更新が成功した場合は、成功メッセージを表示
         .then(response => {
             if (response.ok) {
                 alert('Successfully submitted the form!');
+                document.getElementById('musicForm').reset();
             } else {
                 alert('Failed to submit the form.');
             }
