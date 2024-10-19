@@ -23,8 +23,8 @@ function base64ToUtf8(base64String) {
 // 引数: 更新されたリスト, トークン
 function pushUpdatedList(updatedList, token, sha) {
     // updatedListをBase64エンコード
-    alert(base64Content);
     const base64Content = utf8ToBase64(JSON.stringify(updatedList, null, 2));
+    // 更新されたリストをpush
     return fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json', {
         method: 'PUT',
         headers: {
@@ -108,6 +108,7 @@ function handleFormSubmission(event) {
                     if (entry.title === title && entry.artist === artist) {
                         entry.url_date_sets.push({url: url, date: date});
                     }
+                    return entry;
                 });
             }
             return pushUpdatedList(updatedList, token, data.sha);
