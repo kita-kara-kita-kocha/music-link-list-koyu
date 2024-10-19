@@ -93,6 +93,7 @@ function handleFormSubmission(event) {
                     isMatched = true;
                 }
             });
+            // 一致するエントリがない場合
             if (!isMatched) {
                 // 新しいエントリをリストに追加
                 updatedList.push({
@@ -101,15 +102,32 @@ function handleFormSubmission(event) {
                     url_date_sets: [{url: url, date: date}]
                 });
                 // 通知
-                console.log('New entry has been added.');
+                console.log('New entry added');
+            // 一致するエントリがある場合
             } else {
-                // 既存のエントリに新しいsetsを追加
-                updatedList = updatedList.map(entry => {
-                    if (entry.title === title && entry.artist === artist) {
-                        entry.url_date_sets.push({url: url, date: date});
-                    }
-                    return entry;
-                });
+                // 一致するdateがある場合は、urlを更新
+                if (entry.url_date_sets.some(set => set.date === date)) {
+                    updatedList = updatedList.map(entry => {
+                        entry.url_date_sets = entry.url_date_sets.map(set => {
+                            set.url = url;
+                            return set;
+                        });
+                        // 通知
+                        console.log('updated url');
+                        return entry;
+                    });
+                } else {
+                    // 既存のエントリに新しいsetsを追加
+                    updatedList = updatedList.map(entry => {
+                        // dateが一致するエントリがある場合は、urlを更新
+                        if (entry.title === title && entry.artist === artist) {
+                            entry.url_date_sets.push({url: url, date: date});
+                        }
+                        // 通知
+                        console.log('updated entry');
+                        return entry;
+                    });
+                }
             }
             return pushUpdatedList(updatedList, token, data.sha);
         })
