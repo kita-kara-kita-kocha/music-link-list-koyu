@@ -21,6 +21,11 @@ li:hover a {
     display: block;
 }
 
+/* dev class=thの文字色を薄ピンクに変更 */
+.th {
+    color: #f4a4a4;
+}
+
 /* ボディの背景色とフォントを設定 */
 body {
     background-color: #ffe4e1; /* 薄ピンク */
@@ -63,7 +68,8 @@ ul.music-links li {
     transition: background 0.3s;
 }
 
-ul.music-links li:hover {
+ul.music-links li:hover,
+ul.music-links li:ontouchstart {
     background: #45b76b; /* 少し濃いエメラルド色 */
 }
 
