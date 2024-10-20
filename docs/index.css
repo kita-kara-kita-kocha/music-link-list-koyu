@@ -16,9 +16,8 @@ h1, li {
     display: none;
 }
 
-/* li要素にマウスオーバーまたはタップでaタグを表示 */
-li:hover a,
-li:focus-within a {
+/* li要素にマウスオーバーまたはクリックでaタグを表示 */
+li:hover a {
     display: block;
 }
 

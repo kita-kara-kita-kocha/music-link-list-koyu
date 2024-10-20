@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             data.forEach(item => {
                 const li = document.createElement('li');
+                li.setAttribute('ontouchstart', '');
                 li.innerHTML = `${item.title}/${item.artist}`;
                 if (item.url_date_sets) {
                     item.url_date_sets.forEach(set => {
