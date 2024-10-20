@@ -69,7 +69,7 @@ ul.music-links li {
 }
 
 ul.music-links li:hover,
-ul.music-links li:ontouchstart {
+ul.music-links li:active {
     background: #45b76b; /* 少し濃いエメラルド色 */
 }
 
