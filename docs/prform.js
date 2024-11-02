@@ -53,13 +53,6 @@ function handleFormSubmission(event) {
     const date = document.getElementById('date').value;
     const token = document.getElementById('token').value;
 
-    // 新しいエントリを作成
-    const newEntry = {
-        title: title,
-        artist: artist,
-        url: url
-    };
-
     // ./src_list.jsonから既存のデータを読み取る（music-list-prブランチ）
     fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json?ref=add/music-list-pr', {
         method: 'GET',
@@ -107,25 +100,29 @@ function handleFormSubmission(event) {
                 console.log('New entry added');
             // 一致するエントリがある場合
             } else {
-                // 一致するdateがある場合は、urlを更新
+                // 一致するdateがある場合は、該当のエントリの日付とURLのセットのURLを更新
                 if (date_sets.some(set => set.date === date)) {
                     updatedList = updatedList.map(entry => {
-                        entry.url_date_sets = entry.url_date_sets.map(set => {
-                            set.url = url;
-                            return set;
-                        });
-                        // 通知
-                        console.log('updated url');
-                        return entry;
-                    });
-                } else {
-                    // 既存のエントリのdate_setsに新しい日付エントリを追加
-                    updatedList = updatedList.map(entry => {
                         if (entry.title === title && entry.artist === artist) {
-                        entry.url_date_sets.push({url: url, date: date});
+                            entry.url_date_sets = entry.url_date_sets.map(set => {
+                                if (set.date === date) {
+                                    set.url = url;
+                                }
+                                return set;
+                            });
                         }
                         // 通知
-                        console.log('updated entry');
+                        console.log('URL updated');
+                        return entry;
+                    });
+                // 一致するdateがない場合は、該当のエントリの新しい日付とURLのセットを追加
+                } else {
+                    updatedList = updatedList.map(entry => {
+                        if (entry.title === title && entry.artist === artist) {
+                            entry.url_date_sets.push({url: url, date: date});
+                        }
+                        // 通知
+                        console.log('New date added');
                         return entry;
                     });
                 }
