@@ -88,9 +88,11 @@ function handleFormSubmission(event) {
             const datajson = JSON.parse(base64ToUtf8(data.content));
             let updatedList = datajson;
             let isMatched = false;
+            let date_sets = [];
             updatedList.forEach(entry => {
                 if (entry.title === title && entry.artist === artist) {
                     isMatched = true;
+                    date_sets = entry.url_date_sets;
                 }
             });
             // 一致するエントリがない場合
@@ -106,7 +108,7 @@ function handleFormSubmission(event) {
             // 一致するエントリがある場合
             } else {
                 // 一致するdateがある場合は、urlを更新
-                if (entry.url_date_sets.some(set => set.date === date)) {
+                if (date_sets.some(set => set.date === date)) {
                     updatedList = updatedList.map(entry => {
                         entry.url_date_sets = entry.url_date_sets.map(set => {
                             set.url = url;
@@ -117,12 +119,9 @@ function handleFormSubmission(event) {
                         return entry;
                     });
                 } else {
-                    // 既存のエントリに新しいsetsを追加
+                    // 既存のエントリのdate_setsに新しい日付エントリを追加
                     updatedList = updatedList.map(entry => {
-                        // dateが一致するエントリがある場合は、urlを更新
-                        if (entry.title === title && entry.artist === artist) {
-                            entry.url_date_sets.push({url: url, date: date});
-                        }
+                        entry.url_date_sets.push({url: url, date: date});
                         // 通知
                         console.log('updated entry');
                         return entry;
