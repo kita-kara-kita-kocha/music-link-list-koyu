@@ -121,7 +121,9 @@ function handleFormSubmission(event) {
                 } else {
                     // 既存のエントリのdate_setsに新しい日付エントリを追加
                     updatedList = updatedList.map(entry => {
+                        if (entry.title === title && entry.artist === artist) {
                         entry.url_date_sets.push({url: url, date: date});
+                        }
                         // 通知
                         console.log('updated entry');
                         return entry;
