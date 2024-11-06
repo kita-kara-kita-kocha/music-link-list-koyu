@@ -44,6 +44,8 @@ function pushUpdatedList(updatedList, token, sha) {
 
 // フォーム送信を処理する関数
 function handleFormSubmission(event) {
+
+    // デフォルトのフォーム送信をキャンセル
     event.preventDefault();
 
     // フォームの値を取得
@@ -52,6 +54,19 @@ function handleFormSubmission(event) {
     const url = document.getElementById('url').value;
     const date = document.getElementById('date').value;
     const token = document.getElementById('token').value;
+
+    // いずれかのフィールドが空の場合は、エラーメッセージを表示して処理を終了
+    if (!title || !artist || !url || !date || !token) {
+        alert('空のフィールドがあります。全てのフィールドを入力してください。');
+        return;
+    }
+    
+    // dateのフォーマットが正しいかチェック
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    if (!date.match(dateRegex)) {
+        alert('dateのフォーマットが不正です。 YYYY-MM-DDの形式で入力してください。');
+        return;
+    }
 
     // ./src_list.jsonから既存のデータを読み取る（music-list-prブランチ）
     fetch('https://api.github.com/repos/kita-kara-kita-kocha/music-link-list-koyu/contents/docs/src_list.json?ref=add/music-list-pr', {
@@ -132,16 +147,16 @@ function handleFormSubmission(event) {
         // 更新が成功した場合は、成功メッセージを表示
         .then(response => {
             if (response.ok) {
-                alert('Successfully submitted the form!');
+                alert('フォームが正常に送信されました。');
                 document.getElementById('musicForm').reset();
             } else {
-                alert('Failed to submit the form.');
+                alert('フォームの送信に失敗しました。');
             }
         })
         // エラーが発生した場合は、エラーメッセージを表示
         .catch(error => {
             console.error(error);
-            alert('Failed to submit the form.');
+            alert('既存dデータの取得に失敗しました。（たぶん。）');
         });
 }
 
