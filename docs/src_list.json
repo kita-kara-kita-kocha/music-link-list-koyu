@@ -86,6 +86,10 @@
       {
         "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=4480s",
         "date": "2021-08-22"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=3869s",
+        "date": "2021-08-30"
       }
     ]
   },
@@ -186,6 +190,270 @@
       {
         "url": "https://www.youtube.com/watch?v=HAZJ_sAO6Xo&t=4863s",
         "date": "2021-08-24"
+      }
+    ]
+  },
+  {
+    "title": "君の知らない物語",
+    "artist": "supercell",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=321s",
+        "date": "2021-08-30"
+      }
+    ]
+  },
+  {
+    "title": "もしも…",
+    "artist": "ハロー!プロジェクト モベキマス",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=868s",
+        "date": "2021-08-30"
+      }
+    ]
+  },
+  {
+    "title": "春を告げる",
+    "artist": "yama",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=1383s",
+        "date": "2021-08-30"
+      }
+    ]
+  },
+  {
+    "title": "Henceforth",
+    "artist": "Orangestar",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=1798s",
+        "date": "2021-08-30"
+      }
+    ]
+  },
+  {
+    "title": "コネクト",
+    "artist": "ClariS",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=2242s",
+        "date": "2021-08-30"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=5076s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "踊",
+    "artist": "Ado",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=2893s",
+        "date": "2021-08-30"
+      }
+    ]
+  },
+  {
+    "title": "ビターチョコデコレーション",
+    "artist": "syudou",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=3455s",
+        "date": "2021-08-30"
+      }
+    ]
+  },
+  {
+    "title": "かくしん的☆めたまるふぉ~ぜっ!",
+    "artist": "土間うまる(cv.田中あいみ)",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=346s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "Fantastic future",
+    "artist": "田村ゆかり",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=635s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "オリオンをなぞる",
+    "artist": "UNISON SQUARE GARDEN",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=916s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "0-week-old",
+    "artist": "ファルル(cv.赤﨑千夏)",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=1372s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "紅蓮華",
+    "artist": "LiSA",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=1855s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "1・2・3",
+    "artist": "After the Rain",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=2262s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "廻廻奇譚",
+    "artist": "Eve",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=2867s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "secret base 〜君がくれたもの〜",
+    "artist": "ZONE",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=3246s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "炎",
+    "artist": "LiSA",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=3740s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "traumerei",
+    "artist": "LiSA",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=4227s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "魔女っ子メグちゃん",
+    "artist": "アンジュルム",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=4660s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "恋愛サーキュレーション",
+    "artist": "千石撫子(cv.花澤香菜)",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=5471s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "凶夢伝染",
+    "artist": "ALI PROJECT",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=5985s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "ハルジオン",
+    "artist": "YOASOBI",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=6427s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "魂のルフラン",
+    "artist": "高橋洋子",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=6894s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "残酷な天使のテーゼ",
+    "artist": "高橋洋子",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=7388s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "うまぴょい伝説",
+    "artist": "ウマ娘",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=7883s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "一番の宝物 (Yui ver.)",
+    "artist": "Girls Dead Monster",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=8306s",
+        "date": "2021-09-04"
+      }
+    ]
+  },
+  {
+    "title": "ライオン",
+    "artist": "シェリル・ノーム starring May'n,ランカ・リー=中島愛",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=8842s",
+        "date": "2021-09-04"
       }
     ]
   }
