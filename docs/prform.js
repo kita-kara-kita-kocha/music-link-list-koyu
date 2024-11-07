@@ -64,8 +64,13 @@ function handleFormSubmission(event) {
     // dateのフォーマットが正しいかチェック
     const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
     if (!date.match(dateRegex)) {
-        alert('dateのフォーマットが不正です。 YYYY-MM-DDの形式で入力してください。');
-        return;
+        // dateのフォーマットがYYYY/DD/MMの形式の場合は、YYYY-MM-DDの形式に変換
+        if (date.match(/^\d{4}\/\d{2}\/\d{2}$/)) {
+            date = date.replace(/\//g, '-');
+        } else {
+            alert('dateのフォーマットが不正です。 YYYY-MM-DDの形式で入力してください。');
+            return;
+        }
     }
 
     // ./src_list.jsonから既存のデータを読み取る（music-list-prブランチ）
