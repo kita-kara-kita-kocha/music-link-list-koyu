@@ -52,7 +52,7 @@ function handleFormSubmission(event) {
     const title = document.getElementById('title').value;
     const artist = document.getElementById('artist').value;
     const url = document.getElementById('url').value;
-    const date = document.getElementById('date').value;
+    let date = document.getElementById('date').value;
     const token = document.getElementById('token').value;
 
     // いずれかのフィールドが空の場合は、エラーメッセージを表示して処理を終了
