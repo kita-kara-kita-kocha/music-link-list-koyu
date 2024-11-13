@@ -82,3 +82,12 @@ ul.music-links li a {
 section {
     margin-bottom: 20px;
 }
+
+/* sort_buttonの設定 */
+.sort_button {
+    background-color: #ff69b4; /* ショッキングピンク */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
