@@ -91,3 +91,14 @@ section {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* sort_buttonのマウスオーバー時の設定 */
+.sort_button:hover {
+    background-color: #ff1493; /* ディープピンク */
+}
+
+/* desccriptionの設定　注釈の表示　小さめの文字 */
+.description {
+    font-size: 0.8em;
+    color: #999;
+}
