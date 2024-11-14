@@ -21,7 +21,7 @@ function base64ToUtf8(base64String) {
 
 // 更新されたリストをhttps://github.com/kita-kara-kita-kocha/music-link-list-koyu/blob/add/music-list-pr/docs/src_list.jsonにpushする関数
 // 引数: 更新されたリスト, トークン
-function pushUpdatedList(updatedList, token, sha) {
+function pushUpdatedList(updatedList, token, sha, push_message) {
     // updatedListをBase64エンコード
     const base64Content = utf8ToBase64(JSON.stringify(updatedList, null, 2));
     // 更新されたリストをpush
@@ -33,7 +33,7 @@ function pushUpdatedList(updatedList, token, sha) {
             'X-GitHub-Api-Version': '2022-11-28',
         },
         body: JSON.stringify({
-            message: 'Add a new entry',
+            message: push_message,
             content: base64Content,
             sha: sha,
             branch: 'add/music-list-pr'
@@ -108,6 +108,7 @@ function handleFormSubmission(event) {
                     date_sets = entry.url_date_sets;
                 }
             });
+            let push_message = `Add new entry: ${title}/${artist}`;
             // 一致するエントリがない場合
             if (!isMatched) {
                 // 新しいエントリをリストに追加
@@ -126,6 +127,8 @@ function handleFormSubmission(event) {
                         if (entry.title === title && entry.artist === artist) {
                             entry.url_date_sets = entry.url_date_sets.map(set => {
                                 if (set.date === date) {
+                                    // 既存のURLを新しいURLに更新
+                                    push_message = `Update URL: ${title}/${artist}`;
                                     set.url = url;
                                 }
                                 return set;
@@ -139,6 +142,7 @@ function handleFormSubmission(event) {
                 } else {
                     updatedList = updatedList.map(entry => {
                         if (entry.title === title && entry.artist === artist) {
+                            push_message = `Add new date: ${title}/${artist}`;
                             entry.url_date_sets.push({url: url, date: date});
                         }
                         // 通知
@@ -147,7 +151,7 @@ function handleFormSubmission(event) {
                     });
                 }
             }
-            return pushUpdatedList(updatedList, token, data.sha);
+            return pushUpdatedList(updatedList, token, data.sha, push_message);
         })
         // 更新が成功した場合は、成功メッセージを表示
         .then(response => {
