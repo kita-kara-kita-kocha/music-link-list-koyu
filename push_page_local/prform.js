@@ -41,6 +41,17 @@ function pushUpdatedList(updatedList, token, sha, push_message) {
     });
 }
 
+// 全角文字部分があれば、可能な限り半角文字に変換する関数
+function toHalfWidth(str) {
+    return str.replace(/[！-～]/g, function(char) {
+        return String.fromCharCode(char.charCodeAt(0) - 0xFEE0);
+    }).replace(/　/g, ' ').replace(/￥/g, '\\');
+}
+
+// 空白を削除する関数
+function removeSpace(str) {
+    return str.replace(/\s+/g, '');
+}
 
 // フォーム送信を処理する関数
 function handleFormSubmission(event) {
@@ -103,7 +114,11 @@ function handleFormSubmission(event) {
             let isMatched = false;
             let date_sets = [];
             updatedList.forEach(entry => {
-                if (entry.title === title && entry.artist === artist) {
+                const entryTitle = toHalfWidth(entry.title);
+                const entryArtist = toHalfWidth(entry.artist);
+                const targetTitle = toHalfWidth(title);
+                const targetArtist = toHalfWidth(artist);
+                if (entryTitle === targetTitle && entryArtist === targetArtist) {
                     isMatched = true;
                     date_sets = entry.url_date_sets;
                 }
@@ -124,7 +139,11 @@ function handleFormSubmission(event) {
                 // 一致するdateがある場合は、該当のエントリの日付とURLのセットのURLを更新
                 if (date_sets.some(set => set.date === date)) {
                     updatedList = updatedList.map(entry => {
-                        if (entry.title === title && entry.artist === artist) {
+                        const entryTitle = toHalfWidth(entry.title);
+                        const entryArtist = toHalfWidth(entry.artist);
+                        const targetTitle = toHalfWidth(title);
+                        const targetArtist = toHalfWidth(artist);
+                        if (entryTitle === targetTitle && entryArtist === targetArtist) {
                             entry.url_date_sets = entry.url_date_sets.map(set => {
                                 if (set.date === date) {
                                     // 既存のURLを新しいURLに更新
@@ -141,7 +160,11 @@ function handleFormSubmission(event) {
                 // 一致するdateがない場合は、該当のエントリの新しい日付とURLのセットを追加
                 } else {
                     updatedList = updatedList.map(entry => {
-                        if (entry.title === title && entry.artist === artist) {
+                        const entryTitle = toHalfWidth(entry.title);
+                        const entryArtist = toHalfWidth(entry.artist);
+                        const targetTitle = toHalfWidth(title);
+                        const targetArtist = toHalfWidth(artist);
+                        if (entryTitle === targetTitle && entryArtist === targetArtist) {
                             push_message = `Add new date: ${title}/${artist}`;
                             entry.url_date_sets.push({url: url, date: date});
                         }
