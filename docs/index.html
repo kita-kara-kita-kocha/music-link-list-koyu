@@ -19,15 +19,45 @@
             表示される日付(配信日)をクリックすると、
             YouTubeで楽曲を聴くことができます。
         </p>
-        <dev class="sort_button" id="sort_date">初回日付でソート</dev>
-        <dev class="sort_button" id="sort_new_date">最新日付でソート</dev>
-        <dev class="sort_button" id="sort_title">タイトルでソート</dev>
-        <dev class="sort_button" id="sort_artist">アーティスト名でソート</dev>
-        <br>
-        <dev class="th">曲名/アーティスト名 ※マウスオーバーかタップで日付とリンクを表示</dev>
+        <dev class="sort_button">
+            <div class="sort_menu" onclick="toggle()">ソート：</div>
+            <ul>
+                <li><dev id="sort_date">初回日付でソート</dev></li>
+                <li><dev id="sort_new_date">最新日付でソート</dev></li>
+                <li><dev id="sort_title">タイトルでソート</dev></li>
+                <li><dev id="sort_artist">アーティスト名でソート</dev></li>
+            </ul>
+        </dev>
+        <dev class="th">曲名/アーティスト名 <dev class="description">※マウスオーバーかタップで日付とリンクを表示</dev></dev>
         <ul class="music-list"></ul>
     </div>
     <dev class="streaming" id="streaming"></dev>
+    <dev class="tweet-box">
+        <button onclick="this.parentElement.style.display='none'">閉じる</button>
+        <blockquote class="twitter-tweet">
+            <p lang="ja" dir="ltr">‼️重大告知‼️
+                <a href="https://twitter.com/hashtag/%E6%8E%A8%E3%81%97%E5%AF%BE?src=hash&amp;ref_src=twsrc%5Etfw">#推し対</a>
+                初のLIVEイベント❕<br>
+                星降こゆ、出演決定 ❕❕<br>
+                <br>
+                推しと対バンよろしくお願いします<br>
+                〜歌舞伎町タワーネオン戦線〜
+                <a href="https://twitter.com/hashtag/OshitaiLive?src=hash&amp;ref_src=twsrc%5Etfw">#OshitaiLive</a>
+                <br>
+                <br>
+                出演者様も、開催場所も<br>
+                す、、凄すぎるイベント…！！🥺<br>
+                <br>
+                最高に、盛り上げます❕🌠<br>
+                <br>
+                追加情報をお待ちくださぃ…❕ 
+                <a href="https://t.co/6lB1GwPlxG">https://t.co/6lB1GwPlxG</a>
+            </p>
+            &mdash; 星降こゆ(ほしふるこゆ)👼🏻⭐️ (@koyuchan_) 
+            <a href="https://twitter.com/koyuchan_/status/1857349261706379440?ref_src=twsrc%5Etfw">November 15, 2024</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </dev>
     <div class="form-link">
         <a href="https://www.youtube.com/@koyuchan_">YouTubeチャンネルページに移動</a>
     </div>

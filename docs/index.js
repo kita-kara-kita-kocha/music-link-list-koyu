@@ -1,5 +1,9 @@
 // Path: docs/src_list.json
 
+function toggle() {
+    document.querySelector('.sort_button').classList.toggle('open');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('./src_list.json')
         .then(response => response.json())

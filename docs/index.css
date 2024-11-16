@@ -79,18 +79,40 @@ section {
     margin-bottom: 20px;
 }
 
-/* sort_buttonの設定 */
-.sort_button {
-    background-color: #ff69b4; /* ショッキングピンク */
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
+.sort_menu {
+    max-width: 300px;
+    justify-content: space-between;
+    display: flex;
+    background-color: #f3e4eb;
     cursor: pointer;
 }
-
-/* sort_buttonのマウスオーバー時の設定 */
-.sort_button:hover {
-    background-color: #ff1493; /* ディープピンク */
+.sort_menu:hover {
+    background-color: #ecaecd;
+}
+.sort_button ul {
+    max-width: 300px;
+    margin: 0;
+    background: #bb4bac;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+.sort_button ul li {
+    margin: 1px;
+    background: #f3e4eb;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.sort_button ul li:hover {
+    background: #ecaecd;
+}
+.sort_button.open ul {
+    max-height: 300px;
+    max-width: 300px;
+    background-color: #e7e7e7;
+}
+.sort_button li {
+    padding: 5px 10px;
 }
 
 /* desccriptionの設定　注釈の表示　小さめの文字 */
@@ -108,5 +130,22 @@ section {
     color: #fff;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+/* tweet-box クラスの dev タグを画面右上に表示 */
+.tweet-box {
+    position: absolute;
+    /* スクロール可能にする */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* サイズは横20%縦50% */
+    width: 300px;
+    max-width: 40%;
+    height: 50%;
+    /* 位置は右上 */
+    top: 10px;
+    right: 10px;
+    color: #fff;
     cursor: pointer;
 }
