@@ -178,8 +178,8 @@ function sortListDate() {
     }
     const items = Array.from(musicList.children);
     items.sort((a, b) => {
-        const dateA = a.querySelector('a').textContent;
-        const dateB = b.querySelector('a').textContent;
+        const dateA = a.querySelector('dev:first-child a').textContent;
+        const dateB = b.querySelector('dev:first-child a').textContent;
         if (sortIf == 0) {
             return listSort(dateA, dateB);
         }
@@ -190,7 +190,7 @@ function sortListDate() {
     items.forEach(item => musicList.appendChild(item));
 }
 
-// ul.music-listのリストの最新日付リンク(liタグ内の最後のaタグ)でソートする関数
+// ul.music-listのリストの最新日付リンク(liタグ内の最後のdevタグ内aタグ)でソートする関数
 function sortListNewDate() {
     sortButtonReset('sort_new_date');
     sortButtom = document.getElementById('sort_new_date');
@@ -209,8 +209,8 @@ function sortListNewDate() {
     }
     const items = Array.from(musicList.children);
     items.sort((a, b) => {
-        const dateA = a.querySelector('a:last-child').textContent;
-        const dateB = b.querySelector('a:last-child').textContent;
+        const dateA = a.querySelector('dev:last-child a').textContent;
+        const dateB = b.querySelector('dev:last-child a').textContent;
         if (sortIf == 0) {
             return listSort(dateA, dateB);
         }
