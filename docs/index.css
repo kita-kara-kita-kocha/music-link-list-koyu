@@ -12,12 +12,12 @@ h1, li {
 }
 
 /* class="music-list"内のli内のaタグを非表示 */
-.music-list li a {
+.music-list li .music_record {
     display: none;
 }
 
 /* li要素にマウスオーバーまたはクリックでaタグを表示 */
-li:hover a {
+li:hover .music_record {
     display: block;
 }
 
@@ -68,10 +68,6 @@ ul.music-links li {
     transition: background 0.3s;
 }
 
-ul.music-links li:hover {
-    background: #45b76b; /* 少し濃いエメラルド色 */
-}
-
 ul.music-links li a {
     color: #ff69b4; /* ショッキングピンク */
     font-size: 1.2em;
@@ -101,4 +97,16 @@ section {
 .description {
     font-size: 0.8em;
     color: #999;
+}
+
+/* streamingクラスのdevを画面右下に固定表示 */
+.streaming {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #ff69b4; /* ショッキングピンク */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
