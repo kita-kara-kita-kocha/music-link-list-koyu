@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 iframe.src = cnv_url;
                                 // iframeの設定
                                 iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                                iframe.height = 216;
-                                iframe.width = 384;
+                                iframe.height = 180;
+                                iframe.width = 320;
                                 // iframeの追加or置き換え
                                 if (streaming.firstChild) {
                                     streaming.removeChild(streaming.firstChild);
