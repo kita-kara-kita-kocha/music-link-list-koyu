@@ -140,8 +140,8 @@ section {
     overflow-x: hidden;
     overflow-y: scroll;
     /* サイズは横20%縦50% */
-    width: 300px;
-    max-width: 40%;
+    width: 60%;
+    min-width: 260px;
     height: 50%;
     /* 位置は右上 */
     top: 10px;
