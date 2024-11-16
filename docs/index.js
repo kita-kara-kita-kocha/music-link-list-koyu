@@ -15,10 +15,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 li.innerHTML = `${item.title} / ${item.artist}`;
                 if (item.url_date_sets) {
                     item.url_date_sets.forEach(set => {
+                        const dev = document.createElement('dev');
+                        dev.className = 'music_record';
                         const a = document.createElement('a');
                         a.href = set.url;
                         a.textContent = set.date;
-                        li.appendChild(a);
+                        dev.appendChild(a);
+                        // iframeを追加するボタンを追加
+                        const button = document.createElement('button');
+                        // iframeの追加先はdev id=streaming
+                        // iframeの追加先のにiframeがある場合は削除してから追加
+                        // set.urlがhttps://www.youtube.com/watch?v=${videoId}&t=${start}sの形式でなかったら追加せず、×ボタンアイコンを追加
+                        // set.urlからvideoIdとstartを取得し、src="https://www.youtube.com/embed/${videoId}?start=${start}"を設定
+                        // iframeにはallow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"を設定
+                        // iframeの高さは216、幅は384に設定
+                        // iframeの追加ボタンをクリックしたときにiframeを追加or置き換えする
+                        if (set.url.match(/https:\/\/www\.youtube\.com\/watch\?v=[a-zA-Z0-9_-]+&t=[0-9]+s/)) {
+                            button.textContent = '▶';
+                            button.addEventListener('click', function() {
+                                const iframe = document.createElement('iframe');
+                                // watch?v=をembed/に置換、&t=を?start=に置換、最後の文字がsなら削除
+                                const cnv_url = set.url.replace('watch?v=', 'embed/').replace('&t=', '?start=').replace(/s$/, '');
+                                iframe.src = cnv_url;
+                                // iframeの設定
+                                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                                iframe.height = 216;
+                                iframe.width = 384;
+                                // iframeの追加or置き換え
+                                if (streaming.firstChild) {
+                                    streaming.removeChild(streaming.firstChild);
+                                }
+                                streaming.appendChild(iframe);
+                            });
+                        } else {
+                            button.textContent = '×';
+                        }
+                        dev.appendChild(button);
+                        li.appendChild(dev);
                     });
                 }
                 musicList.appendChild(li);
