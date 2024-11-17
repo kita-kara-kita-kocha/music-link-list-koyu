@@ -238,6 +238,10 @@
       {
         "url": "https://www.youtube.com/watch?v=lmzFNTy8EAI&t=5026s",
         "date": "2022-01-07"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=7778s",
+        "date": "2021-12-29"
       }
     ]
   },
@@ -308,16 +312,6 @@
       {
         "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=3455s",
         "date": "2021-08-30"
-      }
-    ]
-  },
-  {
-    "title": "かくしん的☆めたまるふぉ~ぜっ!",
-    "artist": "土間うまる(cv.田中あいみ)",
-    "url_date_sets": [
-      {
-        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=346s",
-        "date": "2021-09-04"
       }
     ]
   },
@@ -615,11 +609,19 @@
   },
   {
     "title": "初音ミクの消失",
-    "artist": "cosMo＠暴走P",
+    "artist": "cosMo@暴走P",
     "url_date_sets": [
       {
         "url": "https://www.youtube.com/watch?v=N-Qpax6cSSY&t=6710s",
         "date": "2021-11-26"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ANjFtHQlROU&t=8307s",
+        "date": "2021-12-11"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=lmzFNTy8EAI&t=7427s",
+        "date": "2022-01-07"
       }
     ]
   },
@@ -802,20 +804,6 @@
     ]
   },
   {
-    "title": "初音ミクの消失",
-    "artist": "cosMo@暴走P",
-    "url_date_sets": [
-      {
-        "url": "https://www.youtube.com/watch?v=ANjFtHQlROU&t=8307s",
-        "date": "2021-12-11"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=lmzFNTy8EAI&t=7427s",
-        "date": "2022-01-07"
-      }
-    ]
-  },
-  {
     "title": "裏表ラバーズ",
     "artist": "wowaka",
     "url_date_sets": [
@@ -922,6 +910,10 @@
       {
         "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=3208s",
         "date": "2021-12-29"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kiHTAjNTXBU&t=6287s",
+        "date": "2022-02-13"
       }
     ]
   },
@@ -999,16 +991,6 @@
     "url_date_sets": [
       {
         "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=7136s",
-        "date": "2021-12-29"
-      }
-    ]
-  },
-  {
-    "title": "もしも…",
-    "artist": "モベキマス",
-    "url_date_sets": [
-      {
-        "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=7778s",
         "date": "2021-12-29"
       }
     ]
@@ -1316,6 +1298,10 @@
       {
         "url": "https://www.youtube.com/watch?v=7L0qD3c3w60&t=4483s",
         "date": "2022-01-31"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=q0XUa-VCf1Y&t=4946s",
+        "date": "2022-03-26"
       }
     ]
   },
@@ -1440,16 +1426,6 @@
     ]
   },
   {
-    "title": "初恋サイダー",
-    "artist": "DEEP MIND",
-    "url_date_sets": [
-      {
-        "url": "https://www.youtube.com/watch?v=kiHTAjNTXBU&t=6287s",
-        "date": "2022-02-13"
-      }
-    ]
-  },
-  {
     "title": "ストロー",
     "artist": "aiko",
     "url_date_sets": [
@@ -1476,6 +1452,10 @@
       {
         "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=710s",
         "date": "2022-02-25"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=346s",
+        "date": "2021-09-04"
       }
     ]
   },
@@ -1913,16 +1893,6 @@
     "url_date_sets": [
       {
         "url": "https://www.youtube.com/watch?v=q0XUa-VCf1Y&t=4353s",
-        "date": "2022-03-26"
-      }
-    ]
-  },
-  {
-    "title": "Dear Mr 「F」",
-    "artist": "ずっと真夜中でいいのに。",
-    "url_date_sets": [
-      {
-        "url": "https://www.youtube.com/watch?v=q0XUa-VCf1Y&t=4946s",
         "date": "2022-03-26"
       }
     ]
