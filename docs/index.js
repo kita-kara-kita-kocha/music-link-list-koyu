@@ -1,8 +1,9 @@
 // Path: docs/src_list.json
 
-function toggle() {
-    document.querySelector('.sort_button').classList.toggle('open');
+function toggle(name) {
+    document.querySelector('.' + name).classList.toggle('open');
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('./src_list.json')
@@ -14,17 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             data.forEach(item => {
-                const li = document.createElement('li');
-                li.setAttribute('ontouchstart', '');
-                li.innerHTML = `${item.title} / ${item.artist}`;
+                const musicList_li = document.createElement('li');
+                musicList_li.setAttribute('ontouchstart', '');
+                const dev_music_record = document.createElement('dev');
+                dev_music_record.className = 'music_record';
+                dev_music_record.textContent = `${item.title} / ${item.artist}`;
+                ul_url_date_sets = document.createElement('ul');
                 if (item.url_date_sets) {
                     item.url_date_sets.forEach(set => {
-                        const dev = document.createElement('dev');
-                        dev.className = 'music_record';
                         const a = document.createElement('a');
                         a.href = set.url;
                         a.textContent = set.date;
-                        dev.appendChild(a);
+                        ul_url_date_sets = document.createElement('ul');
+                        li_url_date_set = document.createElement('li');
+                        li_url_date_set.appendChild(a);
                         // iframeを追加するボタンを追加
                         const button = document.createElement('button');
                         // iframeの追加先はdev id=streaming
@@ -51,14 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                 }
                                 streaming.appendChild(iframe);
                             });
+                            li_url_date_set.appendChild(button);
                         } else {
                             button.textContent = '✕';
                         }
-                        dev.appendChild(button);
-                        li.appendChild(dev);
+                        ul_url_date_sets.appendChild(li_url_date_set);
+                        dev_music_record.appendChild(ul_url_date_sets);
+                        musicList_li.appendChild(dev_music_record);
                     });
                 }
-                musicList.appendChild(li);
+                musicList.appendChild(musicList_li);
             });
         })
         .catch(error => console.error('Error fetching the JSON:', error));
@@ -71,6 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sort_date').addEventListener('click', sortListDate);
     // ソートボタンdev.sort_new_dateをクリックしたときにソートする
     document.getElementById('sort_new_date').addEventListener('click', sortListNewDate);
+
+    // ページ読み込み後1分後に<blockquote class="twitter-tweet">を閉じる
+    setTimeout(function() {
+        document.querySelector('.twitter-tweet').classList.toggle('open');
+    }, 60000);
+
 });
 
 // 引数以外のsort_title, sort_artist, sort_date, sort_new_dateの4つのソートボタンの△と▽を消す関数
