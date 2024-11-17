@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 // watch?v=をembed/に置換、&t=を?start=に置換、最後の文字がsなら削除
                                 const cnv_url = set.url.replace('watch?v=', 'embed/').replace('&t=', '?start=').replace(/s$/, '');
                                 iframe.src = cnv_url;
-                                // iframeの設定
+                                // iframeの設定　
                                 iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
                                 iframe.height = 180;
                                 iframe.width = 320;
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                     streaming.removeChild(streaming.firstChild);
                                 }
                                 streaming.appendChild(iframe);
-                            });
+                           });
                         } else {
-                            button.textContent = '×';
+                            button.textContent = '✕';
                         }
                         dev.appendChild(button);
                         li.appendChild(dev);

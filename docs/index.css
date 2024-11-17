@@ -141,6 +141,7 @@ section {
     overflow-y: scroll;
     /* サイズは横20%縦50% */
     width: 60%;
+    max-width: 570px;
     min-width: 260px;
     height: 50%;
     /* 位置は右上 */
