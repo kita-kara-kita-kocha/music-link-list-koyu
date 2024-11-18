@@ -4,6 +4,16 @@ function toggle(name) {
     document.querySelector('.' + name).classList.toggle('open');
 }
 
+// ソートする関数を定義
+function listSort(source_a, source_b) {
+    if (source_a < source_b) {
+        return -1;
+    }
+    if (source_a > source_b) {
+        return 1;
+    }
+    return 0;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('./src_list.json')
@@ -22,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 dev_music_record.textContent = `${item.title} / ${item.artist}`;
                 ul_url_date_sets = document.createElement('ul');
                 if (item.url_date_sets) {
+                    // item.url_date_setsの配列をソートしてからループ
+                    item.url_date_sets.sort((a, b) => {
+                        const dateA = a.date;
+                        const dateB = b.date;
+                        return listSort(dateA, dateB);
+                    });
                     item.url_date_sets.forEach(set => {
                         const a = document.createElement('a');
                         a.href = set.url;
@@ -99,17 +115,6 @@ function sortButtonReset(untarget) {
     if (untarget != 'sort_new_date') {
         document.getElementById('sort_new_date').textContent = '最新日付でソート';
     }
-}
-
-// ソートする関数を定義
-function listSort(source_a, source_b) {
-    if (source_a < source_b) {
-        return -1;
-    }
-    if (source_a > source_b) {
-        return 1;
-    }
-    return 0;
 }
 
 // ul.music-listのリストをタイトルでソートする関数
