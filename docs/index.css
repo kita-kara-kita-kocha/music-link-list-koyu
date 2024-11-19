@@ -13,12 +13,11 @@ h1, li {
 
 .music_record ul {
     max-width: 0%;
-    max-height: 0%;
     margin: 0;
     background: #2b1628;
     max-height: 0;
     overflow: hidden;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 .music_record ul li {
     white-space: nowrap;
@@ -29,13 +28,28 @@ h1, li {
 .music_record ul li:hover {
     background: #ecaecd;
 }
+.music_record {
+    cursor: default;
+}
 .music_record:hover ul {
-    max-height: 100%;
+    max-height: 50px;
     max-width: 100%;
     background-color: #e7e7e7;
+    transition: all 1s;
+
 }
 .music_record li {
     padding: 5px 10px;
+}
+
+.music_record ul li button {
+    background-color: #bb4bac;
+    color: #fff;
+    margin-left: 50px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* dev class=thの文字色を薄ピンクに変更 */
@@ -110,6 +124,7 @@ section {
     background-color: #e7e7e7;
 }
 .sort_button li {
+    margin-left: 20px;
     padding: 5px 10px;
 }
 
