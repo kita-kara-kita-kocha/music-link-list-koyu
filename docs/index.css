@@ -11,14 +11,36 @@ h1, li {
     font-family: "Kiwi Maru";
 }
 
-/* class="music-list"内のli内のaタグを非表示 */
-.music-list li a {
-    display: none;
+.music_record ul {
+    max-width: 0%;
+    max-height: 0%;
+    margin: 0;
+    background: #2b1628;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+.music_record ul li {
+    white-space: nowrap;
+    margin: 1px;
+    background: #ece6e9;
+    padding: 5px 10px;
+}
+.music_record ul li:hover {
+    background: #ecaecd;
+}
+.music_record:hover ul {
+    max-height: 100%;
+    max-width: 100%;
+    background-color: #e7e7e7;
+}
+.music_record li {
+    padding: 5px 10px;
 }
 
-/* li要素にマウスオーバーでaタグを表示 */
-li:hover a {
-    display: block;
+/* dev class=thの文字色を薄ピンクに変更 */
+.th {
+    color: #f4a4a4;
 }
 
 /* ボディの背景色とフォントを設定 */
@@ -50,30 +72,79 @@ header h1 {
     color: #ff69b4; /* ショッキングピンク */
 }
 
-/* リンクリストのスタイル */
-ul.music-links {
-    margin-top: 20px;
-}
-
-ul.music-links li {
-    background: #50c878; /* エメラルド色 */
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-ul.music-links li:hover {
-    background: #45b76b; /* 少し濃いエメラルド色 */
-}
-
-ul.music-links li a {
-    color: #ff69b4; /* ショッキングピンク */
-    font-size: 1.2em;
-    display: block;
-}
-
 /* セクション間のスペースを追加 */
 section {
     margin-bottom: 20px;
+}
+
+.sort_menu {
+    max-width: 300px;
+    justify-content: space-between;
+    display: flex;
+    background-color: #f3e4eb;
+    cursor: pointer;
+}
+.sort_menu:hover {
+    background-color: #ecaecd;
+}
+.sort_button ul {
+    max-width: 300px;
+    margin: 0;
+    background: #bb4bac;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+.sort_button ul li {
+    margin: 1px;
+    background: #f3e4eb;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.sort_button ul li:hover {
+    background: #ecaecd;
+}
+.sort_button.open ul {
+    max-height: 300px;
+    max-width: 300px;
+    background-color: #e7e7e7;
+}
+.sort_button li {
+    padding: 5px 10px;
+}
+
+/* desccriptionの設定　注釈の表示　小さめの文字 */
+.description {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* streamingクラスのdevを画面右下に固定表示 */
+.streaming {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #ff69b4; /* ショッキングピンク */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* tweet-box クラスの dev タグを画面右上に表示 */
+.tweet-box {
+    position: absolute;
+    /* スクロール可能にする */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* サイズは横20%縦50% */
+    width: 60%;
+    max-width: 570px;
+    min-width: 260px;
+    height: 50%;
+    /* 位置は右上 */
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
 }
