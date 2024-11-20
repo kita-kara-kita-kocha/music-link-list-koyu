@@ -780,6 +780,10 @@
       {
         "url": "https://www.youtube.com/watch?v=uWHUu70l30I&t=6014s",
         "date": "2022-03-19"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=3i47lAK4GSA&t=171s",
+        "date": "2022-06-05"
       }
     ]
   },
@@ -2444,6 +2448,10 @@
       {
         "url": "https://www.youtube.com/watch?v=YcHkBricRTw&t=199s",
         "date": "2022-05-24"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=3i47lAK4GSA&t=391s",
+        "date": "2022-06-05"
       }
     ]
   },
@@ -2808,6 +2816,36 @@
       {
         "url": "https://www.youtube.com/watch?v=2AAPSz9Bsi0&t=5805s",
         "date": "2022-05-08"
+      }
+    ]
+  },
+  {
+    "title": "藍二乗",
+    "artist": "ヨルシカ",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=3i47lAK4GSA&t=682s",
+        "date": "2022-06-05"
+      }
+    ]
+  },
+  {
+    "title": "終点の先が在るとするならば。",
+    "artist": "ツユ",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=3i47lAK4GSA&t=984s",
+        "date": "2022-06-05"
+      }
+    ]
+  },
+  {
+    "title": "daze",
+    "artist": "じん",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=3i47lAK4GSA&t=1211s",
+        "date": "2022-06-05"
       }
     ]
   }
