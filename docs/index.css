@@ -51,6 +51,14 @@ h1, li {
     border-radius: 4px;
     cursor: pointer;
 }
+.playbutton {
+    background-color: #bb4bac;
+    color: #fff;
+    margin: 5px;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 4px;
+}
 
 /* dev class=thの文字色を薄ピンクに変更 */
 .th {
