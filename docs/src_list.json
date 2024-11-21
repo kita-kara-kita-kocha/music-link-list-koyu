@@ -122,6 +122,10 @@
       {
         "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=5588s",
         "date": "2021-08-22"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=3662s",
+        "date": "2022-06-23"
       }
     ]
   },
@@ -274,6 +278,10 @@
       {
         "url": "https://www.youtube.com/watch?v=lmzFNTy8EAI&t=8315s",
         "date": "2022-01-07"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=195s",
+        "date": "2022-06-23"
       }
     ]
   },
@@ -2770,6 +2778,10 @@
       {
         "url": "https://www.youtube.com/watch?v=2AAPSz9Bsi0&t=646s",
         "date": "2022-05-08"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=2499s",
+        "date": "2022-06-23"
       }
     ]
   },
@@ -3014,6 +3026,10 @@
       {
         "url": "https://www.youtube.com/watch?v=lA87q80_woA&t=913s",
         "date": "2022-06-10"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=1180s",
+        "date": "2022-06-23"
       }
     ]
   },
@@ -3084,6 +3100,36 @@
       {
         "url": "https://www.youtube.com/watch?v=lA87q80_woA&t=7662s",
         "date": "2022-06-10"
+      }
+    ]
+  },
+  {
+    "title": "きみだけは。",
+    "artist": "天月-あまつき-",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=1780s",
+        "date": "2022-06-23"
+      }
+    ]
+  },
+  {
+    "title": "夏祭り",
+    "artist": "Whiteberry",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=2854s",
+        "date": "2022-06-23"
+      }
+    ]
+  },
+  {
+    "title": "打上花火",
+    "artist": "DAOKO × 米津玄師",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=3193s",
+        "date": "2022-06-23"
       }
     ]
   }
