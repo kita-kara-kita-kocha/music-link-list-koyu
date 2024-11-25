@@ -318,6 +318,10 @@
       {
         "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=195s",
         "date": "2022-06-23"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=202s",
+        "date": "2022-08-13"
       }
     ]
   },
@@ -2296,6 +2300,10 @@
       {
         "url": "https://www.youtube.com/watch?v=m9FTIO1IwU4&t=5118s",
         "date": "2022-03-03"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=3480s",
+        "date": "2022-08-13"
       }
     ]
   },
@@ -3414,6 +3422,10 @@
       {
         "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=6404s",
         "date": "2022-07-22"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=3020s",
+        "date": "2022-08-13"
       }
     ]
   },
@@ -3424,6 +3436,10 @@
       {
         "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=6731s",
         "date": "2022-07-22"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=583s",
+        "date": "2022-08-13"
       }
     ]
   },
@@ -3564,6 +3580,56 @@
       {
         "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=12967s",
         "date": "2022-07-22"
+      }
+    ]
+  },
+  {
+    "title": "あいつら全員同窓会",
+    "artist": "ずっと真夜中でいいのに。",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=964s",
+        "date": "2022-08-13"
+      }
+    ]
+  },
+  {
+    "title": "だいしきゅーだいしゅき",
+    "artist": "femme fatale",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=1374s",
+        "date": "2022-08-13"
+      }
+    ]
+  },
+  {
+    "title": "ウタカタララバイ",
+    "artist": "Ado",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=1810s",
+        "date": "2022-08-13"
+      }
+    ]
+  },
+  {
+    "title": "MOTTAI",
+    "artist": "P丸様。",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=2166s",
+        "date": "2022-08-13"
+      }
+    ]
+  },
+  {
+    "title": "うたかたよいかないで",
+    "artist": "HIMEHINA",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=8telgpQ7AYE&t=2667s",
+        "date": "2022-08-13"
       }
     ]
   }
