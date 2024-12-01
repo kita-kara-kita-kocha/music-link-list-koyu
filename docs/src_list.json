@@ -2452,6 +2452,10 @@
       {
         "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=3976s",
         "date": "2022-10-05"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=2788s",
+        "date": "2022-10-09"
       }
     ]
   },
@@ -3666,6 +3670,10 @@
       {
         "url": "https://www.youtube.com/watch?v=X4EOuHCHJuk&t=1981s",
         "date": "2022-08-17"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=1178s",
+        "date": "2022-10-09"
       }
     ]
   },
@@ -4162,6 +4170,36 @@
       {
         "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=5284s",
         "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "恋は渾沌の隷也",
+    "artist": "後ろから這いより隊G",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=152s",
+        "date": "2022-10-09"
+      }
+    ]
+  },
+  {
+    "title": "Honey・Come!!",
+    "artist": "小倉唯",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=1910s",
+        "date": "2022-10-09"
+      }
+    ]
+  },
+  {
+    "title": "Rising Hope",
+    "artist": "LiSA",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=3354s",
+        "date": "2022-10-09"
       }
     ]
   }
