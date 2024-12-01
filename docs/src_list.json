@@ -340,6 +340,10 @@
       {
         "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=5076s",
         "date": "2021-09-04"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=4412s",
+        "date": "2022-10-05"
       }
     ]
   },
@@ -1604,8 +1608,8 @@
     ]
   },
   {
-    "title": "fripSide",
-    "artist": "only my railgun",
+    "title": "only my railgun",
+    "artist": "fripSide",
     "url_date_sets": [
       {
         "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=234s",
@@ -2444,6 +2448,10 @@
       {
         "url": "https://www.youtube.com/watch?v=rVIPEBKzrQo&t=2277s",
         "date": "2022-10-01"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=3976s",
+        "date": "2022-10-05"
       }
     ]
   },
@@ -2600,6 +2608,10 @@
       {
         "url": "https://www.youtube.com/watch?v=lA87q80_woA&t=7090s",
         "date": "2022-06-10"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=258s",
+        "date": "2022-10-05"
       }
     ]
   },
@@ -2654,6 +2666,10 @@
       {
         "url": "https://www.youtube.com/watch?v=YcHkBricRTw&t=594s",
         "date": "2022-05-24"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=2576s",
+        "date": "2022-10-05"
       }
     ]
   },
@@ -3868,6 +3884,10 @@
       {
         "url": "https://www.youtube.com/watch?v=y6cVnxfCwDc&t=4918s",
         "date": "2022-08-28"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=1255s",
+        "date": "2022-10-05"
       }
     ]
   },
@@ -4062,6 +4082,86 @@
       {
         "url": "https://www.youtube.com/watch?v=rVIPEBKzrQo&t=3489s",
         "date": "2022-10-01"
+      }
+    ]
+  },
+  {
+    "title": "左右盲",
+    "artist": "ヨルシカ",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=574s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "カノン",
+    "artist": "柊マグネタイト",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=966s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "月のワルツ",
+    "artist": "諫山実生",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=1584s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "Magia",
+    "artist": "Kalafina",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=2070s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "すきっ!",
+    "artist": "ときめき・宣伝部",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=2994s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "アンコール",
+    "artist": "YOASOBI",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=3521s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "チュープリ",
+    "artist": "ZOC",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=4807s",
+        "date": "2022-10-05"
+      }
+    ]
+  },
+  {
+    "title": "おねがいダーリン",
+    "artist": "OИE",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=5284s",
+        "date": "2022-10-05"
       }
     ]
   }
