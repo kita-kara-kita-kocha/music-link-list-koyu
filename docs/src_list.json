@@ -748,6 +748,10 @@
       {
         "url": "https://www.youtube.com/watch?v=N-Qpax6cSSY&t=10518s",
         "date": "2021-11-26"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=5204s",
+        "date": "2022-10-25"
       }
     ]
   },
@@ -2018,6 +2022,10 @@
       {
         "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=17894s",
         "date": "2022-07-22"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=4344s",
+        "date": "2022-10-25"
       }
     ]
   },
@@ -2122,6 +2130,10 @@
       {
         "url": "https://www.youtube.com/watch?v=lOIiuc1Bl-g&t=1170s",
         "date": "2022-05-17"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=4799s",
+        "date": "2022-10-25"
       }
     ]
   },
@@ -3936,6 +3948,10 @@
       {
         "url": "https://www.youtube.com/watch?v=nXmGjCytZk4&t=1076s",
         "date": "2022-09-26"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=3300s",
+        "date": "2022-10-25"
       }
     ]
   },
@@ -4100,6 +4116,10 @@
       {
         "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=574s",
         "date": "2022-10-05"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=3867s",
+        "date": "2022-10-25"
       }
     ]
   },
@@ -4200,6 +4220,76 @@
       {
         "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=3354s",
         "date": "2022-10-09"
+      }
+    ]
+  },
+  {
+    "title": "祝福",
+    "artist": "YOASOBI",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=217s",
+        "date": "2022-10-25"
+      }
+    ]
+  },
+  {
+    "title": "Overdose",
+    "artist": "なとり",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=581s",
+        "date": "2022-10-25"
+      }
+    ]
+  },
+  {
+    "title": "魔法",
+    "artist": "さとうもか",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=916s",
+        "date": "2022-10-25"
+      }
+    ]
+  },
+  {
+    "title": "死ぬのがいいわ",
+    "artist": "藤井 風",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=1364s",
+        "date": "2022-10-25"
+      }
+    ]
+  },
+  {
+    "title": "キラースパイダー",
+    "artist": "ピノキオピー",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=1767s",
+        "date": "2022-10-25"
+      }
+    ]
+  },
+  {
+    "title": "かたち",
+    "artist": "安月名莉子",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=2214s",
+        "date": "2022-10-25"
+      }
+    ]
+  },
+  {
+    "title": "ノーザンクロス",
+    "artist": "シェリル・ノーム starring May'n",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=LjhUGAYbTMQ&t=2714s",
+        "date": "2022-10-25"
       }
     ]
   }
