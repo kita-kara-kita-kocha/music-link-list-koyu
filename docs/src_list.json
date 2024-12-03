@@ -4722,5 +4722,15 @@
         "date": "2022-12-31"
       }
     ]
+  },
+  {
+    "title": "正しくなれない",
+    "artist": "ずっと真夜中でいいのに。",
+    "url_date_sets": [
+      {
+        "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=11754s",
+        "date": "2022-12-31"
+      }
+    ]
   }
 ]
