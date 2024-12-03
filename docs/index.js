@@ -199,8 +199,8 @@ function sortListDate() {
     }
     const items = Array.from(musicList.children);
     items.sort((a, b) => {
-        const dateA = a.querySelector('dev:first-child a').textContent;
-        const dateB = b.querySelector('dev:first-child a').textContent;
+        const dateA = a.querySelector('dev:last-child a').textContent;
+        const dateB = b.querySelector('dev:last-child a').textContent;
         if (sortIf == 0) {
             return listSort(dateA, dateB);
         }
@@ -230,8 +230,8 @@ function sortListNewDate() {
     }
     const items = Array.from(musicList.children);
     items.sort((a, b) => {
-        const dateA = a.querySelector('dev:last-child a').textContent;
-        const dateB = b.querySelector('dev:last-child a').textContent;
+        const dateA = a.querySelector('dev:first-child a').textContent;
+        const dateB = b.querySelector('dev:first-child a').textContent;
         if (sortIf == 0) {
             return listSort(dateA, dateB);
         }
