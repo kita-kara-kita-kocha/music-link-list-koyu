@@ -2922,6 +2922,10 @@
       {
         "url": "https://www.youtube.com/watch?v=lOIiuc1Bl-g&t=3019s",
         "date": "2022-05-17"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=8742s",
+        "date": "2022-07-22"
       }
     ]
   },
@@ -3619,16 +3623,6 @@
     "url_date_sets": [
       {
         "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=8077s",
-        "date": "2022-07-22"
-      }
-    ]
-  },
-  {
-    "title": "ヨワネハキ",
-    "artist": "MAISONdes",
-    "url_date_sets": [
-      {
-        "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=8742s",
         "date": "2022-07-22"
       }
     ]
