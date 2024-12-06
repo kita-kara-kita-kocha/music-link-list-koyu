@@ -5438,5 +5438,15 @@
                 "date": "2023-05-31"
             }
         ]
+    },
+    {
+        "title": "Daydream cafe",
+        "artist": "Petit Rabbit's",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=nhcJ7X1Gtkg&t=6452s",
+                "date": "2023-05-31"
+            }
+        ]
     }
 ]
