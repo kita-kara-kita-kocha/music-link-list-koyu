@@ -2,7 +2,7 @@ import streamlit as st
 import json
 
 # 前提日付情報を定義
-set_date = '2021-08-22'
+set_date = '2023-05-31'
 
 st.title('タイムテーブル入力フォーム')
 
