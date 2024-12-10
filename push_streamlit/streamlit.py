@@ -2,7 +2,7 @@ import streamlit as st
 import json
 
 # 前提情報を定義
-set_date = '2023-06-09'
+set_date = ''
 set_artist = ''
 
 st.title('タイムテーブル入力フォーム')
@@ -97,6 +97,7 @@ with st.form(key='my_form', clear_on_submit=True):
     url = st.text_input('URL:')
     date = st.text_input('DATE:', value=set_date)
     submitted = st.form_submit_button(label='更新')
+    set_date = date
 
     if submitted:
         commit_json(title, artist, url, date)
