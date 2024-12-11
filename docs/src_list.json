@@ -1484,6 +1484,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=uZ9xCP1PdCE&t=2998s",
                 "date": "2023-05-07"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=504s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -2970,6 +2974,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=YcHkBricRTw&t=3378s",
                 "date": "2022-05-24"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=4946s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -3290,6 +3298,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=2AAPSz9Bsi0&t=3697s",
                 "date": "2022-05-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=5888s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -3466,6 +3478,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=lA87q80_woA&t=187s",
                 "date": "2022-06-10"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=981s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -4152,6 +4168,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=y6cVnxfCwDc&t=2579s",
                 "date": "2022-08-28"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qZTHrHdVNg4&t=736s",
+                "date": "2023-07-09"
             }
         ]
     },
@@ -4186,6 +4206,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=1255s",
                 "date": "2022-10-05"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=3045s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -4504,6 +4528,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=PlSSCkZQnoo&t=1910s",
                 "date": "2022-10-09"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=qZTHrHdVNg4&t=1448s",
+                "date": "2023-07-09"
             }
         ]
     },
@@ -4618,6 +4646,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=10501s",
                 "date": "2022-12-31"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=2030s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -5384,6 +5416,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=kImQZJaTCbw&t=203s",
                 "date": "2023-06-16"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=1623s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -5534,6 +5570,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=mwvvKAGTr6E&t=2607s",
                 "date": "2023-06-09"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=2539s",
+                "date": "2023-07-01"
             }
         ]
     },
@@ -5866,6 +5906,46 @@
             {
                 "url": "https://www.youtube.com/watch?v=tZO0JYc2iFc&t=1456s",
                 "date": "2023-07-30"
+            }
+        ]
+    },
+    {
+        "title": "オレンジ",
+        "artist": "逢坂大河(釘宮理恵)・櫛枝実乃梨(堀江由衣)・川嶋亜美(喜多村英梨)",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=3566s",
+                "date": "2023-07-01"
+            }
+        ]
+    },
+    {
+        "title": "you",
+        "artist": "癒月",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=4299s",
+                "date": "2023-07-01"
+            }
+        ]
+    },
+    {
+        "title": "第一夜",
+        "artist": "ヨルシカ",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=6620s",
+                "date": "2023-07-01"
+            }
+        ]
+    },
+    {
+        "title": "センパイ。",
+        "artist": "HoneyWorks",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=qZTHrHdVNg4&t=238s",
+                "date": "2023-07-09"
             }
         ]
     }
