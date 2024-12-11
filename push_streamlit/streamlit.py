@@ -2,8 +2,8 @@ import streamlit as st
 import json
 
 # 前提情報を定義
-set_date = '2023-06-16'
-set_artist = ''
+set_date = st.text_input('SET_DATE:')
+set_artist = st.text_input('SET_ARTIST:')
 
 st.title('タイムテーブル入力フォーム')
 
