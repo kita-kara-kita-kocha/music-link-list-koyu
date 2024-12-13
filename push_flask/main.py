@@ -1,15 +1,19 @@
-import streamlit as st
+from push_flask import app
+from flask import render_template, request, redirect, url_for
 import json
 
-# 前提情報を定義
-set_date = st.text_input('SET_DATE:')
-set_artist = st.text_input('SET_ARTIST:')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-st.title('タイムテーブル入力フォーム')
-
-st.write('''
-フォーム「Title:」「Artist:」「URL:」「DATE:」を入力。コミットして、ソースのjsonファイルを編集する。
-''')
+@app.route('/register', methods=['POST'])
+def register():
+    title = request.form['title']
+    artist = request.form['artist']
+    url = request.form['url']
+    date = request.form['date']
+    
+    return redirect(url_for('index'))
 
 # jsonファイルのパス
 json_path = '../docs/src_list.json'
@@ -86,23 +90,6 @@ def commit_json(title, artist, url, date):
         msg = f'{title} / {artist} : 新しい楽曲を追加しました'
     # jsonファイルを書き換える
     write_json(src_list)
-    st.write(msg)
     # git commit
     git_commit(msg)
     return
-
-with st.form(key='my_form', clear_on_submit=True):
-    set_title_and_artist = st.text_input(label = 'SET_TITLE_AND_ARTIST:', value = '')
-    set_title = ''
-    if set_artist == '' and set_title_and_artist != '':
-        set_title = set_title_and_artist.split(' / ')[0]
-        set_artist = set_title_and_artist.split(' / ')[1]
-        set_title_and_artist = ''
-    title = st.text_input('Title:', value=set_title)
-    artist = st.text_input('Artist:', value=set_artist)
-    url = st.text_input('URL:')
-    date = st.text_input('DATE:', value=set_date)
-    submitted = st.form_submit_button(label='更新')
-
-    if submitted:
-        commit_json(title, artist, url, date)
