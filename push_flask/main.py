@@ -1,6 +1,7 @@
 from push_flask import app
 from flask import render_template, request, redirect, url_for
 import json
+import html
 
 @app.route('/')
 def index():
@@ -23,10 +24,10 @@ def listPushForm():
 def listRegister():
     # Content-Typeがapplication/jsonのリクエスト。jsonを受け取る
     data = request.get_json()
-    title = data['title']
-    artist = data['artist']
-    url = data['url']
-    date = data['date']
+    title = html.unescape(data['title'])
+    artist = html.unescape(data['artist'])
+    url = html.unescape(data['url'])
+    date = html.unescape(data['date'])
     try:
         commit_json(title, artist, url, date)
         return {'result': 'success'}
