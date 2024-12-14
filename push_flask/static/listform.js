@@ -94,6 +94,7 @@ function set_commits_info() {
 function update_commits_info() {
     // music_tableのレコードを取得
     var music_table_rows = music_table.rows;
+    var commit_results = document.getElementsByClassName('commit_result')
     // music_tableのレコードを処理
     for (var i = 1; i < music_table_rows.length; i++) {
         // music_tableのレコードから各要素を取得
@@ -114,15 +115,13 @@ function update_commits_info() {
                 url: url
             })
         }).then(function(response) {
-            // レスポンスを確認
-            if (response['result'] == 'success') {
-                console.log('Record is registered');
-            } else {
-                alert(response['result']);
-            }
+            // レスポンスをmusic_table_rows[i]の最後のセルに表示(class="commit_result")
+            response.json().then(function(data) {
+                console.log(data);
+            });
         });
     }
-    update_commits_info_button.setAttribute('hidden', true);
+    // update_commits_info_button.setAttribute('hidden', true);
 }
 
 function clear_commits_info() {

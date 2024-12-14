@@ -1,5 +1,5 @@
 from push_flask import app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, make_response
 import json
 import html
 
@@ -30,9 +30,13 @@ def listRegister():
     date = html.unescape(data['date'])
     try:
         commit_json(title, artist, url, date)
-        return {'result': 'success'}
+        res = make_response({'result': 'success'})
+        res.headers['Content-Type'] = 'application/json'
+        return res
     except:
-        return {'result': f'error: {title} / {artist}'}
+        res = make_response({'result': 'error'})
+        res.headers['Content-Type'] = 'application/json'
+        return res
 
 # jsonファイルのパス
 json_path = 'docs/src_list.json'
