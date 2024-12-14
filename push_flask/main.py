@@ -21,10 +21,12 @@ def listPushForm():
 
 @app.route('/registerRecord', methods=['POST'])
 def listRegister():
-    title = request.form['title']
-    artist = request.form['artist']
-    url = request.form['url']
-    date = request.form['date']
+    # Content-Typeがapplication/jsonのリクエスト。jsonを受け取る
+    data = request.get_json()
+    title = data['title']
+    artist = data['artist']
+    url = data['url']
+    date = data['date']
     try:
         commit_json(title, artist, url, date)
         return {'result': 'success'}
@@ -97,15 +99,19 @@ def commit_json(title, artist, url, date):
             msg = f'{title} / {artist} : 既存楽曲に新しい日付を追加しました'
         else:
             # あった場合はurlを更新
-            msg = f'{title} / {artist} : 既存楽曲の既存日付のURLを更新しました\n{src_list[i]['url_date_sets'][j]['url']}\n→{url}'
-            src_list[i]['url_date_sets'][j]['url'] = url
+            # 既存のurlと新しいurlが異なる場合のみ更新
+            if src_list[i]['url_date_sets'][j]['url'] != url:
+                msg = f'{title} / {artist} : 既存楽曲の既存日付のURLを更新しました\n{src_list[i]['url_date_sets'][j]['url']}\n→{url}'
+                src_list[i]['url_date_sets'][j]['url'] = url
+            else:
+                msg = ''
     else:
         # なかった場合は新規追加
         url_date_set = {'url': url, 'date': date}
         src_list.append({'title': title, 'artist': artist, 'url_date_sets': [url_date_set]})
         msg = f'{title} / {artist} : 新しい楽曲を追加しました'
-    # jsonファイルを書き換える
-    write_json(src_list)
-    # git commit
-    git_commit(msg)
+    # 内容に変更があればjsonファイルを書き換えてgit commit
+    if msg != '':
+        write_json(src_list)
+        git_commit(msg)
     return

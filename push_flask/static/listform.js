@@ -118,13 +118,11 @@ function update_commits_info() {
             if (response['result'] == 'success') {
                 console.log('Record is registered');
             } else {
-                // エラーが発生した場合は対象レコードを通知
-                alert('Failed to register the record: ' + title + ' / ' + artist);
+                alert(response['result']);
             }
         });
     }
     update_commits_info_button.setAttribute('hidden', true);
-    clear_commits_info();
 }
 
 function clear_commits_info() {
