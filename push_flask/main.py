@@ -31,7 +31,7 @@ def listRegister():
         commit_json(title, artist, url, date)
         return {'result': 'success'}
     except:
-        return {'result': 'error'}
+        return {'result': f'error: {title} / {artist}'}
 
 # jsonファイルのパス
 json_path = 'docs/src_list.json'
