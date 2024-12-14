@@ -12,11 +12,27 @@ def register():
     artist = request.form['artist']
     url = request.form['url']
     date = request.form['date']
-    
+    commit_json(title, artist, url, date)
     return redirect(url_for('index'))
 
+@app.route('/listPushForm')
+def listPushForm():
+    return render_template('listform.html')
+
+@app.route('/registerRecord', methods=['POST'])
+def listRegister():
+    title = request.form['title']
+    artist = request.form['artist']
+    url = request.form['url']
+    date = request.form['date']
+    try:
+        commit_json(title, artist, url, date)
+        return {'result': 'success'}
+    except:
+        return {'result': 'error'}
+
 # jsonファイルのパス
-json_path = '../docs/src_list.json'
+json_path = 'docs/src_list.json'
 
 # jsonファイルを読み込む関数
 def read_json():
