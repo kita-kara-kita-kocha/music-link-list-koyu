@@ -47,6 +47,16 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+table {
+    width: 100%;
+    border: 1px solid #ccc; 
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
 input[type="submit"]:hover {
     background-color: #4cae4c;
 }

@@ -2,6 +2,7 @@ var url
 var date
 var time_table_textarea
 var music_table
+var update_commits_info_button
 
 window.onload = function() {
     // 利用するHTML要素を定義
@@ -9,12 +10,16 @@ window.onload = function() {
     date = document.getElementById('date');
     time_table_textarea = document.getElementById('time_table_textarea');
     music_table = document.getElementById('music_table');
+    update_commits_info_button = document.getElementById('update_commits_info');
 
     // set_commits_infoボタンがクリックされたらset_commits_infoを実行
     document.getElementById('set_commits_info').onclick = set_commits_info;
 
     // update_commits_infoボタンがクリックされたらupdate_commits_infoを実行
     document.getElementById('update_commits_info').onclick = update_commits_info;
+
+    // clear_commits_infoボタンがクリックされたらclear_commits_infoを実行
+    document.getElementById('clear_commits_info').onclick = clear_commits_info;
 }
 
 function set_commits_info() {
@@ -79,6 +84,7 @@ function set_commits_info() {
         // music_tableのhidden属性を削除
         music_table.removeAttribute('hidden');
     }
+    update_commits_info_button.removeAttribute('hidden');
 }
 
 // music_tableをレコードごとにコミットする関数
@@ -113,4 +119,17 @@ function update_commits_info() {
             }
         });
     }
+    update_commits_info_button.setAttribute('hidden', true);
+}
+
+function clear_commits_info() {
+    // music_tableのレコードを削除
+    // ※ ヘッダー行は残す
+    while (music_table.rows.length > 1) {
+        music_table.deleteRow(1);
+    }
+    // music_tableのhidden属性を追加
+    music_table.setAttribute('hidden', true);
+    // update_commits_info_buttonのhidden属性を追加
+    update_commits_info_button.setAttribute('hidden', true);
 }
