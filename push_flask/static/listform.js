@@ -85,6 +85,9 @@ function set_commits_info() {
         music_table.removeAttribute('hidden');
     }
     update_commits_info_button.removeAttribute('hidden');
+    url.value = '';
+    date.value = '';
+    time_table_textarea.value = '';
 }
 
 // music_tableをレコードごとにコミットする関数
@@ -115,11 +118,13 @@ function update_commits_info() {
             if (response['result'] == 'success') {
                 console.log('Record is registered');
             } else {
-                console.log(response);
+                // エラーが発生した場合は対象レコードを通知
+                alert('Failed to register the record: ' + title + ' / ' + artist);
             }
         });
     }
     update_commits_info_button.setAttribute('hidden', true);
+    clear_commits_info();
 }
 
 function clear_commits_info() {
