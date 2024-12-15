@@ -80,21 +80,20 @@ function set_commits_info() {
             url_value += '?t=' + time_second + 's';
         }
         // 曲名、アーティスト名、日付、URLをmusic_tableに追加
-        music_table.innerHTML += '<tr><td>' + title + '</td><td>' + artist + '</td><td>' + date_value + '</td><td>' + url_value + '</td></tr>';
-        // music_tableのhidden属性を削除
-        music_table.removeAttribute('hidden');
+        music_table.innerHTML += '<tr><td>' + title + '</td><td>' + artist + '</td><td>' + date_value + '</td><td>' + url_value + '</td><td class="commit_result"></td></tr>';
     }
+    // music_tableのhidden属性を削除
+    music_table.removeAttribute('hidden');
     update_commits_info_button.removeAttribute('hidden');
     url.value = '';
     date.value = '';
     time_table_textarea.value = '';
 }
 
-// music_tableをレコードごとにコミットする関数
+// music_tableをレコードごとに、コミットするためのリクエストにする関数
 function update_commits_info() {
     // music_tableのレコードを取得
     var music_table_rows = music_table.rows;
-    var commit_results = document.getElementsByClassName('commit_result')
     // music_tableのレコードを処理
     for (var i = 1; i < music_table_rows.length; i++) {
         // music_tableのレコードから各要素を取得
@@ -103,25 +102,27 @@ function update_commits_info() {
         var date = music_table_rows[i].cells[2].innerHTML;
         var url = music_table_rows[i].cells[3].innerHTML;
         // 「/registerRecord」にPOSTリクエストを送信
-        fetch('/registerRecord', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                title: title,
-                artist: artist,
-                date: date,
-                url: url
-            })
-        }).then(function(response) {
-            // レスポンスをmusic_table_rows[i]の最後のセルに表示(class="commit_result")
-            response.json().then(function(data) {
-                console.log(data);
-            });
-        });
+        // ※ 順番でrequestしたいので、同期通信で処理する
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/registerRecord', false);
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.send(JSON.stringify({
+            'title': title,
+            'artist': artist,
+            'date': date,
+            'url': url
+        }));
+        // レスポンスを取得
+        var response = xhr.responseText;
+        // レスポンスをmusic_tableに表示
+        music_table_rows[i].cells[4].innerHTML = response;        
     }
-    // update_commits_info_button.setAttribute('hidden', true);
+    // すべてのレコードの処理が完了したらmusic_tableをクリア
+    // clear_commits_info();
+    // music_tableのhidden属性を追加
+    // music_table.setAttribute('hidden', true);
+    // update_commits_info_buttonのhidden属性を追加
+    update_commits_info_button.setAttribute('hidden', true);
 }
 
 function clear_commits_info() {
