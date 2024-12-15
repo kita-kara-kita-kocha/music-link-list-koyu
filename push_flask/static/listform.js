@@ -122,7 +122,7 @@ function update_commits_info() {
     // music_tableのhidden属性を追加
     // music_table.setAttribute('hidden', true);
     // update_commits_info_buttonのhidden属性を追加
-    update_commits_info_button.setAttribute('hidden', true);
+    // update_commits_info_button.setAttribute('hidden', true);
 }
 
 function clear_commits_info() {
