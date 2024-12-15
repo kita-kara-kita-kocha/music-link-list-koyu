@@ -1,18 +1,45 @@
-import streamlit as st
+from push_flask import app
+from flask import render_template, request, redirect, url_for, make_response
 import json
+import html
 
-# 前提情報を定義
-set_date = st.text_input('SET_DATE:')
-set_artist = st.text_input('SET_ARTIST:')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-st.title('タイムテーブル入力フォーム')
+@app.route('/register', methods=['POST'])
+def register():
+    title = request.form['title']
+    artist = request.form['artist']
+    url = request.form['url']
+    date = request.form['date']
+    commit_json(title, artist, url, date)
+    return redirect(url_for('index'))
 
-st.write('''
-フォーム「Title:」「Artist:」「URL:」「DATE:」を入力。コミットして、ソースのjsonファイルを編集する。
-''')
+@app.route('/listPushForm')
+def listPushForm():
+    return render_template('listform.html')
+
+@app.route('/registerRecord', methods=['POST'])
+def listRegister():
+    # Content-Typeがapplication/jsonのリクエスト。jsonを受け取る
+    data = request.get_json()
+    title = html.unescape(data['title'])
+    artist = html.unescape(data['artist'])
+    url = html.unescape(data['url'])
+    date = html.unescape(data['date'])
+    try:
+        commit_json(title, artist, url, date)
+        res = make_response({'result': 'success'})
+        res.headers['Content-Type'] = 'application/json'
+        return res
+    except:
+        res = make_response({'result': 'error'})
+        res.headers['Content-Type'] = 'application/json'
+        return res
 
 # jsonファイルのパス
-json_path = '../docs/src_list.json'
+json_path = 'docs/src_list.json'
 
 # jsonファイルを読み込む関数
 def read_json():
@@ -56,7 +83,7 @@ def check_json_date(url_date_sets, date):
 # git commit関数
 def git_commit(msg):
     import subprocess
-    subprocess.run(['git', 'add', '../docs/src_list.json'])
+    subprocess.run(['git', 'add', './docs/src_list.json'])
     subprocess.run(['git', 'commit', '-m', msg])
     return
 
@@ -77,32 +104,19 @@ def commit_json(title, artist, url, date):
             msg = f'{title} / {artist} : 既存楽曲に新しい日付を追加しました'
         else:
             # あった場合はurlを更新
-            msg = f'{title} / {artist} : 既存楽曲の既存日付のURLを更新しました\n{src_list[i]['url_date_sets'][j]['url']}\n→{url}'
-            src_list[i]['url_date_sets'][j]['url'] = url
+            # 既存のurlと新しいurlが異なる場合のみ更新
+            if src_list[i]['url_date_sets'][j]['url'] != url:
+                msg = f'{title} / {artist} : 既存楽曲の既存日付のURLを更新しました\n{src_list[i]['url_date_sets'][j]['url']}\n→{url}'
+                src_list[i]['url_date_sets'][j]['url'] = url
+            else:
+                msg = ''
     else:
         # なかった場合は新規追加
         url_date_set = {'url': url, 'date': date}
         src_list.append({'title': title, 'artist': artist, 'url_date_sets': [url_date_set]})
         msg = f'{title} / {artist} : 新しい楽曲を追加しました'
-    # jsonファイルを書き換える
-    write_json(src_list)
-    st.write(msg)
-    # git commit
-    git_commit(msg)
+    # 内容に変更があればjsonファイルを書き換えてgit commit
+    if msg != '':
+        write_json(src_list)
+        git_commit(msg)
     return
-
-with st.form(key='my_form', clear_on_submit=True):
-    set_title_and_artist = st.text_input(label = 'SET_TITLE_AND_ARTIST:', value = '')
-    set_title = ''
-    if set_artist == '' and set_title_and_artist != '':
-        set_title = set_title_and_artist.split(' / ')[0]
-        set_artist = set_title_and_artist.split(' / ')[1]
-        set_title_and_artist = ''
-    title = st.text_input('Title:', value=set_title)
-    artist = st.text_input('Artist:', value=set_artist)
-    url = st.text_input('URL:')
-    date = st.text_input('DATE:', value=set_date)
-    submitted = st.form_submit_button(label='更新')
-
-    if submitted:
-        commit_json(title, artist, url, date)
