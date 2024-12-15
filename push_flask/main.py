@@ -83,7 +83,7 @@ def check_json_date(url_date_sets, date):
 # git commit関数
 def git_commit(msg):
     import subprocess
-    subprocess.run(['git', 'add', '../docs/src_list.json'])
+    subprocess.run(['git', 'add', './docs/src_list.json'])
     subprocess.run(['git', 'commit', '-m', msg])
     return
 
