@@ -43,7 +43,7 @@ json_path = 'docs/src_list.json'
 
 # jsonファイルを読み込む関数
 def read_json():
-    with open(json_path, 'r') as f:
+    with open(json_path, 'r', encoding='utf-8') as f:
         src_list = json.load(f)
     return src_list
 
