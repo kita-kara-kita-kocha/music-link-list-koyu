@@ -29,8 +29,8 @@ def listRegister():
     url = html.unescape(data['url'])
     date = html.unescape(data['date'])
     try:
-        commit_json(title, artist, url, date)
-        res = make_response({'result': 'success'})
+        result = commit_json(title, artist, url, date)
+        res = make_response({'result': result})
         res.headers['Content-Type'] = 'application/json'
         return res
     except:
@@ -50,7 +50,7 @@ def read_json():
 # jsonファイルを、引数のjsonファイルに書き換える関数
 def write_json(json_file):
     # そのままだと代替え文字が入るので、ensure_ascii=Falseを指定
-    with open(json_path, 'w') as f:
+    with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(json_file, f, ensure_ascii=False, indent=4)
 
 # titleとartistが一致するものがないか確認
@@ -119,4 +119,6 @@ def commit_json(title, artist, url, date):
     if msg != '':
         write_json(src_list)
         git_commit(msg)
-    return
+        return msg
+    else:
+        return '変更はありませんでした'
