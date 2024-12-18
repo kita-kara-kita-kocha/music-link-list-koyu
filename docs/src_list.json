@@ -674,6 +674,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=N-Qpax6cSSY&t=1668s",
                 "date": "2021-11-26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=3554s",
+                "date": "2023-10-04"
             }
         ]
     },
@@ -782,6 +786,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=54zNL4Y5A08&t=2254s",
                 "date": "2022-04-19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=3925s",
+                "date": "2023-10-04"
             }
         ]
     },
@@ -1044,6 +1052,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=ANjFtHQlROU&t=9168s",
                 "date": "2021-12-11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=6051s",
+                "date": "2023-10-04"
             }
         ]
     },
@@ -1812,6 +1824,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=1447s",
                 "date": "2022-02-25"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=4206s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -2644,6 +2660,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=uQUsqXraQik&t=3743s",
                 "date": "2023-06-03"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=2858s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -2786,6 +2806,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=_oyyIkaCFk0&t=2771s",
                 "date": "2022-04-02"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=4802s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -3050,6 +3074,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=rW-jF8OoKqY&t=4946s",
                 "date": "2023-07-01"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=3487s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -3410,6 +3438,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=2AAPSz9Bsi0&t=4898s",
                 "date": "2022-05-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=4390s",
+                "date": "2023-10-04"
             }
         ]
     },
@@ -4546,6 +4578,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=H9Ht5cpTpFo&t=3536s",
                 "date": "2023-06-07"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=1418s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -5234,6 +5270,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=z9K5AGIN2wI&t=6450s",
                 "date": "2023-01-10"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=326s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -5816,6 +5856,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=uQUsqXraQik&t=374s",
                 "date": "2023-06-03"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=1900s",
+                "date": "2023-10-12"
             }
         ]
     },
@@ -6654,6 +6698,136 @@
             {
                 "url": "https://www.youtube.com/watch?v=YPyTPsrVyWQ&t=1514s",
                 "date": "2023-09-04"
+            }
+        ]
+    },
+    {
+        "title": "ノマド",
+        "artist": "バルーン",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=841s",
+                "date": "2023-10-12"
+            }
+        ]
+    },
+    {
+        "title": "Departures ～あなたにおくるアイの歌～",
+        "artist": "EGOIST",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=2320s",
+                "date": "2023-10-12"
+            }
+        ]
+    },
+    {
+        "title": "すずめ",
+        "artist": "RADWIMPS",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=6080s",
+                "date": "2023-10-12"
+            }
+        ]
+    },
+    {
+        "title": "勇者",
+        "artist": "YOASOBI",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=283s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "ボルテッカー",
+        "artist": "DECO*27",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=814s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "アポカリプスなう",
+        "artist": "ピノキオピー",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=1291s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "唱",
+        "artist": "Ado",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=1600s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "粛聖!! ロリ神レクイエム☆",
+        "artist": "しぐれうい",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=2042s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "ケムニマク",
+        "artist": "とあ",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=2581s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "英雄 運命の詩",
+        "artist": "EGOIST",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=3064s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "カメレオン",
+        "artist": "すりぃ",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=4864s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "神のまにまに",
+        "artist": "れるりり",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=6472s",
+                "date": "2023-10-04"
+            }
+        ]
+    },
+    {
+        "title": "ray",
+        "artist": "BUMP OF CHICKEN",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=6974s",
+                "date": "2023-10-04"
             }
         ]
     }
