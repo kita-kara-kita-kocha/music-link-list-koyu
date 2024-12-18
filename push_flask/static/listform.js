@@ -114,6 +114,8 @@ function update_commits_info() {
         }));
         // レスポンスを取得
         var response = xhr.responseText;
+        // response["result"]をデコード
+        response = JSON.parse(response)["result"];
         // レスポンスをmusic_tableに表示
         music_table_rows[i].cells[4].innerHTML = response;        
     }
