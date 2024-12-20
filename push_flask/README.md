@@ -14,11 +14,9 @@ flask run
 ```
  - 2回目以降
 ``` sh
-cd push_flask
-source flask/bin/activate
+source push_flask/flask/bin/activate
 export FLASK_APP=push_flask
 export FLASK_ENV=development
-cd ../
 flask run
 ```
 
