@@ -902,6 +902,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=mwvvKAGTr6E&t=4446s",
                 "date": "2023-06-09"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=1003s",
+                "date": "2024-02-07"
             }
         ]
     },
@@ -1046,6 +1050,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=23274s",
                 "date": "2022-12-31"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=2156s",
+                "date": "2024-02-07"
             }
         ]
     },
@@ -1956,6 +1964,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=5573s",
                 "date": "2022-02-25"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uGK-uLIjcqw&t=938s",
+                "date": "2024-02-25"
             }
         ]
     },
@@ -6376,6 +6388,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=CNQ6qN_PO58&t=1294s",
                 "date": "2023-08-19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=uGK-uLIjcqw&t=58s",
+                "date": "2024-02-25"
             }
         ]
     },
@@ -6836,6 +6852,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=aoWauUaSY-0&t=2874s",
                 "date": "2023-09-12"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=3447s",
+                "date": "2024-02-07"
             }
         ]
     },
@@ -7342,6 +7362,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=RCD1aVmTU38&t=4237s",
                 "date": "2023-12-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=1624s",
+                "date": "2024-02-07"
             }
         ]
     },
@@ -7758,6 +7782,66 @@
             {
                 "url": "https://www.youtube.com/watch?v=Y_IV2i1eXlQ&t=5138s",
                 "date": "2024-01-25"
+            }
+        ]
+    },
+    {
+        "title": "混沌ブギ",
+        "artist": "jon-YAKITORY",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=475s",
+                "date": "2024-02-07"
+            }
+        ]
+    },
+    {
+        "title": "ルカルカ★ナイトフィーバー",
+        "artist": "samfree",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=2909s",
+                "date": "2024-02-07"
+            }
+        ]
+    },
+    {
+        "title": "いーあるふぁんくらぶ",
+        "artist": "みきとP",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=4039s",
+                "date": "2024-02-07"
+            }
+        ]
+    },
+    {
+        "title": "病み垢ステロイド",
+        "artist": "かいりきベア",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=5057s",
+                "date": "2024-02-07"
+            }
+        ]
+    },
+    {
+        "title": "カヌレ",
+        "artist": "CHiCO with HoneyWorks",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=uGK-uLIjcqw&t=610s",
+                "date": "2024-02-25"
+            }
+        ]
+    },
+    {
+        "title": "JUVENILE",
+        "artist": "じん",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=uGK-uLIjcqw&t=1323s",
+                "date": "2024-02-25"
             }
         ]
     }
