@@ -8846,5 +8846,15 @@
                 "date": "2024-07-29"
             }
         ]
+    },
+    {
+        "title": "対象a",
+        "artist": "anNina",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=PcXvKC4j86U&t=327s",
+                "date": "2024-08-03"
+            }
+        ]
     }
 ]
