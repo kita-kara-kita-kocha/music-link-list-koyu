@@ -8752,16 +8752,6 @@
         ]
     },
     {
-        "title": "世界一可愛い私",
-        "artist": "初星学園",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=WOiUDR5rXdQ&t=4298s",
-                "date": "2024-06-02"
-            }
-        ]
-    },
-    {
         "title": "嘘じゃない",
         "artist": "ずっと真夜中でいいのに。",
         "url_date_sets": [
@@ -8791,7 +8781,7 @@
     },
     {
         "title": "光景",
-        "artist": "篠澤広(初星学園)",
+        "artist": "初星学園 篠澤広(川村玲奈)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=GcvSVXeM5JU&t=2243s",
@@ -8875,7 +8865,7 @@
     },
     {
         "title": "Fighting My Way",
-        "artist": "花海咲季(初星学園)",
+        "artist": "初星学園 花海咲季(長月あおい)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=1114s",
@@ -8885,7 +8875,7 @@
     },
     {
         "title": "Luna say maybe",
-        "artist": "月村手毬(初星学園)",
+        "artist": "初星学園 月村手毬(小鹿なお)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=1614s",
@@ -8899,8 +8889,12 @@
     },
     {
         "title": "世界一可愛い私",
-        "artist": "藤田ことね(初星学園)",
+        "artist": "初星学園 藤田ことね(飯田ヒカル)",
         "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=WOiUDR5rXdQ&t=4298s",
+                "date": "2024-06-02"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=2170s",
                 "date": "2024-06-24"
@@ -8909,7 +8903,7 @@
     },
     {
         "title": "clumsy trick",
-        "artist": "姫崎莉波(初星学園)",
+        "artist": "初星学園 姫崎莉波(薄井友里)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=2755s",
@@ -8919,7 +8913,7 @@
     },
     {
         "title": "Tame-Lie-One-Step",
-        "artist": "紫雲清夏 (初星学園)",
+        "artist": "初星学園 紫雲清夏(湊みや)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=3276s",
@@ -8929,7 +8923,7 @@
     },
     {
         "title": "白線",
-        "artist": "葛城リーリヤ(初星学園)",
+        "artist": "初星学園 葛城リーリヤ(花岩香奈)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=4319s",
@@ -8943,7 +8937,7 @@
     },
     {
         "title": "Wonder Scale",
-        "artist": "倉本千奈(初星学園)",
+        "artist": "初星学園 倉本千奈(伊藤舞音)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=4946s",
@@ -8953,7 +8947,7 @@
     },
     {
         "title": "Fluorite",
-        "artist": "有村麻央 (初星学園)",
+        "artist": "初星学園 有村麻央(七瀬つむぎ)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=5466s",
@@ -8963,7 +8957,7 @@
     },
     {
         "title": "The Rolling Riceball",
-        "artist": "花海佑芽(初星学園)",
+        "artist": "初星学園 花海佑芽 (松田彩音)",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y2eKyLb6SQE&t=5957s",
