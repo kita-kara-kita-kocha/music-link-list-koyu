@@ -3,6 +3,7 @@
 import subprocess
 import sys
 import json
+import codecs
 
 # 実行コマンド
 # python link_chk.py
@@ -68,7 +69,11 @@ def get_playlist_links():
         line_dict = json.loads(line)
         if line_dict["live_status"] is None:
             continue
-        links.append(line_dict["url"])
+        title = line_dict["title"]
+        # titleの文字列から、Unicodeエスケープ文字部分をデコード
+        title = codecs.decode(title.encode('unicode-escape').decode('utf-8'), 'unicode-escape')
+
+        links.append(f'{line_dict["url"]} {title}')
         # links.append({"title:": link["title"], "url": link["url"]})
     return links
 
