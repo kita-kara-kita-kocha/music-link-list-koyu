@@ -3,6 +3,7 @@
 import subprocess
 import sys
 import json
+import codecs
 
 # 実行コマンド
 # python link_chk.py
@@ -65,8 +66,14 @@ def get_playlist_links():
     for line in result.stdout.split("\n"):
         if len(line) == 0:
             continue
-        link = json.loads(line)
-        links.append(link["url"])
+        line_dict = json.loads(line)
+        if line_dict["live_status"] is None:
+            continue
+        title = line_dict["title"]
+        # titleの文字列から、Unicodeエスケープ文字部分をデコード
+        title = codecs.decode(title.encode('unicode-escape').decode('utf-8'), 'unicode-escape')
+
+        links.append({"url": line_dict["url"], "title": title})
         # links.append({"title:": link["title"], "url": link["url"]})
     return links
 
@@ -94,8 +101,8 @@ def main():
         sys.exit()
     # リンクのチェック
     for link in links:
-        if not check_link(link):
-            print(link)
+        if not check_link(link["url"]):
+            print(f'{link["url"]} {link["title"]}')
 
 if __name__ == "__main__":
     main()
