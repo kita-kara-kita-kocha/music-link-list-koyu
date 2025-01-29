@@ -65,8 +65,10 @@ def get_playlist_links():
     for line in result.stdout.split("\n"):
         if len(line) == 0:
             continue
-        link = json.loads(line)
-        links.append(link["url"])
+        line_dict = json.loads(line)
+        if line_dict["live_status"] is None:
+            continue
+        links.append(line_dict["url"])
         # links.append({"title:": link["title"], "url": link["url"]})
     return links
 
