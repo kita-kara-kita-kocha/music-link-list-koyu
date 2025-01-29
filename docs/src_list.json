@@ -334,16 +334,20 @@
                 "date": "2022-07-22"
             },
             {
+                "url": "https://www.youtube.com/watch?v=uN3Xjs1bsvw&t=6256s",
+                "date": "2022-09-09"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=27868s",
                 "date": "2022-12-31"
             },
             {
-                "url": "https://www.youtube.com/watch?v=27rtQ6KG-jg&t=4400s",
-                "date": "2024-11-28"
+                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=5365s",
+                "date": "2024-10-21"
             },
             {
-                "url": "https://www.youtube.com/watch?v=uN3Xjs1bsvw&t=6256s",
-                "date": "2022-09-09"
+                "url": "https://www.youtube.com/watch?v=27rtQ6KG-jg&t=4400s",
+                "date": "2024-11-28"
             }
         ]
     },
@@ -10109,16 +10113,6 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=3986s",
-                "date": "2024-10-21"
-            }
-        ]
-    },
-    {
-        "title": "ダイアモンドクレバス",
-        "artist": "May'n",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=5365s",
                 "date": "2024-10-21"
             }
         ]
