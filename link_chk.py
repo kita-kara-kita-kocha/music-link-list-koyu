@@ -73,7 +73,7 @@ def get_playlist_links():
         # titleの文字列から、Unicodeエスケープ文字部分をデコード
         title = codecs.decode(title.encode('unicode-escape').decode('utf-8'), 'unicode-escape')
 
-        links.append(f'{line_dict["url"]} {title}')
+        links.append({"url": line_dict["url"], "title": title})
         # links.append({"title:": link["title"], "url": link["url"]})
     return links
 
@@ -101,8 +101,8 @@ def main():
         sys.exit()
     # リンクのチェック
     for link in links:
-        if not check_link(link):
-            print(link)
+        if not check_link(link["url"]):
+            print(f'{link["url"]} {link["title"]}')
 
 if __name__ == "__main__":
     main()
