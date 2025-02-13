@@ -1964,7 +1964,7 @@
         ]
     },
     {
-        "title": "Dear Mr「F」",
+        "title": "Dear Mr 「F」",
         "artist": "ずっと真夜中でいいのに。",
         "url_date_sets": [
             {
@@ -1974,6 +1974,18 @@
             {
                 "url": "https://www.youtube.com/watch?v=q0XUa-VCf1Y&t=4946s",
                 "date": "2022-03-26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=6nAJuf31FvE&t=1496s",
+                "date": "2022-11-06"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=15931s",
+                "date": "2022-12-31"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2-vMRXggxZA&t=6669s",
+                "date": "2023-03-20"
             },
             {
                 "url": "https://www.youtube.com/watch?v=uQUsqXraQik&t=6371s",
@@ -1986,10 +1998,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=5Tgnjgzxa18&t=458s",
                 "date": "2024-10-26"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2-vMRXggxZA&t=6669s",
-                "date": "2023-03-20"
             }
         ]
     },
@@ -5866,20 +5874,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=_3VWkD3XUhA&t=1200s",
                 "date": "2024-11-11"
-            }
-        ]
-    },
-    {
-        "title": "Dear Mr 「F」",
-        "artist": "ずっと真夜中でいいのに。",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=6nAJuf31FvE&t=1496s",
-                "date": "2022-11-06"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=15931s",
-                "date": "2022-12-31"
             }
         ]
     },
