@@ -430,6 +430,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=RO0iAnIKZQo&t=104s",
                 "date": "2021-09-02"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AgkK8RKZ4FA&t=746s",
+                "date": "2024-09-19"
             }
         ]
     },
@@ -624,16 +628,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=5102s",
                 "date": "2022-02-25"
-            }
-        ]
-    },
-    {
-        "title": "secret base 〜君がくれたもの〜",
-        "artist": "ZONE",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=3246s",
-                "date": "2021-09-04"
             }
         ]
     },
@@ -1486,7 +1480,7 @@
         ]
     },
     {
-        "title": "「ひとりで生きられそう」って それってねえ、褒めているの？",
+        "title": "「ひとりで生きられそう」って それってねえ、褒めているの?",
         "artist": "Juice=Juice",
         "url_date_sets": [
             {
@@ -1496,6 +1490,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=lmzFNTy8EAI&t=5642s",
                 "date": "2022-01-07"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=xF0E0-SUgP0&t=684s",
+                "date": "2023-07-17"
             }
         ]
     },
@@ -1525,16 +1523,6 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=8515s",
-                "date": "2021-12-29"
-            }
-        ]
-    },
-    {
-        "title": "Danceでバコーン",
-        "artist": "℃-ute",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=8984s",
                 "date": "2021-12-29"
             }
         ]
@@ -2048,16 +2036,6 @@
         ]
     },
     {
-        "title": "すきっ！",
-        "artist": "超ときめき宣伝部",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=kiHTAjNTXBU&t=306s",
-                "date": "2022-02-13"
-            }
-        ]
-    },
-    {
         "title": "ヒアルロンリーガール",
         "artist": "ZOC",
         "url_date_sets": [
@@ -2206,20 +2184,6 @@
         ]
     },
     {
-        "title": "かくしん的☆めたまるふぉ~ぜっ!",
-        "artist": "土間うまる(田中あいみ)",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=710s",
-                "date": "2022-02-25"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=346s",
-                "date": "2021-09-04"
-            }
-        ]
-    },
-    {
         "title": "ン・パカ・マーチ",
         "artist": "徳光由香",
         "url_date_sets": [
@@ -2240,6 +2204,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=XtIHdKhube4&t=4206s",
                 "date": "2023-10-12"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RCD1aVmTU38&t=1245s",
+                "date": "2023-12-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Z6MICaE1wbI&t=4206s",
+                "date": "2022-09-23"
             }
         ]
     },
@@ -2558,6 +2530,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=1j_thtSwZCU&t=1209s",
                 "date": "2025-01-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=AgkK8RKZ4FA&t=2952s",
+                "date": "2024-09-19"
             }
         ]
     },
@@ -3010,16 +2986,6 @@
         ]
     },
     {
-        "title": "さよなら、春泥棒さん",
-        "artist": "メル",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=uWHUu70l30I&t=2673s",
-                "date": "2022-03-19"
-            }
-        ]
-    },
-    {
         "title": "梅",
         "artist": "私立恵比寿中学",
         "url_date_sets": [
@@ -3284,6 +3250,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=lQx6cguzKMI&t=1518s",
                 "date": "2022-04-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2AAPSz9Bsi0&t=5805s",
+                "date": "2022-05-08"
             },
             {
                 "url": "https://www.youtube.com/watch?v=kP5aZAx7c0U&t=6483s",
@@ -3594,20 +3564,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=uZjRMI0ksaQ&t=968s",
                 "date": "2023-06-02"
-            }
-        ]
-    },
-    {
-        "title": "Bad Apple!!",
-        "artist": "Alstroemeria Records",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=54zNL4Y5A08&t=1831s",
-                "date": "2022-04-19"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=2wVPl64RT8g&t=3197s",
-                "date": "2024-07-05"
             }
         ]
     },
@@ -4218,6 +4174,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=1sBYfuaFFBo&t=1829s",
                 "date": "2023-04-02"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=NA5UUdFXVNc&t=444s",
+                "date": "2022-09-30"
             }
         ]
     },
@@ -4270,16 +4230,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=YwdFfYaOdJU&t=4390s",
                 "date": "2023-10-04"
-            }
-        ]
-    },
-    {
-        "title": "Ham ",
-        "artist": "ずっと真夜中でいいのに。",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=2AAPSz9Bsi0&t=5805s",
-                "date": "2022-05-08"
             }
         ]
     },
@@ -4378,16 +4328,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z6MICaE1wbI&t=3545s",
                 "date": "2022-09-23"
-            }
-        ]
-    },
-    {
-        "title": "すきっ! ",
-        "artist": "ときめき・宣伝部",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=fWSW76rrCL8&t=1983s",
-                "date": "2022-06-13"
             }
         ]
     },
@@ -4746,6 +4686,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=_3VWkD3XUhA&t=2905s",
                 "date": "2024-11-11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=faWALEtSrAY&t=2559s",
+                "date": "2023-05-21"
             }
         ]
     },
@@ -5344,6 +5288,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=qZTHrHdVNg4&t=736s",
                 "date": "2023-07-09"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=5284s",
+                "date": "2022-10-05"
             }
         ]
     },
@@ -5353,16 +5301,6 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=y6cVnxfCwDc&t=4172s",
-                "date": "2022-08-28"
-            }
-        ]
-    },
-    {
-        "title": "いつかオトナになれるといいね。",
-        "artist": "つゆ",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=y6cVnxfCwDc&t=4575s",
                 "date": "2022-08-28"
             }
         ]
@@ -5686,6 +5624,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=2994s",
                 "date": "2022-10-05"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fWSW76rrCL8&t=1983s",
+                "date": "2022-06-13"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=kiHTAjNTXBU&t=306s",
+                "date": "2022-02-13"
             }
         ]
     },
@@ -5709,16 +5655,6 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=4807s",
-                "date": "2022-10-05"
-            }
-        ]
-    },
-    {
-        "title": "おねがいダーリン",
-        "artist": "OИE",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=kD29KhKKA9g&t=5284s",
                 "date": "2022-10-05"
             }
         ]
@@ -6724,6 +6660,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=Mc1TgVF6vFo&t=2349s",
                 "date": "2023-03-09"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=36uriFfx7kQ&t=6187s",
+                "date": "2022-12-08"
             }
         ]
     },
@@ -7542,16 +7482,6 @@
         ]
     },
     {
-        "title": "「ひとりで生きられそう」って それってねえ、褒めているの?",
-        "artist": "Juice=Juice",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=xF0E0-SUgP0&t=684s",
-                "date": "2023-07-17"
-            }
-        ]
-    },
-    {
         "title": "限りあるＭoment",
         "artist": "アンジュルム",
         "url_date_sets": [
@@ -7568,16 +7498,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=xF0E0-SUgP0&t=1555s",
                 "date": "2023-07-19"
-            }
-        ]
-    },
-    {
-        "title": "アナタボシ",
-        "artist": "MillkyWay",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=tZO0JYc2iFc&t=801s",
-                "date": "2023-07-30"
             }
         ]
     },
@@ -7676,6 +7596,14 @@
             {
                 "url": "https://www.youtube.com/watch?v=CNQ6qN_PO58&t=154s",
                 "date": "2023-08-19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=oNJO1TpTqX8&t=710s",
+                "date": "2022-02-25"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=346s",
+                "date": "2021-09-04"
             }
         ]
     },
@@ -8074,7 +8002,7 @@
         ]
     },
     {
-        "title": "あの夏が飽和する。",
+        "title": "あの夏が飽和する",
         "artist": "カンザキイオリ",
         "url_date_sets": [
             {
@@ -8088,6 +8016,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=4PLeWfaRY6E&t=3869s",
                 "date": "2024-09-01"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=MJZJD1C3uws&t=2533s",
+                "date": "2024-06-27"
             }
         ]
     },
@@ -8226,6 +8158,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=daKb_QiSPYg&t=2710s",
                 "date": "2023-08-06"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=5VfJEMD-MxY&t=1208s",
+                "date": "2021-08-22"
             }
         ]
     },
@@ -8331,6 +8267,10 @@
         "title": "Danceでバコーン!",
         "artist": "℃-ute",
         "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=J5fOBbwJ-sY&t=8984s",
+                "date": "2021-12-29"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=aoWauUaSY-0&t=3365s",
                 "date": "2023-09-12"
@@ -8832,20 +8772,6 @@
         ]
     },
     {
-        "title": "Sincerely",
-        "artist": "唐沢美帆",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=RCD1aVmTU38&t=1245s",
-                "date": "2023-12-08"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=Z6MICaE1wbI&t=4206s",
-                "date": "2022-09-23"
-            }
-        ]
-    },
-    {
         "title": "人マニア",
         "artist": "原口沙輔",
         "url_date_sets": [
@@ -8914,16 +8840,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=KihglGxjsfw&t=1624s",
                 "date": "2024-02-07"
-            }
-        ]
-    },
-    {
-        "title": "それがあなたの幸せとしても",
-        "artist": "Heavenz",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=RCD1aVmTU38&t=4700s",
-                "date": "2023-12-08"
             }
         ]
     },
@@ -9146,6 +9062,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=vDHNnW1nk2E&t=4320s",
                 "date": "2024-01-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=RCD1aVmTU38&t=4700s",
+                "date": "2023-12-08"
             }
         ]
     },
@@ -9298,6 +9218,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=tknmWy3qt4U&t=502s",
                 "date": "2024-01-15"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=2286s",
+                "date": "2024-11-25"
             }
         ]
     },
@@ -9892,6 +9816,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=IOvRHJD1OiA&t=1128s",
                 "date": "2024-07-07"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=KQXbIvkjUvo&t=2238s",
+                "date": "2024-09-20"
             }
         ]
     },
@@ -9992,19 +9920,13 @@
         ]
     },
     {
-        "title": "あの夏が飽和する",
-        "artist": "カンザキイオリ",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=MJZJD1C3uws&t=2533s",
-                "date": "2024-06-27"
-            }
-        ]
-    },
-    {
         "title": "secret base ～君がくれたもの～",
         "artist": "ZONE",
         "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=fPF0AChLl-8&t=3246s",
+                "date": "2021-09-04"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=MJZJD1C3uws&t=4677s",
                 "date": "2024-06-27"
@@ -10172,6 +10094,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=VQOn3NcnY1c&t=1413s",
                 "date": "2024-07-20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=3695s",
+                "date": "2024-11-25"
             }
         ]
     },
@@ -10470,16 +10396,6 @@
         ]
     },
     {
-        "title": "もしも...",
-        "artist": "モベキマス",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=AgkK8RKZ4FA&t=746s",
-                "date": "2024-09-19"
-            }
-        ]
-    },
-    {
         "title": "大人の事情",
         "artist": "NEXT YOU",
         "url_date_sets": [
@@ -10510,16 +10426,6 @@
         ]
     },
     {
-        "title": "What is Love?",
-        "artist": "モーニング娘。",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=AgkK8RKZ4FA&t=2952s",
-                "date": "2024-09-19"
-            }
-        ]
-    },
-    {
         "title": "少年時代",
         "artist": "井上陽水",
         "url_date_sets": [
@@ -10530,16 +10436,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=IcY1uPmcExc&t=1511s",
                 "date": "2024-11-01"
-            }
-        ]
-    },
-    {
-        "title": "Luna say maybe",
-        "artist": "月村手毬",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=KQXbIvkjUvo&t=2238s",
-                "date": "2024-09-20"
             }
         ]
     },
@@ -10690,16 +10586,6 @@
         ]
     },
     {
-        "title": "ばかじゃないのに",
-        "artist": "ずっと真夜中でいいのに",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=L0d2wPQEu20&t=2175s",
-                "date": "2024-10-04"
-            }
-        ]
-    },
-    {
         "title": "曇天",
         "artist": "DOES",
         "url_date_sets": [
@@ -10816,6 +10702,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=JgyFJVPkpLg&t=1230s",
                 "date": "2024-10-11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=tZO0JYc2iFc&t=801s",
+                "date": "2023-07-30"
             }
         ]
     },
@@ -10910,16 +10800,6 @@
         ]
     },
     {
-        "title": "TAIDADA",
-        "artist": "ずっと真夜中で良いのに。",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=2772s",
-                "date": "2024-10-21"
-            }
-        ]
-    },
-    {
         "title": "Catch the Moment",
         "artist": "LiSA",
         "url_date_sets": [
@@ -10968,6 +10848,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=kkRJ4doxMbM&t=5423s",
                 "date": "2024-10-29"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=2772s",
+                "date": "2024-10-21"
             }
         ]
     },
@@ -11007,8 +10891,16 @@
     },
     {
         "title": "Bad Apple!!",
-        "artist": "ZUNsoft",
+        "artist": "ZUN",
         "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=54zNL4Y5A08&t=1831s",
+                "date": "2022-04-19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=2wVPl64RT8g&t=3197s",
+                "date": "2024-07-05"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=cZACC5muVws&t=3530s",
                 "date": "2024-10-17"
@@ -11214,31 +11106,11 @@
         ]
     },
     {
-        "title": "#超絶かわいい",
-        "artist": "mona(夏川椎菜)",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=2286s",
-                "date": "2024-11-25"
-            }
-        ]
-    },
-    {
         "title": "糸",
         "artist": "中島みゆき",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=2936s",
-                "date": "2024-11-25"
-            }
-        ]
-    },
-    {
-        "title": "のだ",
-        "artist": "大漠波心",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=3695s",
                 "date": "2024-11-25"
             }
         ]
@@ -11678,16 +11550,6 @@
         ]
     },
     {
-        "title": "イデア",
-        "artist": "天月",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=5VfJEMD-MxY&t=1208s",
-                "date": "2021-08-22"
-            }
-        ]
-    },
-    {
         "title": "カワキヲアメク",
         "artist": "美波",
         "url_date_sets": [
@@ -11768,16 +11630,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=Z6MICaE1wbI&t=3902s",
                 "date": "2022-09-23"
-            }
-        ]
-    },
-    {
-        "title": "INTERNET OVERDOSE",
-        "artist": "NEEDY GIRL OVERDOSE(Aiobahn,KOTOKO)",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=NA5UUdFXVNc&t=444s",
-                "date": "2022-09-30"
             }
         ]
     },
@@ -11942,16 +11794,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=36uriFfx7kQ&t=5701s",
                 "date": "2022-12-08"
-            }
-        ]
-    },
-    {
-        "title": "こちら、幸福安心委員会です。",
-        "artist": "UtataP",
-        "url_date_sets": [
+            },
             {
-                "url": "https://www.youtube.com/watch?v=36uriFfx7kQ&t=6187s",
-                "date": "2022-12-08"
+                "url": "https://www.youtube.com/watch?v=uWHUu70l30I&t=2673s",
+                "date": "2022-03-19"
             }
         ]
     },
@@ -12204,22 +12050,16 @@
         ]
     },
     {
-        "title": "うっせえわ",
-        "artist": "Ado",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=faWALEtSrAY&t=2559s",
-                "date": "2023-05-21"
-            }
-        ]
-    },
-    {
         "title": "いつかオトナになれるといいね。",
         "artist": "ツユ",
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=uZjRMI0ksaQ&t=1601s",
                 "date": "2023-06-02"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=y6cVnxfCwDc&t=4575s",
+                "date": "2022-08-28"
             }
         ]
     },
@@ -12240,6 +12080,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=OGyyUb5WgH4&t=4449s",
                 "date": "2023-06-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=L0d2wPQEu20&t=2175s",
+                "date": "2024-10-04"
             }
         ]
     },
