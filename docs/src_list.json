@@ -560,6 +560,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=lmzFNTy8EAI&t=3038s",
                 "date": "2022-01-07"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=1884s",
+                "date": "2024-10-21"
             }
         ]
     },
@@ -10770,26 +10774,6 @@
         ]
     },
     {
-        "title": "オトノケ",
-        "artist": "Creepy Nats",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=868s",
-                "date": "2024-10-21"
-            }
-        ]
-    },
-    {
-        "title": "オリオンなぞる",
-        "artist": "UNISON SQUARE GARDEN",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=1884s",
-                "date": "2024-10-21"
-            }
-        ]
-    },
-    {
         "title": "ヴィーナスとジーザス",
         "artist": "やくしまるえつこ",
         "url_date_sets": [
@@ -10834,6 +10818,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=cZACC5muVws&t=828s",
                 "date": "2024-10-17"
+            }
+            {
+                "url": "https://www.youtube.com/watch?v=_lGwIVHXD84&t=868s",
+                "date": "2024-10-21"
             }
         ]
     },
