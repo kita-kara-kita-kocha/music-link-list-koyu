@@ -1,3 +1,4 @@
+import re
 from push_flask import app
 from flask import render_template, request, redirect, url_for, make_response
 import json
@@ -54,17 +55,28 @@ def write_json(json_file):
         json.dump(json_file, f, ensure_ascii=False, indent=4)
 
 # titleとartistが一致するものがないか確認
-def check_json_music(src_list, title, artist):
+def check_json_music(src_list, title:str, artist:str):
     '''
     処理:titleとartistが一致するものがないか確認
     引数:title, artist
     戻り値:一致するものがあればそのindexを返す。なければ0を返す
     '''
-    for i in range(len(src_list)):
+    for index_number in range(len(src_list)):
+        src_title:str  = src_list[index_number]['title']
+        src_artist:str = src_list[index_number]['artist']
+        # 記号を無視して比較
+        src_title      = re.sub(r'\W', '', src_title)
+        src_artist     = re.sub(r'\W', '', src_artist)
+        title          = re.sub(r'\W', '', title)
+        artist         = re.sub(r'\W', '', artist)
         # 大文字小文字を無視して比較
-        # スペースを無視して比較
-        if src_list[i]['title'].replace(' ', '').lower() == title.replace(' ', '').lower() and src_list[i]['artist'].replace(' ', '').lower() == artist.replace(' ', '').lower():
-            return i
+        src_title      = src_title.lower()
+        src_artist     = src_artist.lower()
+        title          = title.lower()
+        artist         = artist.lower()
+
+        if src_title == title and src_artist == artist:        
+            return index_number
     return -1
 
 # url_date_setsのlistから、dateと一致するdateがあるか確認
