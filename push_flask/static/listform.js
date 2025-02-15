@@ -20,6 +20,9 @@ window.onload = function() {
 
     // clear_commits_infoボタンがクリックされたらclear_commits_infoを実行
     document.getElementById('clear_commits_info').onclick = clear_commits_info;
+
+    // input type="url" id="url" の値が変更されたら、getUploadDateを実行
+    document.getElementById('url').onchange = getUploadDate;
 }
 
 function set_commits_info() {
@@ -137,4 +140,26 @@ function clear_commits_info() {
     music_table.setAttribute('hidden', true);
     // update_commits_info_buttonのhidden属性を追加
     update_commits_info_button.setAttribute('hidden', true);
+}
+
+// URLの有効性をチェックし、日付を取得する関数
+function getUploadDate() {
+    // 動作テストにコンソール表示
+    console.log('getUploadDate');
+    // https://www.youtube.com/watch?v={11文字} の形式か確認
+    if (url.value.match(/https:\/\/www.youtube.com\/watch\?v=.+/)) {
+        // 正しい形式なら、/getUploadDateにPOSTリクエストを送信
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/getUploadDate', false);
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.send(JSON.stringify({
+            'url': url.value
+        }));
+        // レスポンスを取得
+        var response = xhr.responseText;
+        // response["result"]をデコード
+        response = JSON.parse(response)["result"];
+        // dateテキストボックスにレスポンスを表示
+        date.value = response;
+    }
 }

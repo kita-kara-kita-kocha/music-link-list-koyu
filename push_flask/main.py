@@ -1,4 +1,5 @@
 import re
+import subprocess
 from push_flask import app
 from flask import render_template, request, redirect, url_for, make_response
 import json
@@ -31,6 +32,21 @@ def listRegister():
     date = html.unescape(data['date'])
     try:
         result = commit_json(title, artist, url, date)
+        res = make_response({'result': result})
+        res.headers['Content-Type'] = 'application/json'
+        return res
+    except:
+        res = make_response({'result': 'error'})
+        res.headers['Content-Type'] = 'application/json'
+        return res
+
+@app.route('/getUploadDate', methods=['POST'])
+def getUploadDate():
+    # Content-Typeがapplication/jsonのリクエスト。jsonを受け取る
+    data = request.get_json()
+    url = html.unescape(data['url'])
+    try:
+        result = get_video_info(video_url=url)
         res = make_response({'result': result})
         res.headers['Content-Type'] = 'application/json'
         return res
@@ -134,3 +150,19 @@ def commit_json(title, artist, url, date):
         return msg
     else:
         return '変更はありませんでした'
+
+def get_video_info(video_url):
+    """
+    プレイリストの動画リンクを取得する関数
+
+    Returns:
+        list: プレイリストの動画リンクのリスト
+    """
+    # yt-dlpのパス
+    yt_dlp_path = "yt-dlp"
+    # yt-dlpの実行
+    cmd = [yt_dlp_path, "-j", video_url]
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    upload_date = json.loads(result.stdout)["upload_date"]
+    upload_date = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}"
+    return upload_date
