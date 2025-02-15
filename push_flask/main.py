@@ -163,6 +163,6 @@ def get_video_info(video_url):
     # yt-dlpの実行
     cmd = [yt_dlp_path, "-j", video_url]
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    upload_date = json.loads(result.stdout)["upload_date"]
+    upload_date = json.loads(result.stdout)["release_date"]
     upload_date = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}"
     return upload_date
