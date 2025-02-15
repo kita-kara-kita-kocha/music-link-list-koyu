@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('ul.music-list element not found');
                 return;
             }
+            // dataの数を<p id="music_count">に表示
+            document.getElementById('music_count').textContent = `現在の楽曲リスト数:${data.length}`;
             data.forEach(item => {
                 const musicList_li = document.createElement('li');
                 musicList_li.setAttribute('ontouchstart', '');
