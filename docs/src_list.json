@@ -4338,6 +4338,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=fWSW76rrCL8&t=4839s",
                 "date": "2022-06-13"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=sZo2KEVEp4M&t=1613s",
+                "date": "2022-05-04"
             }
         ]
     },
@@ -11467,16 +11471,6 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=sZo2KEVEp4M&t=761s",
-                "date": "2022-05-04"
-            }
-        ]
-    },
-    {
-        "title": "ヴィータ",
-        "artist": "Gero",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=sZo2KEVEp4M&t=1613s",
                 "date": "2022-05-04"
             }
         ]
