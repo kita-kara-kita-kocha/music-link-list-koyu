@@ -8,3 +8,6 @@
 - [x] htmlにjs追加してフォーム作成
 - [x] 追加情報の投稿をPRへ流す機能を付ける(js)
 - [ ] 最新の配信（歌枠）までの情報を入力
+
+コラボ歌枠発見
+https://www.youtube.com/watch?v=jiQVSs_Whd8
