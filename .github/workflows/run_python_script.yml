@@ -43,7 +43,7 @@ jobs:
         git add .
         git commit -m "Update generated files"
 
-    - name: Create Pull Request
+    - name: Create Pull Request & Merge
       uses: peter-evans/create-pull-request@v5
       with:
         token: ${{ secrets.PULL_REQUEST_TOKEN }}
@@ -51,20 +51,7 @@ jobs:
         branch: update-generated-files
         title: "Update generated files"
         body: "This PR updates the generated files."
-
-    - name: Merge Pull Request
-      if: steps.create_pr.outputs.pull-request-url != ''
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const pr = await github.pulls.get({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: context.payload.pull_request.number,
-          });
-          await github.pulls.merge({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: pr.data.number,
-            merge_method: 'merge',
-          });
+        labels: "auto-merge"
+        base: main
+        merge: true
+        delete-branch: true
