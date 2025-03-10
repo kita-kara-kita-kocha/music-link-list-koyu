@@ -2,6 +2,20 @@
     "data": [
         {
             "edit_history_tweet_ids": [
+                "1899239664386806103"
+            ],
+            "id": "1899239664386806103",
+            "text": "SNSうまれSNS育ち星降こゆです。\n\nXとブルースカイが不調になった瞬間\nYouTubeコミュニティをSNSとする赤子です。 https://t.co/39dmWME58B"
+        },
+        {
+            "edit_history_tweet_ids": [
+                "1899237124693787127"
+            ],
+            "id": "1899237124693787127",
+            "text": "ちな昨日の夜、Switch配信久々だしキャプボ設定しとくか~と思ったら全然繋がらなくて\n❓ってよく見たら\n\n新PCだからソフトからインストールしなきゃでした。\n\nほまーーーーーに焦った！昨日のうちに調べた星降大天才かもです。"
+        },
+        {
+            "edit_history_tweet_ids": [
                 "1899236784846041419"
             ],
             "id": "1899236784846041419",
@@ -150,32 +164,12 @@
             ],
             "id": "1899109660667322581",
             "text": "ぁ‼️"
-        },
-        {
-            "edit_history_tweet_ids": [
-                "1899091445098963124"
-            ],
-            "id": "1899091445098963124",
-            "referenced_tweets": [
-                {
-                    "id": "1899087602487280090",
-                    "type": "replied_to"
-                }
-            ],
-            "text": "https://t.co/Tw9grjooWg\n\nこのアーカイブと聴き比べてくださぃ❕\n\nでてるのょ！でてんの！！！"
-        },
-        {
-            "edit_history_tweet_ids": [
-                "1899088164071014537"
-            ],
-            "id": "1899088164071014537",
-            "text": "すぐけす"
         }
     ],
     "meta": {
-        "newest_id": "1899236784846041419",
-        "next_token": "7140dibdnow9c7btw4b3o57nmfjdbs4odko6vqw1tazhz",
-        "oldest_id": "1899088164071014537",
+        "newest_id": "1899239664386806103",
+        "next_token": "7140dibdnow9c7btw4b3o57y2q5edixme1q5qa9d7racx",
+        "oldest_id": "1899109660667322581",
         "result_count": 15
     }
 }
