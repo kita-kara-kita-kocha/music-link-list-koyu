@@ -58,6 +58,8 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
+          const { GitHub, context } = require('@actions/github');
+          const github = new GitHub(process.env.GITHUB_TOKEN);
           const pr = await github.pulls.get({
             owner: context.repo.owner,
             repo: context.repo.repo,
