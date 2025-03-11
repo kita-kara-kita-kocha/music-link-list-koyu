@@ -7,14 +7,12 @@ python3 -m venv venv
 cd ../
 source get_fixed_post/venv/bin/activate
 pip install -r get_fixed_post/requirements.txt
-
+python get_fixed_post/main.py
 ```
  - 2回目以降
 ``` sh
-source push_flask/flask/bin/activate
-export FLASK_APP=push_flask
-export FLASK_ENV=development
-flask run
+source get_fixed_post/venv/bin/activate
+python get_fixed_post/main.py
 ```
 
 streamlit終了とvenvの抜け方

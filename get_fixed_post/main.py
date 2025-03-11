@@ -15,6 +15,8 @@ user_name = "koyuchan_"
 # 2日前の時間を"2021-01-01T00:00:00Z"の文字列形式で取得
 start_time = {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime(time.time() - 60 * 60 * 24 * 2))}
 
+next_request_time_file = "get_fixed_post/next_request_time.txt"
+
 def create_url_get_user_pinned_post():
     """
     ユーザーのピン留めされたリストを取得するためのURLを作成します。
@@ -91,40 +93,36 @@ def connect_to_endpoint(api, url, params):
     Returns:
         (json) APIレスポンス
     """
-    last_request_time = None
-    if os.path.exists("last_request_time.txt"):
-        with open("last_request_time.txt", "r") as f:
-            for line in f:
+    next_request_time = None
+    lines = []
+    if os.path.exists(next_request_time_file):
+        with open(next_request_time_file, "r") as f:
+            lines = f.readlines()
+            for line in lines:
                 if api == line.split(":::")[0]:
-                    last_request_time = float(line.split(":::")[1])
+                    next_request_time = float(line.split(":::")[1].split("\n")[0])
+                    wait_time = next_request_time - time.time()
+                    if wait_time > 0:
+                        print(f"{api}の次のリクエストまで{wait_time}秒待機します。")
+                        time.sleep(next_request_time - time.time())
                     break
-            f.close()
-        if last_request_time and time.time() - last_request_time < 900:
-            wait_second = 900 - (time.time() - last_request_time)
-            wait_second = round(wait_second, 0)
-            print(f'前回のリクエストから15分経過していません。{wait_second}秒待機します。{time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time()))}~{time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() + wait_second))}')
-            time.sleep(wait_second + 1)
+            f.close()    
     else:
-        with open("last_request_time.txt", "w") as f:
+        with open(next_request_time_file, "w") as f:
             f.write(f"{api}:::{time.time()}\n")
             f.close()
-    # api名とリクエスト時間を記録
-    # ファイルが存在しない場合は新規作成
-    # api名が存在しない場合は追記
-    # api名が存在する場合はその行だけ上書き
-    with open("last_request_time.txt", "r") as f:
-        lines = f.readlines()
-        f.close()
-    with open("last_request_time.txt", "w") as f:
-        for line in lines:
-            if api != line.split(":::")[0]:
-                f.write(line)
-        f.write(f"{api}:::{time.time()}\n")
-        f.close()
     response = requests.request("GET", url, auth=bearer_oauth, params=params)
-    print(f'レスポンスコード：{response.status_code}')
+    print(f'{api}のレスポンスコード：{response.status_code}')
+    # response.status_codeが429なら、response.headers["x-rate-limit-reset"]の値をnext_request_time_fileに記録
     if response.status_code == 429:
-        connect_to_endpoint(api, url, params)
+        with open(next_request_time_file, "w") as f:
+            for line in lines:
+                if api == line.split(":::")[0]:
+                    reset_time = int(response.headers['x-rate-limit-reset']) + 1
+                    f.write(f"{api}:::{reset_time}\n")
+                else:
+                    f.write(line)
+        response = connect_to_endpoint(api, url, params)
     elif response.status_code != 200:
         raise Exception(
             "Request returned an error: {} {}".format(
@@ -209,6 +207,8 @@ def create_blockquote(user_id, post_id):
         "align": "center",
     }
     response = requests.get(publish_url, params=params)
+    print(f'ツイートID：{post_id}のレスポンスコード：{response.status_code}')
+    print(response.text)
     embed_data = json.loads(response.text)
     # scriptタグを削除
     blockquote = embed_data["html"].replace("<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>", "")
@@ -271,12 +271,12 @@ def main():
     pinned_tweet_id = json_response["data"]["pinned_tweet_id"]
 
     blockquotes = []
-    timeline_tweets = request_and_save_json_response(create_url_get_user_timeline())["data"]
+    # timeline_tweets = request_and_save_json_response(create_url_get_user_timeline())["data"]
     # with open("get_fixed_post/get_user_timeline.json", "r") as f:
     #     timeline_tweets = json.load(f)["data"]
     #     f.close()
     blockquotes.append(create_blockquote(user_name, pinned_tweet_id))
-    blockquotes.extend(create_blockquotes(timeline_tweets))
+    # blockquotes.extend(create_blockquotes(timeline_tweets))
     create_html(blockquotes)
     print("done")
 
