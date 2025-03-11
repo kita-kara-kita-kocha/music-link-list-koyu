@@ -5,18 +5,34 @@ on:
     branches:
       - rewrite/x
 
+# rewrite/xの時に実行される
+# main <- rewrite/xのPRを作成する
 jobs:
-  create-pull-request:
+  create-pr:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          head: rewrite/x
-          title: 'Auto PR: main <- rewrite/x'
-          body: 'This is an automated pull request to merge changes from rewrite/x into main.'
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Create Pull Request
+      id: create_pr
+      uses: peter-evans/create-pull-request@v6
+      with:
+        token: ${{ secrets.PULL_REQUEST_TOKEN }}
+        commit-message: "Update files"
+        branch: main
+        title: "Update files for rewrite/x"
+        body: "This PR updates the files for rewrite/x."
+        base: rewrite/x
+        delete-branch: false
+
+    # 作成されたPRのURLを表示
+    - name: Show Pull Request URL
+      if: steps.create_pr.outputs.pull-request-url != ''
+      run: echo ${{ steps.create_pr.outputs.pull-request-url }}
