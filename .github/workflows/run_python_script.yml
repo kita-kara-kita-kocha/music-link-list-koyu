@@ -58,14 +58,15 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const { GitHub, context } = require('@actions/github');
-          const github = new GitHub(process.env.GITHUB_TOKEN);
-          const pr = await github.pulls.get({
+          const github = require('@actions/github');
+          const context = github.context;
+          const octokit = new github.GitHub(process.env.GITHUB_TOKEN);
+          const pr = await octokit.pulls.get({
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: steps.create_pr.outputs.pull-request-number,
           });
-          await github.pulls.merge({
+          await octokit.pulls.merge({
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: pr.data.number,
