@@ -1,5 +1,5 @@
 import requests
-from requests_oauthlib import OAuth1Session
+# from requests_oauthlib import OAuth1Session
 import os
 import json
 import time
