@@ -2,9 +2,8 @@ name: Run Python Script
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 16 * * *' # Run every day at 1:00 JST (16:00 UTC)
-    - cron: '0 4 * * *'  # Run every day at 13:00 JST (04:00 UTC)
+  schedule: # Run every week sunday at 0:00 JST (Saturday 15:00 UTC)
+    - cron: '0 15 * * 0'
 
 jobs:
   run-script:
