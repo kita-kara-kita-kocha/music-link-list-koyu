@@ -1,4 +1,5 @@
 import requests
+from requests_oauthlib import OAuth1Session
 import os
 import json
 import time
@@ -48,7 +49,7 @@ def create_url_get_user_timeline():
         "params": {
             "tweet.fields": "id,referenced_tweets",
             "start_time": start_time,
-            "max_results": 15
+            "max_results": 1
         }
     }
 
@@ -115,21 +116,23 @@ def connect_to_endpoint(api, url, params):
     print(f'{api}のレスポンスコード：{response.status_code}')
     # response.status_codeが429なら、response.headers["x-rate-limit-reset"]の値をnext_request_time_fileに記録
     if response.status_code == 429:
+        reset_time = int(response.headers['x-rate-limit-reset']) + 1
+        print(f"{api}の次のリクエストまで待機します。{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(reset_time))}まで")
         with open(next_request_time_file, "w") as f:
             for line in lines:
                 if api == line.split(":::")[0]:
-                    reset_time = int(response.headers['x-rate-limit-reset']) + 1
                     f.write(f"{api}:::{reset_time}\n")
                 else:
                     f.write(line)
-        response = connect_to_endpoint(api, url, params)
+        time.sleep(reset_time - time.time())
+        return connect_to_endpoint(api, url, params)
     elif response.status_code != 200:
         raise Exception(
             "Request returned an error: {} {}".format(
                 response.status_code, response.text
             )
         )
-    return response.json()
+    return response
 
 def decode_string(rawstring):
     """
@@ -184,9 +187,9 @@ def request_and_save_json_response(aup: dict):
     json_response = connect_to_endpoint(aup["api"], aup["url"], aup["params"])
     # レスポンスをjson形式で保存
     with open(f'get_fixed_post/{aup["api"]}.json', "w") as f:
-        json.dump(json_response, f, ensure_ascii=False, indent=4, sort_keys=True)
+        json.dump(json_response.json(), f, ensure_ascii=False, indent=4, sort_keys=True)
         f.close()
-    return json_response
+    return json_response.json()
 
 def create_blockquote(user_id, post_id):
     """
