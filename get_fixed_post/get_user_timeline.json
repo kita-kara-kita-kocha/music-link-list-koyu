@@ -2,6 +2,19 @@
     "data": [
         {
             "edit_history_tweet_ids": [
+                "1899248445069926851"
+            ],
+            "id": "1899248445069926851",
+            "referenced_tweets": [
+                {
+                    "id": "1898682248670683399",
+                    "type": "retweeted"
+                }
+            ],
+            "text": "RT @milkcoffeeghost: 〖 🌷を持つ手 と 背景 #VTuberAssets 🌷〗౨ৎ*.+ﾟ\n🌷3×6 colors 💭.*\n\n┈┈┈┈\n︎︎︎︎︎︎\n☑︎使用条件┊︎このポストを ♡♲\n@milkcoffeeghost ﾌｫﾛｰ ʜᴀᴘᴘʏ\n\n⚠︎注意┊︎…"
+        },
+        {
+            "edit_history_tweet_ids": [
                 "1899239664386806103"
             ],
             "id": "1899239664386806103",
@@ -157,19 +170,12 @@
             ],
             "id": "1899109690782675176",
             "text": "ただいまX"
-        },
-        {
-            "edit_history_tweet_ids": [
-                "1899109660667322581"
-            ],
-            "id": "1899109660667322581",
-            "text": "ぁ‼️"
         }
     ],
     "meta": {
-        "newest_id": "1899239664386806103",
-        "next_token": "7140dibdnow9c7btw4b3o57y2q5edixme1q5qa9d7racx",
-        "oldest_id": "1899109660667322581",
+        "newest_id": "1899248445069926851",
+        "next_token": "7140dibdnow9c7btw4b3o57y2q5edzc7q9tf4rvun16pi",
+        "oldest_id": "1899109690782675176",
         "result_count": 15
     }
 }
