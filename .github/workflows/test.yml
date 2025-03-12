@@ -24,6 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
 
+    # テスト用のファイル編集
+    - name: Edit test file
+      run: |
+        echo "Hello, world!" > test.txt
+
     - name: Configure Git
       run: |
         git config --global user.name 'github-actions[bot]'
@@ -52,16 +57,18 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const { GitHub } = require('@actions/github');
-          const octokit = new GitHub(process.env.PULL_REQUEST_TOKEN);
-          const pr = await octokit.pulls.get({
+          const token = process.env.PULL_REQUEST_TOKEN;
+          const octokit = require('@octokit/rest')({
+            auth: `token ${token}`
+          });
+          const { data: pr } = await octokit.pulls.get({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            pull_number: steps.create_pr.outputs.pull-request-number,
+            pull_number: steps.create_pr.outputs['pull-request-number']
           });
           await octokit.pulls.merge({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            pull_number: pr.data.number,
-            merge_method: 'merge',
+            pull_number: pr.number,
+            merge_method: 'merge'
           });
