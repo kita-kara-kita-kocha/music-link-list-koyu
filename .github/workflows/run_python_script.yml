@@ -57,9 +57,8 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const github = require('@actions/github');
-          const context = github.context;
-          const octokit = new github.GitHub(process.env.GITHUB_TOKEN);
+          const { GitHub, context } = require('@actions/github');
+          const octokit = new GitHub(process.env.GITHUB_TOKEN);
           const pr = await octokit.pulls.get({
             owner: context.repo.owner,
             repo: context.repo.repo,
