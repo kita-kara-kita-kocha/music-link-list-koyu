@@ -1,9 +1,10 @@
 name: Run Python Script
 
+# mainにpushされた時
 on:
-  workflow_dispatch:
-  schedule: # Run every week sunday at 0:00 JST (Saturday 15:00 UTC)
-    - cron: '0 15 * * 0'
+    push:
+        branches:
+        - main
 
 jobs:
   run-script:
@@ -22,12 +23,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
-    
-    - name: Run Python script
-      env:
-        BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
-      run: |
-        python get_fixed_post/main.py
 
     - name: Configure Git
       run: |
