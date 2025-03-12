@@ -1,4 +1,4 @@
-name: Run Python Script
+name: testYaml
 
 # mainにpushされた時
 on:
@@ -52,23 +52,9 @@ jobs:
         base: main
         delete-branch: true
 
-    - name: Merge Pull Request
-      if: steps.create_pr.outputs.pull-request-url != ''
-      uses: actions/github-script@v6
+    - name: Enable auto-merge
+      uses: peter-evans/enable-pull-request-automerge@v3
       with:
-        script: |
-          const token = process.env.PULL_REQUEST_TOKEN;
-          const octokit = require('@octokit/rest')({
-            auth: `token ${token}`
-          });
-          const { data: pr } = await octokit.pulls.get({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: steps.create_pr.outputs['pull-request-number']
-          });
-          await octokit.pulls.merge({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: pr.number,
-            merge_method: 'merge'
-          });
+        pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
+        token: ${{ secrets.PULL_REQUEST_TOKEN }}
+        
