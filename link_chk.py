@@ -44,6 +44,9 @@ def get_playlist_links():
     Returns:
         list: プレイリストの動画リンクのリスト
     """
+    skip_links = [
+        "https://www.youtube.com/watch?v=3MbQvdd9V4U"
+    ]
     # yt-dlpの実行
     cmd = [yt_dlp_path, "--flat-playlist", "-j", playlist_url]
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -68,6 +71,8 @@ def get_playlist_links():
             continue
         line_dict = json.loads(line)
         if line_dict["live_status"] is None:
+            continue
+        if line_dict["url"] in skip_links:
             continue
         title = line_dict["title"]
         # titleの文字列から、Unicodeエスケープ文字部分をデコード
@@ -102,7 +107,8 @@ def main():
     # リンクのチェック
     for link in links:
         if not check_link(link["url"]):
-            print(f'{link["url"]} {link["title"]}')
+            print(f'{link["url"]}')
+            # print(f'{link["url"]} {link["title"]}')
 
 if __name__ == "__main__":
     main()
