@@ -6,6 +6,16 @@ body, h1, h2, h3, p, ul, li, a {
     text-decoration: none;
 }
 
+body {
+    background-image: url('IMG_0284.jpeg');
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kiwi Maru', 'nicomoji', sans-serif;
+}
+
 /* h1をよもぎフォントに設定 */
 h1, li {
     font-family: "Kiwi Maru";
