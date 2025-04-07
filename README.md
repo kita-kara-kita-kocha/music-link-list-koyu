@@ -13,3 +13,15 @@
 https://www.youtube.com/watch?v=jiQVSs_Whd8
 
 https://w.atwiki.jp/saikouon_dokoda/
+
+``` sh
+source push_flask/flask/bin/activate
+export FLASK_APP=push_flask
+export FLASK_ENV=development
+flask run
+```
+
+``` sh
+source push_flask/flask/bin/activate
+python link_chk.py
+```
