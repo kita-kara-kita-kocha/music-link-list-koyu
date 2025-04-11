@@ -1972,7 +1972,7 @@
                 "date": "2023-03-06"
             },
             {
-                "url": "低血ボルト",
+                "url": "https://www.youtube.com/watch?v=nhcJ7X1Gtkg&t=1433s",
                 "date": "2023-05-31"
             },
             {
@@ -4156,6 +4156,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=dZtcRPYZw3I&t=5970s",
                 "date": "2024-02-26"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=CL7YwXrsnZs&t=990s",
+                "date": "2023-03-24"
             }
         ]
     },
@@ -10312,6 +10316,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=LBClF53_dEA&t=4879s",
                 "date": "2024-11-05"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=1827s",
+                "date": "2025-04-11"
             }
         ]
     },
@@ -14030,6 +14038,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=SNNZvnAWuv0&t=1119s",
                 "date": "2025-04-03"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=1065s",
+                "date": "2025-04-11"
             }
         ]
     },
@@ -14180,6 +14192,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=pX4_fwp-k1s&t=6160s",
                 "date": "2025-04-04"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=3400s",
+                "date": "2025-04-11"
             }
         ]
     },
@@ -14292,6 +14308,36 @@
             {
                 "url": "https://www.youtube.com/watch?v=aBiudcufkXE&t=3773s",
                 "date": "2025-03-01"
+            }
+        ]
+    },
+    {
+        "title": "レディーレ",
+        "artist": "バルーン",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=550s",
+                "date": "2025-04-11"
+            }
+        ]
+    },
+    {
+        "title": "ハッピーミルフィーユ",
+        "artist": "初星学園",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=4073s",
+                "date": "2025-04-11"
+            }
+        ]
+    },
+    {
+        "title": "アイドルでよかった。",
+        "artist": "HoneyWorks",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=5414s",
+                "date": "2025-04-11"
             }
         ]
     }
