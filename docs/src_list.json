@@ -404,6 +404,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=7oo6SWcx-rg&t=5581s",
                 "date": "2023-09-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=3457s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -5872,6 +5876,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=y9WRoa8Y4Zk&t=2740s",
                 "date": "2024-11-22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=5876s",
+                "date": "2025-04-27"
             }
         ]
     },
@@ -6828,6 +6836,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=joqY53EI3N8&t=2866s",
                 "date": "2025-02-23"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=1345s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -7342,6 +7354,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=uZ9xCP1PdCE&t=669s",
                 "date": "2023-05-07"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=5518s",
+                "date": "2025-04-27"
             }
         ]
     },
@@ -7636,6 +7652,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=uQUsqXraQik&t=920s",
                 "date": "2023-06-03"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=2683s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -11180,6 +11200,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=y9WRoa8Y4Zk&t=5616s",
                 "date": "2024-11-22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=4032s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -11198,6 +11222,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=_dQ8z2zIKc4&t=406s",
                 "date": "2025-01-14"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=4245s",
+                "date": "2025-04-27"
             }
         ]
     },
@@ -11240,6 +11268,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=cMu87wI4m8Y&t=1551s",
                 "date": "2025-01-19"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=5555s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -11302,6 +11334,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=yP1x_UFYqv8&t=1469s",
                 "date": "2023-10-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=2106s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -13604,6 +13640,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=aBiudcufkXE&t=6101s",
                 "date": "2025-03-01"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=782s",
+                "date": "2025-04-18"
             }
         ]
     },
@@ -14028,6 +14068,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=SNNZvnAWuv0&t=440s",
                 "date": "2025-04-03"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=2198s",
+                "date": "2025-04-27"
             }
         ]
     },
@@ -14338,6 +14382,50 @@
             {
                 "url": "https://www.youtube.com/watch?v=W71SKe8oJBY&t=5414s",
                 "date": "2025-04-11"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=6781s",
+                "date": "2025-04-18"
+            }
+        ]
+    },
+    {
+        "title": "UNDEAD",
+        "artist": "YOASOBI",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=451s",
+                "date": "2025-04-27"
+            }
+        ]
+    },
+    {
+        "title": "LADY CRAZY",
+        "artist": "HIMEHINA",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=1357s",
+                "date": "2025-04-27"
+            }
+        ]
+    },
+    {
+        "title": "かわいいだけじゃだめですか?",
+        "artist": "CUTIE STREET",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=2783s",
+                "date": "2025-04-27"
+            }
+        ]
+    },
+    {
+        "title": "アウトサイダー",
+        "artist": "Eve",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=hyz-LWczttA&t=4695s",
+                "date": "2025-04-27"
             }
         ]
     }
