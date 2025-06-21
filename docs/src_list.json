@@ -10326,6 +10326,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=LglvZoFbw_4&t=3031s",
                 "date": "2024-05-02"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=11592s",
+                "date": "2024-08-20"
             }
         ]
     },
@@ -14699,16 +14703,6 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=9529s",
-                "date": "2024-08-20"
-            }
-        ]
-    },
-    {
-        "title": "臨界ダイバー",
-        "artist": "うみろ",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=11592s",
                 "date": "2024-08-20"
             }
         ]
