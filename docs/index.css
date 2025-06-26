@@ -16,22 +16,6 @@ body {
     font-family: 'Kiwi Maru', 'nicomoji', sans-serif;
 }
 
-/* スマートフォン対応: 背景画像を固定 */
-@media (max-width: 600px) {
-    body {
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center center;
-        /* iOS対策: 疑似要素で背景を再現 */
-    }
-    html {
-        height: 100%;
-    }
-    body {
-        min-height: 100vh;
-    }
-}
-
 /* h1をよもぎフォントに設定 */
 h1, li {
     font-family: "Kiwi Maru";
