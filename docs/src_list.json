@@ -950,6 +950,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=uN3Xjs1bsvw&t=4947s",
                 "date": "2022-09-09"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=9001s",
+                "date": "2025-07-01"
             }
         ]
     },
@@ -8990,6 +8994,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=n67jfcJPc74&t=1645s",
                 "date": "2023-12-17"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=5767s",
+                "date": "2025-07-01"
             }
         ]
     },
@@ -14959,6 +14967,26 @@
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=3437s",
+                "date": "2025-07-01"
+            }
+        ]
+    },
+    {
+        "title": "リードコントロール",
+        "artist": "なるみや",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=6257s",
+                "date": "2025-07-01"
+            }
+        ]
+    },
+    {
+        "title": "通心障害",
+        "artist": "なるみや",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=6623s",
                 "date": "2025-07-01"
             }
         ]
