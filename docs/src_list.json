@@ -626,6 +626,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=okVnJ8VwRoE&t=1835s",
                 "date": "2024-07-28"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=1585s",
+                "date": "2025-07-01"
             }
         ]
     },
@@ -13846,6 +13850,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=YjtZL7-0n3A&t=1788s",
                 "date": "2025-02-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=2258s",
+                "date": "2025-07-01"
             }
         ]
     },
@@ -14912,6 +14920,46 @@
             {
                 "url": "https://www.youtube.com/watch?v=pCKi5fy7Gtw&t=1480s",
                 "date": "2025-06-21"
+            }
+        ]
+    },
+    {
+        "title": "イエスタデイ",
+        "artist": "Official髭男dism",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=512s",
+                "date": "2025-07-01"
+            }
+        ]
+    },
+    {
+        "title": "形",
+        "artist": "ずっと真夜中でいいのに。",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=1198s",
+                "date": "2025-07-01"
+            }
+        ]
+    },
+    {
+        "title": "アンチユー",
+        "artist": "Chinozo",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=2901s",
+                "date": "2025-07-01"
+            }
+        ]
+    },
+    {
+        "title": "オールセーブチャレンジ",
+        "artist": "ワンダーランズ×ショウタイム",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=Xai97_lndDo&t=3437s",
+                "date": "2025-07-01"
             }
         ]
     }
