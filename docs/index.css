@@ -39,14 +39,13 @@ h1, li {
     background: #ecaecd;
 }
 .music_record {
-    cursor: default;
+    cursor: pointer;
 }
-.music_record:hover ul {
+.music_record.open ul {
     max-height: 50px;
     max-width: 100%;
     background-color: #e7e7e7;
     transition: all 1s;
-
 }
 .music_record li {
     padding: 5px 10px;
