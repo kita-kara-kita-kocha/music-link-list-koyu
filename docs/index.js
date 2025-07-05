@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dev_music_record = document.createElement('dev');
                 dev_music_record.className = 'music_record';
                 dev_music_record.textContent = `${item.title} / ${item.artist}`;
+                
+                // クリックで表示を切り替えるイベントリスナーを追加
+                dev_music_record.addEventListener('click', function() {
+                    dev_music_record.classList.toggle('open');
+                });
+                
                 ul_url_date_sets = document.createElement('ul');
                 if (item.url_date_sets) {
                     // item.url_date_setsの配列をソートしてからループ
@@ -95,7 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sort_date').addEventListener('click', sortListDate);
     // ソートボタンdev.sort_new_dateをクリックしたときにソートする
     document.getElementById('sort_new_date').addEventListener('click', sortListNewDate);
-
+    // ソートボタンdev.sort_countをクリックしたときにソートする
+    document.getElementById('sort_count').addEventListener('click', sortListCount);
+    
     // ページ読み込み後1分後に<blockquote class="twitter-tweet">を閉じる
     setTimeout(function() {
         document.querySelector('.twitter-tweet').classList.toggle('open');
@@ -103,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// 引数以外のsort_title, sort_artist, sort_date, sort_new_dateの4つのソートボタンの△と▽を消す関数
+// 引数以外のsort_title, sort_artist, sort_date, sort_new_date, sort_countの5つのソートボタンの△と▽を消す関数
 function sortButtonReset(untarget) {
     if (untarget != 'sort_title') {
         document.getElementById('sort_title').textContent = 'タイトルでソート';
@@ -116,6 +124,9 @@ function sortButtonReset(untarget) {
     }
     if (untarget != 'sort_new_date') {
         document.getElementById('sort_new_date').textContent = '最新日付でソート';
+    }
+    if (untarget != 'sort_count') {
+        document.getElementById('sort_count').textContent = '歌われた回数でソート';
     }
 }
 
@@ -250,3 +261,35 @@ function sortListNewDate() {
     items.forEach(item => musicList.appendChild(item));
 }
 
+// 歌われた回数(リンク数)でソートする関数
+function sortListCount() {
+    sortButtonReset('sort_count');
+    sortButtom = document.getElementById('sort_count');
+    sortIf = 0;
+    if (sortButtom.textContent == '歌われた回数でソート' || sortButtom.textContent == '歌われた回数でソート▽') {
+        sortButtom.textContent = '歌われた回数でソート△';
+    }
+    else {
+        sortButtom.textContent = '歌われた回数でソート▽';
+        sortIf = 1;
+    }
+    const musicList = document.querySelector('ul.music-list');
+    if (!musicList) {
+        console.error('ul.music-list element not found');
+        return;
+    }
+    const items = Array.from(musicList.children);
+    items.sort((a, b) => {
+        let a_lis = a.getElementsByClassName('music_record')[0].getElementsByTagName('li');
+        let b_lis = b.getElementsByClassName('music_record')[0].getElementsByTagName('li');
+        let countA = a_lis.length;
+        let countB = b_lis.length;
+        if (sortIf == 0) {
+            return listSort(countA, countB);
+        }
+        else {
+            return listSort(countB, countA);
+        }
+    });
+    items.forEach(item => musicList.appendChild(item));
+}
