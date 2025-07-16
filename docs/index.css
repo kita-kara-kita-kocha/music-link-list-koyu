@@ -60,6 +60,7 @@ h1, li {
     border-radius: 4px;
     cursor: pointer;
 }
+/* 改行させない */
 .playbutton {
     background-color: #bb4bac;
     color: #fff;
@@ -67,9 +68,11 @@ h1, li {
     padding: 2px 5px;
     border: none;
     border-radius: 4px;
+    display: inline-block;
+    white-space: nowrap;
 }
 
-/* dev class=thの文字色を薄ピンクに変更 */
+/* div class=thの文字色を薄ピンクに変更 */
 .th {
     color: #f4a4a4;
 }
@@ -151,7 +154,7 @@ section {
     color: #999;
 }
 
-/* streamingクラスのdevを画面右下に固定表示 */
+/* streamingクラスのdivを画面右下に固定表示 */
 .streaming {
     position: fixed;
     bottom: 10px;
@@ -163,7 +166,7 @@ section {
     cursor: pointer;
 }
 
-/* tweet-box クラスの dev タグを画面右上に表示 */
+/* tweet-box クラスの div タグを画面右上に表示 */
 .tweet-box {
     position: absolute;
     /* スクロール可能にする */
