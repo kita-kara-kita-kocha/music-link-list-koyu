@@ -166,6 +166,28 @@ section {
     cursor: pointer;
 }
 
+/* pr クラスの div タグを画面左上に表示 */
+.pr {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 0.9em;
+}
+
+.pr a {
+    color: #bb4bac;
+    text-decoration: none;
+}
+
+.pr a:hover {
+    text-decoration: underline;
+}
+
 /* tweet-box クラスの div タグを画面右上に表示 */
 .tweet-box {
     position: absolute;

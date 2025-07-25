@@ -29,6 +29,9 @@
             YouTubeで楽曲を聴くことができます。<br>
             また、<div class="playbutton">▶</div>ボタンを押すと右下のストリーミングボックスで楽曲が流れます。
         </p>
+        <p class="pr">
+            <a href="https://kita-kara-kita-kocha.github.io/nanahapi-history/calendar.html">ななはぴカレンダー</a>もよろしくね！
+        </p>
         <p id="music_count"></p>
         <div class="sort_button">
             <div class="sort_menu" onclick="toggle('sort_button')">ソート：</div>
