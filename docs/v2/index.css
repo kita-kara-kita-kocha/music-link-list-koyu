@@ -32,6 +32,27 @@ body {
     background-clip: text;
 }
 
+.pinned-post-notice {
+    margin-top: 15px;
+}
+
+.pinned-post-button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.pinned-post-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -241,6 +262,104 @@ body {
     overflow: hidden;
 }
 
+.pinned-post-modal {
+    aspect-ratio: auto;
+    max-width: 650px;
+    background: white;
+    padding: 0;
+    height: auto;
+    min-height: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.pinned-post-content {
+    padding: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.pinned-post-content h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.blockquote-container {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Twitterブロッククォートのスタイル調整 */
+.blockquote-container blockquote {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.twitter-tweet {
+    margin: 0 auto !important;
+    max-width: 550px !important;
+}
+
+.pinned-post-info p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.twitter-link {
+    margin: 20px 0;
+}
+
+.twitter-button {
+    display: inline-block;
+    background: #1da1f2;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(29, 161, 242, 0.3);
+}
+
+.twitter-button:hover {
+    background: #0c85d0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(29, 161, 242, 0.4);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-link {
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    color: white;
+}
+
+.social-link.twitter {
+    background: #1da1f2;
+}
+
+.social-link.youtube {
+    background: #ff0000;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
 .modal-close {
     position: absolute;
     top: 10px;
@@ -319,6 +438,25 @@ body {
         height: 35px;
         font-size: 24px;
     }
+
+    .pinned-post-modal {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .pinned-post-content {
+        padding: 20px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pinned-post-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
 }
 
 @media (max-height: 600px) {
@@ -326,5 +464,10 @@ body {
         width: 95%;
         height: 80vh;
         aspect-ratio: auto;
+    }
+
+    .pinned-post-modal {
+        height: 80vh;
+        overflow-y: auto;
     }
 }

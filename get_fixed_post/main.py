@@ -280,6 +280,10 @@ def main():
     #     f.close()
     blockquotes.append(create_blockquote(user_name, pinned_tweet_id))
     # blockquotes.extend(create_blockquotes(timeline_tweets))
+    # blockquotesをそのままdocs/pinned_post_blockquote.htmlに保存
+    with open("docs/pinned_post_blockquote.html", "w") as f:
+        f.write("\n".join(blockquotes))
+        f.close()
     create_html(blockquotes)
     print("done")
 
