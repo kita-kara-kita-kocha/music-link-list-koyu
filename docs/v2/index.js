@@ -10,10 +10,31 @@ function App() {
     const [activeTab, setActiveTab] = useState('songs');
     const [searchTerm, setSearchTerm] = useState('');
     const [modalVideo, setModalVideo] = useState(null);
+    const [showPinnedPost, setShowPinnedPost] = useState(false);
+    const [pinnedPost, setPinnedPost] = useState(null);
 
     useEffect(() => {
         fetchData();
+        fetchPinnedPost();
     }, []);
+
+    // Twitter widgetsの再初期化
+    useEffect(() => {
+        if (showPinnedPost && pinnedPost) {
+            // Twitter widgets が読み込まれるのを待ってから初期化
+            const initializeTwitterWidget = () => {
+                if (window.twttr && window.twttr.widgets) {
+                    window.twttr.widgets.load();
+                } else {
+                    // Twitter widgets がまだ読み込まれていない場合、少し待ってから再試行
+                    setTimeout(initializeTwitterWidget, 500);
+                }
+            };
+            
+            // モーダルが表示された後に少し遅延させて初期化
+            setTimeout(initializeTwitterWidget, 300);
+        }
+    }, [showPinnedPost, pinnedPost]);
 
     const fetchData = async () => {
         try {
@@ -28,6 +49,19 @@ function App() {
             setError(err.message);
         } finally {
             setLoading(false);
+        }
+    };
+
+    // 固定ポスト情報を取得
+    const fetchPinnedPost = async () => {
+        try {
+            const response = await fetch('/docs/pinned_post_blockquote.html');
+            if (response.ok) {
+                const htmlContent = await response.text();
+                setPinnedPost(htmlContent);
+            }
+        } catch (err) {
+            console.log('固定ポスト情報の取得をスキップしました:', err.message);
         }
     };
 
@@ -121,6 +155,11 @@ function App() {
         setModalVideo(null);
     };
 
+    // 固定ポストポップアップを開く/閉じる
+    const togglePinnedPost = () => {
+        setShowPinnedPost(!showPinnedPost);
+    };
+
     if (loading) {
         return (
             <div className="container">
@@ -155,6 +194,16 @@ function App() {
             <div className="header">
                 <h1>🌟 星降こゆ 楽曲・ライブ管理システム</h1>
                 <p>楽曲とライブ配信の情報を管理・検索できます</p>
+                {pinnedPost && (
+                    <div className="pinned-post-notice">
+                        <button 
+                            onClick={togglePinnedPost}
+                            className="pinned-post-button"
+                        >
+                            📌 固定ツイートを表示
+                        </button>
+                    </div>
+                )}
             </div>
 
             <div className="stats">
@@ -165,10 +214,6 @@ function App() {
                 <div className="stat-card">
                     <div className="stat-number">{data?.lives?.length || 0}</div>
                     <div className="stat-label">ライブ配信数</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-number">{data?.timestamps?.length || 0}</div>
-                    <div className="stat-label">タイムスタンプ数</div>
                 </div>
             </div>
 
@@ -218,6 +263,22 @@ function App() {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
                             ></iframe>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* 固定ポストポップアップ */}
+            {showPinnedPost && pinnedPost && (
+                <div className="modal show" onClick={togglePinnedPost}>
+                    <div className="modal-content pinned-post-modal" onClick={(e) => e.stopPropagation()}>
+                        <span className="modal-close" onClick={togglePinnedPost}>&times;</span>
+                        <div className="pinned-post-content">
+                            <h2>📌 固定ツイート</h2>
+                            <div 
+                                dangerouslySetInnerHTML={{ __html: pinnedPost }}
+                                className="blockquote-container"
+                            />
                         </div>
                     </div>
                 </div>
