@@ -331,10 +331,32 @@ function SongsList({ songs, formatTime, openVideoModal }) {
 
 // ライブ一覧コンポーネント
 function LivesList({ lives, formatTime, openVideoModal }) {
+    const handleImageError = (e) => {
+        e.target.style.display = 'none';
+        e.target.nextElementSibling.style.display = 'flex';
+    };
+
     return (
         <div className="grid">
             {lives.map(live => (
                 <div key={live.mng_live_id} className="card live-card">
+                    {live.thumbnail && (
+                        <div className="live-thumbnail">
+                            <img 
+                                src={live.thumbnail} 
+                                alt={`${live.title}のサムネイル`}
+                                className="thumbnail-image"
+                                onClick={() => openVideoModal(live.url, 0)}
+                                onError={handleImageError}
+                            />
+                            <div className="thumbnail-fallback" style={{display: 'none'}}>
+                                <div className="fallback-content">
+                                    <span>📺</span>
+                                    <p>サムネイル画像を<br />読み込めませんでした</p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                     <div className="card-title">{live.title}</div>
                     <div className="card-info">
                         📅 {new Date(live.date).toLocaleDateString('ja-JP')}
