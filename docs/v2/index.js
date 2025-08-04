@@ -55,7 +55,7 @@ function App() {
     // 固定ポスト情報を取得
     const fetchPinnedPost = async () => {
         try {
-            const response = await fetch('/docs/pinned_post_blockquote.html');
+            const response = await fetch('../pinned_post_blockquote.html');
             if (response.ok) {
                 const htmlContent = await response.text();
                 setPinnedPost(htmlContent);
