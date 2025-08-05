@@ -14,6 +14,8 @@ function App() {
     const [pinnedPost, setPinnedPost] = useState(null);
     const [sortKey, setSortKey] = useState('playCount');
     const [sortOrder, setSortOrder] = useState('desc'); // 'asc' or 'desc'
+    const [liveDateFrom, setLiveDateFrom] = useState('');
+    const [liveDateTo, setLiveDateTo] = useState('');
 
     useEffect(() => {
         fetchData();
@@ -204,6 +206,19 @@ function App() {
         return sorted;
     };
 
+    // ライブ配信日フィルター（範囲指定対応）
+    const filterLivesByDate = (lives, from, to) => {
+        if (!from && !to) return lives;
+        return lives.filter(live => {
+            const liveDate = new Date(live.date);
+            const fromDate = from ? new Date(from) : null;
+            const toDate = to ? new Date(to) : null;
+            if (fromDate && liveDate < fromDate) return false;
+            if (toDate && liveDate > toDate) return false;
+            return true;
+        });
+    };
+
     if (loading) {
         return (
             <div className="container">
@@ -235,6 +250,7 @@ function App() {
     const filteredSongs = filterData(songsData, searchTerm);
     const sortedSongs = sortSongs(filteredSongs, sortKey, sortOrder);
     const filteredLives = filterData(sortedLives, searchTerm);
+    const dateFilteredLives = filterLivesByDate(filteredLives, liveDateFrom, liveDateTo);
 
     return (
         <div className="container">
@@ -283,11 +299,11 @@ function App() {
                     className={`tab ${activeTab === 'lives' ? 'active' : ''}`}
                     onClick={() => setActiveTab('lives')}
                 >
-                    📺 ライブ一覧 ({filteredLives.length})
+                    📺 ライブ一覧 ({dateFilteredLives.length})
                 </button>
             </div>
 
-            {/* ソートUI（楽曲一覧タブのみ表示） */}
+            {/* 楽曲一覧タブのソートUI */}
             {activeTab === 'songs' && (
                 <div className="sort-controls" style={{marginBottom: '16px', display: 'flex', gap: '8px', alignItems: 'center'}}>
                     <label>ソート:</label>
@@ -308,12 +324,22 @@ function App() {
                 </div>
             )}
 
+            {/* ライブ一覧タブのカレンダーフィルター（範囲指定・専用デザイン） */}
+            {activeTab === 'lives' && (
+                <LiveDateRangeFilter
+                    from={liveDateFrom}
+                    to={liveDateTo}
+                    setFrom={setLiveDateFrom}
+                    setTo={setLiveDateTo}
+                />
+            )}
+
             <div className="content">
                 {activeTab === 'songs' && (
                     <SongsList songs={sortedSongs} formatTime={formatTime} openVideoModal={openVideoModal} />
                 )}
                 {activeTab === 'lives' && (
-                    <LivesList lives={filteredLives} formatTime={formatTime} openVideoModal={openVideoModal} />
+                    <LivesList lives={dateFilteredLives} formatTime={formatTime} openVideoModal={openVideoModal} />
                 )}
             </div>
 
@@ -473,6 +499,67 @@ function LivesList({ lives, formatTime, openVideoModal }) {
                 </div>
             ))}
         </div>
+    );
+}
+
+// 配信日範囲フィルター専用フォームコンポーネント
+function LiveDateRangeFilter({ from, to, setFrom, setTo }) {
+    return (
+        <form
+            className="live-date-range-filter"
+            style={{
+                marginBottom: '16px',
+                display: 'flex',
+                gap: '12px',
+                alignItems: 'center',
+                background: '#f7f7fa',
+                padding: '10px 16px',
+                borderRadius: '8px',
+                boxShadow: '0 1px 4px rgba(0,0,0,0.04)'
+            }}
+            onSubmit={e => e.preventDefault()}
+        >
+            <label style={{fontWeight: 'bold'}}>配信日で絞り込み:</label>
+            <span>
+                <input
+                    type="date"
+                    value={from}
+                    onChange={e => setFrom(e.target.value)}
+                    style={{
+                        padding: '4px 8px',
+                        border: '1px solid #ccc',
+                        borderRadius: '4px'
+                    }}
+                />
+                <span style={{margin: '0 6px'}}>〜</span>
+                <input
+                    type="date"
+                    value={to}
+                    onChange={e => setTo(e.target.value)}
+                    style={{
+                        padding: '4px 8px',
+                        border: '1px solid #ccc',
+                        borderRadius: '4px'
+                    }}
+                />
+            </span>
+            {(from || to) && (
+                <button
+                    type="button"
+                    onClick={() => { setFrom(''); setTo(''); }}
+                    style={{
+                        padding: '2px 10px',
+                        marginLeft: '8px',
+                        background: '#eee',
+                        border: 'none',
+                        borderRadius: '4px',
+                        cursor: 'pointer'
+                    }}
+                >
+                    クリア
+                </button>
+            )}
+        </form>
     );
 }
 
