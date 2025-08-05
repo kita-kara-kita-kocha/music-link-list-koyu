@@ -12,6 +12,8 @@ function App() {
     const [modalVideo, setModalVideo] = useState(null);
     const [showPinnedPost, setShowPinnedPost] = useState(false);
     const [pinnedPost, setPinnedPost] = useState(null);
+    const [sortKey, setSortKey] = useState('playCount');
+    const [sortOrder, setSortOrder] = useState('desc'); // 'asc' or 'desc'
 
     useEffect(() => {
         fetchData();
@@ -160,6 +162,48 @@ function App() {
         setShowPinnedPost(!showPinnedPost);
     };
 
+    // 楽曲一覧のソート
+    const sortSongs = (songs, key, order) => {
+        const sorted = [...songs];
+        sorted.sort((a, b) => {
+            switch (key) {
+                case 'playCount':
+                    return order === 'desc'
+                        ? b.timestamps.length - a.timestamps.length
+                        : a.timestamps.length - b.timestamps.length;
+                case 'latestLive':
+                    // 最新の歌った配信日（降順:新しい順, 昇順:古い順）
+                    const bLatest = b.timestamps.length > 0
+                        ? Math.max(...b.timestamps.map(ts => new Date(ts.live.date).getTime()))
+                        : 0;
+                    const aLatest = a.timestamps.length > 0
+                        ? Math.max(...a.timestamps.map(ts => new Date(ts.live.date).getTime()))
+                        : 0;
+                    return order === 'desc' ? bLatest - aLatest : aLatest - bLatest;
+                case 'oldestLive':
+                    // 最古の歌った配信日（降順:新しい順, 昇順:古い順）
+                    const bOldest = b.timestamps.length > 0
+                        ? Math.min(...b.timestamps.map(ts => new Date(ts.live.date).getTime()))
+                        : 0;
+                    const aOldest = a.timestamps.length > 0
+                        ? Math.min(...a.timestamps.map(ts => new Date(ts.live.date).getTime()))
+                        : 0;
+                    return order === 'desc' ? bOldest - aOldest : aOldest - bOldest;
+                case 'artist':
+                    return order === 'desc'
+                        ? (b.artist || '').localeCompare(a.artist || '')
+                        : (a.artist || '').localeCompare(b.artist || '');
+                case 'title':
+                    return order === 'desc'
+                        ? (b.title || '').localeCompare(a.title || '')
+                        : (a.title || '').localeCompare(b.title || '');
+                default:
+                    return 0;
+            }
+        });
+        return sorted;
+    };
+
     if (loading) {
         return (
             <div className="container">
@@ -186,8 +230,11 @@ function App() {
 
     const songsData = Object.values(groupTimestampsBySong());
     const livesData = Object.values(groupTimestampsByLive());
+    // 配信日が新しい順にソート
+    const sortedLives = livesData.sort((a, b) => new Date(b.date) - new Date(a.date));
     const filteredSongs = filterData(songsData, searchTerm);
-    const filteredLives = filterData(livesData, searchTerm);
+    const sortedSongs = sortSongs(filteredSongs, sortKey, sortOrder);
+    const filteredLives = filterData(sortedLives, searchTerm);
 
     return (
         <div className="container">
@@ -240,9 +287,30 @@ function App() {
                 </button>
             </div>
 
+            {/* ソートUI（楽曲一覧タブのみ表示） */}
+            {activeTab === 'songs' && (
+                <div className="sort-controls" style={{marginBottom: '16px', display: 'flex', gap: '8px', alignItems: 'center'}}>
+                    <label>ソート:</label>
+                    <select value={sortKey} onChange={e => setSortKey(e.target.value)}>
+                        <option value="playCount">演奏回数</option>
+                        <option value="latestLive">最新の歌った配信日</option>
+                        <option value="oldestLive">最古の歌った配信日</option>
+                        <option value="artist">アーティスト</option>
+                        <option value="title">曲名</option>
+                    </select>
+                    <button
+                        onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                        style={{padding: '2px 8px'}}
+                        title={sortOrder === 'asc' ? '昇順' : '降順'}
+                    >
+                        {sortOrder === 'asc' ? '⬆️' : '⬇️'}
+                    </button>
+                </div>
+            )}
+
             <div className="content">
                 {activeTab === 'songs' && (
-                    <SongsList songs={filteredSongs} formatTime={formatTime} openVideoModal={openVideoModal} />
+                    <SongsList songs={sortedSongs} formatTime={formatTime} openVideoModal={openVideoModal} />
                 )}
                 {activeTab === 'lives' && (
                     <LivesList lives={filteredLives} formatTime={formatTime} openVideoModal={openVideoModal} />
