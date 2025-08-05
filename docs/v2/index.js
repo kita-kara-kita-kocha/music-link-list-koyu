@@ -335,6 +335,22 @@ function LivesList({ lives, formatTime, openVideoModal }) {
         <div className="grid">
             {lives.map(live => (
                 <div key={live.mng_live_id} className="card live-card">
+                    {/* サムネイル画像を追加 */}
+                    {live.thumbnail && (
+                        <img
+                            src={live.thumbnail}
+                            alt="サムネイル"
+                            className="live-thumbnail"
+                            style={{
+                                width: '100%',
+                                height: '180px',
+                                objectFit: 'cover',
+                                borderRadius: '8px 8px 0 0',
+                                marginBottom: '8px'
+                            }}
+                            loading="lazy"
+                        />
+                    )}
                     <div className="card-title">{live.title}</div>
                     <div className="card-info">
                         📅 {new Date(live.date).toLocaleDateString('ja-JP')}
