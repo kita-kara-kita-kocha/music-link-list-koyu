@@ -4,3 +4,4 @@ push_flask/flask/*
 push_flask/__pycache__/*
 get_fixed_post/venv/*
 venv/
+__pycache__/

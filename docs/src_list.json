@@ -2,302 +2,371 @@
     {
         "title": "シル・ヴ・プレジデント",
         "artist": "P丸様。",
+        "song_seconds": 194,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=333s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "527s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=kP5aZAx7c0U&t=4780s",
-                "date": "2022-07-09"
+                "date": "2022-07-09",
+                "end": "4974s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=1976s",
-                "date": "2022-07-22"
+                "date": "2022-07-22",
+                "end": "2170s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=IWajnhOjzW4&t=237s",
-                "date": "2024-04-27"
+                "date": "2024-04-27",
+                "end": "432s"
             }
         ]
     },
     {
         "title": "愛のシュプリーム(OPサイズver)",
         "artist": "fhana",
+        "song_seconds": 91,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=760s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "851s"
             }
         ]
     },
     {
         "title": "ギラギラ",
         "artist": "Ado",
+        "song_seconds": 273,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=953s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "1226s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=m9FTIO1IwU4&t=1617s",
-                "date": "2022-03-03"
+                "date": "2022-03-03",
+                "end": "1890s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=LBClF53_dEA&t=4359s",
-                "date": "2024-11-05"
+                "date": "2024-11-05",
+                "end": "4632s"
             }
         ]
     },
     {
         "title": "ANIMA",
         "artist": "ReoNa",
+        "song_seconds": 266,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=1489s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "1755s"
             }
         ]
     },
     {
         "title": "プラチナ",
         "artist": "坂本真綾",
+        "song_seconds": 245,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=2048s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "2293s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ltDA4NZbTWY&t=423s",
-                "date": "2022-12-31"
+                "date": "2022-12-31",
+                "end": "668s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=uZ9xCP1PdCE&t=2409s",
-                "date": "2023-05-07"
+                "date": "2023-05-07",
+                "end": "2654s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=W0Lj-WyMTCc&t=612s",
-                "date": "2024-07-21"
+                "date": "2024-07-21",
+                "end": "857s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ohq-Ctneerc&t=3571s",
-                "date": "2024-09-22"
+                "date": "2024-09-22",
+                "end": "3816s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=8770s",
-                "date": "2024-11-25"
+                "date": "2024-11-25",
+                "end": "9035s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tvLS-GAfi4Q&t=373s",
-                "date": "2023-05-05"
+                "date": "2023-05-05",
+                "end": "618s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=e5-hlsIbj_M&t=1519s",
-                "date": "2023-09-24"
+                "date": "2023-09-24",
+                "end": "1764s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=vlTA0KFg4Nk&t=917s",
-                "date": "2023-12-31"
+                "date": "2023-12-31",
+                "end": "1162s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=0GhL1uBDXRQ&t=409s",
-                "date": "2024-05-05"
+                "date": "2024-05-05",
+                "end": "654s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=4409s",
-                "date": "2024-08-20"
+                "date": "2024-08-20",
+                "end": "4654s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=f1h1-YaQmZY&t=3790s",
-                "date": "2025-02-03"
+                "date": "2025-02-03",
+                "end": "4035s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=afctYcFIwXc&t=5823s",
-                "date": "2025-05-09"
+                "date": "2025-05-09",
+                "end": "6058s"
             }
         ]
     },
     {
         "title": "完全感覚Dreamer",
         "artist": "ONE OK ROCK",
+        "song_seconds": 249,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=2898s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "3147s"
             }
         ]
     },
     {
         "title": "メンタルチェンソー",
         "artist": "P丸様。",
+        "song_seconds": 175,
         "url_date_sets": [
             {
-                "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=3413s",
-                "date": "2021-08-22"
+                "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=3417s",
+                "date": "2021-08-22",
+                "end": "3592s"
             }
         ]
     },
     {
         "title": "ヴァンパイア",
         "artist": "DECO*27",
+        "song_seconds": 184,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=4019s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "4203s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=m9FTIO1IwU4&t=4170s",
-                "date": "2022-03-03"
+                "date": "2022-03-03",
+                "end": "4348s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=rVIPEBKzrQo&t=365s",
-                "date": "2022-10-01"
+                "date": "2022-10-01",
+                "end": "544s"
             },
             {
-                "url": "https://www.youtube.com/watch?v=c1ZpwxTAOGk&t=1223s",
-                "date": "2024-08-28"
+                "url": "https://www.youtube.com/watch?v=c1ZpwxTAOGk&t=1242s",
+                "date": "2024-08-28",
+                "end": "1422s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=n67jfcJPc74&t=2693s",
-                "date": "2023-12-17"
+                "date": "2023-12-17",
+                "end": "2877s"
             }
         ]
     },
     {
         "title": "お勉強しといてよ",
         "artist": "ずっと真夜中でいいのに。",
+        "song_seconds": 277,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=4480s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "4757s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=pt59HNtmv3A&t=3869s",
-                "date": "2021-08-30"
+                "date": "2021-08-30",
+                "end": "4146s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=tly3Mn2ixq0&t=1991s",
-                "date": "2023-11-15"
+                "date": "2023-11-15",
+                "end": "2268s"
             }
         ]
     },
     {
         "title": "怪物",
         "artist": "YOASOBI",
+        "song_seconds": 205,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=4937s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "5142s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=7L0qD3c3w60&t=5778s",
-                "date": "2022-01-31"
+                "date": "2022-01-31",
+                "end": "5983s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=kP5aZAx7c0U&t=5239s",
-                "date": "2022-07-09"
+                "date": "2022-07-09",
+                "end": "5444s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RCD1aVmTU38&t=363s",
-                "date": "2023-12-08"
+                "date": "2023-12-08",
+                "end": "568s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=afctYcFIwXc&t=6552s",
-                "date": "2025-05-09"
+                "date": "2025-05-09",
+                "end": "6757s"
             }
         ]
     },
     {
         "title": "だから僕は音楽を辞めた",
         "artist": "ヨルシカ",
+        "song_seconds": 245,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=n3PiwtW7sXE&t=5588s",
-                "date": "2021-08-22"
+                "date": "2021-08-22",
+                "end": "5833s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=FRyO2p51ReU&t=3662s",
-                "date": "2022-06-23"
+                "date": "2022-06-23",
+                "end": "3907s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=3040s",
-                "date": "2022-07-22"
+                "date": "2022-07-22",
+                "end": "3285s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=oGtKZV2nnRA&t=246s",
-                "date": "2023-03-06"
+                "date": "2023-03-06",
+                "end": "491s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=H9Ht5cpTpFo&t=5265s",
-                "date": "2023-06-07"
+                "date": "2023-06-07",
+                "end": "5515s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=ZdlWgd4u_-4&t=5391s",
-                "date": "2023-08-01"
+                "date": "2023-08-01",
+                "end": "5636s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=HNrZRt-hS5g&t=4036s",
-                "date": "2023-12-21"
+                "date": "2023-12-21",
+                "end": "4281s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=audY8UxuYHk&t=371s",
-                "date": "2024-03-27"
+                "date": "2024-03-27",
+                "end": "616s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=z_GIvn7HFsk&t=2078s",
-                "date": "2024-07-29"
+                "date": "2024-07-29",
+                "end": "2323s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=EQo5h4lQUFI&t=7069s",
-                "date": "2025-02-25"
+                "date": "2025-02-25",
+                "end": "7314s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=f1h1-YaQmZY&t=4983s",
-                "date": "2025-02-03"
+                "date": "2025-02-03",
+                "end": "5228s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=10544s",
-                "date": "2024-08-20"
+                "date": "2024-08-20",
+                "end": "10789s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=fXITRLn1BHI&t=489s",
-                "date": "2025-07-21"
+                "date": "2025-07-21",
+                "end": "734s"
             }
         ]
     },
     {
         "title": "群青",
         "artist": "YOASOBI",
+        "song_seconds": 245,
         "url_date_sets": [
             {
                 "url": "https://www.youtube.com/watch?v=HAZJ_sAO6Xo&t=376s",
-                "date": "2021-08-24"
+                "date": "2021-08-24",
+                "end": "621s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=AT-HCBJE-nE&t=6042s",
-                "date": "2022-07-22"
+                "date": "2022-07-22",
+                "end": "6287s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=RLwINOlE8FM&t=3313s",
-                "date": "2024-01-03"
+                "date": "2024-01-03",
+                "end": "3558s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=L0d2wPQEu20&t=2862s",
-                "date": "2024-10-04"
+                "date": "2024-10-04",
+                "end": "3107s"
             },
             {
                 "url": "https://www.youtube.com/watch?v=sZo2KEVEp4M&t=1220s",
-                "date": "2022-05-04"
+                "date": "2022-05-04",
+                "end": "1469s"
             }
         ]
     },
     {
         "title": "やさしさで溢れるように",
         "artist": "JUJU",
+        "song_seconds": 283,
         "url_date_sets": [
             {
-                "url": "https://www.youtube.com/watch?v=HAZJ_sAO6Xo&t=915s",
-                "date": "2021-08-24"
+                "url": "https://www.youtube.com/watch?v=HAZJ_sAO6Xo&t=925s",
+                "date": "2021-08-24",
+                "end": "1208s"
             }
         ]
     },
@@ -15140,6 +15209,16 @@
             {
                 "url": "https://www.youtube.com/watch?v=fXITRLn1BHI&t=1508s",
                 "date": "2025-07-21"
+            }
+        ]
+    },
+    {
+        "title": "プロポーズ",
+        "artist": "なとり",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=reHrzZX-Jos&t=416s",
+                "date": "2025-08-17"
             }
         ]
     }
