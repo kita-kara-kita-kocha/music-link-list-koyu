@@ -10907,6 +10907,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=939s",
                 "date": "2024-08-20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yCmAP_hO4J4&t=620s",
+                "date": "2025-08-22"
             }
         ]
     },
@@ -14823,6 +14827,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=6781s",
                 "date": "2025-04-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=yCmAP_hO4J4&t=3373s",
+                "date": "2025-08-22"
             }
         ]
     },
@@ -15275,6 +15283,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=reHrzZX-Jos&t=3531s",
                 "date": "2025-08-17"
+            }
+        ]
+    },
+    {
+        "title": "CLEAR",
+        "artist": "坂本真綾",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=yCmAP_hO4J4&t=180s",
+                "date": "2025-08-22"
+            }
+        ]
+    },
+    {
+        "title": "Astrantia",
+        "artist": "星降こゆ",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=yCmAP_hO4J4&t=2597s",
+                "date": "2025-08-22"
             }
         ]
     }
