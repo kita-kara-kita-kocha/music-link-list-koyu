@@ -10847,6 +10847,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=KQXbIvkjUvo&t=2238s",
                 "date": "2024-09-20"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=5416s",
+                "date": "2025-08-27"
             }
         ]
     },
@@ -12085,6 +12089,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=7xT-FfMOAfU&t=4159s",
                 "date": "2024-11-25"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=4683s",
+                "date": "2025-08-27"
             }
         ]
     },
@@ -15303,6 +15311,66 @@
             {
                 "url": "https://www.youtube.com/watch?v=yCmAP_hO4J4&t=2597s",
                 "date": "2025-08-22"
+            }
+        ]
+    },
+    {
+        "title": "大きな愛でもてなして",
+        "artist": "℃-ute",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=585s",
+                "date": "2025-08-27"
+            }
+        ]
+    },
+    {
+        "title": "倍倍FIGHT!",
+        "artist": "CANDY TUNE",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=1024s",
+                "date": "2025-08-27"
+            }
+        ]
+    },
+    {
+        "title": "冠菊",
+        "artist": "初星学園  (花海咲季・藤田ことね・葛城リーリヤ)",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=1616s",
+                "date": "2025-08-27"
+            }
+        ]
+    },
+    {
+        "title": "ENDLESS DANCE",
+        "artist": "初星学園  (花海佑芽・秦谷美鈴・十王星南)",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=2110s",
+                "date": "2025-08-27"
+            }
+        ]
+    },
+    {
+        "title": "キスハグ侵略者! ",
+        "artist": "iLiFE!",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=2656s",
+                "date": "2025-08-27"
+            }
+        ]
+    },
+    {
+        "title": "プライド・ブライト",
+        "artist": "Juice=Juice",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=x2Iy5EApwN4&t=3153s",
+                "date": "2025-08-27"
             }
         ]
     }
