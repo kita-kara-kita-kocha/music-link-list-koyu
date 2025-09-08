@@ -9,23 +9,45 @@
 </head>
 <body>
     <h1>Music Link Input Request Form</h1>
-    <label for="date">Date:</label><br>
-    <input type="text" id="date" name="date" placeholder="YYYY-MM-DD" required value="202"><br><br>
+    <input type="button" id="link_check" value="link check"><br><br>
+    <table id="uncommit_link" hidden="true">
+        <tr>
+            <th>Title</th>
+            <th>Link</th>
+            <th>Upload Date</th>
+        </tr>
+    </table>
     <label for="url">URL:</label><br>
     <input type="url" id="url" name="url" required><br><br>
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="date">Date:</label><br>
+    <input type="text" id="date" name="date" placeholder="YYYY-MM-DD" ><br><br>
+    <label for="thumbnail">Thumbnail URL:</label><br>
+    <input type="url" id="thumbnail" name="thumbnail" ><br><br>
     <label for="time_table_textarea">Time Table Text Area:</label><br>
     <textarea id="time_table_textarea" rows="10" cols="50"></textarea><br><br>
     <input type="button" id="set_commits_info" value="set">
     <input type="button" id="clear_commits_info" value="clear"><br><br>
+    <table id="live_table" hidden="true">
+        <tr>
+            <th>Title</th>
+            <th>Link</th>
+            <th>Date</th>
+            <th>Thumbnail</th>
+        </tr>
+    </table>
+    <br>
     <table id="music_table" hidden="true">
         <tr>
             <th>Title</th>
             <th>Artist</th>
-            <th>Date</th>
-            <th>Link</th>
+            <th>Timestamp</th>
             <th>CommitResult</th>
+            <th>addSheetResult</th>
         </tr>
     </table>
     <input type="button" id="update_commits_info" value="commits_table" hidden="true"><br><br>
+    <input type="button" id="push_to_sheet" value="push_to_sheet" hidden="true"><br><br>
 </body>
 </html>

@@ -1,7 +1,9 @@
 import re
-import subprocess
+import requests
+import yt_dlp
 from push_flask import app
 from flask import render_template, request, redirect, url_for, make_response
+import datetime
 import json
 import html
 
@@ -9,6 +11,13 @@ import html
 def index():
     return render_template('index.html')
 
+@app.route('/link_check', methods=['GET'])
+def link_check():
+    # GETリクエストのパラメータからbase_api_urlを取得
+    api_url = request.args.get('api_url')
+    # リンクチェック結果を取得して返す
+    return link_check_main(api_url)
+    
 @app.route('/register', methods=['POST'])
 def register():
     title = request.form['title']
@@ -46,14 +55,56 @@ def getUploadDate():
     data = request.get_json()
     url = html.unescape(data['url'])
     try:
-        result = get_video_info(video_url=url)
-        res = make_response({'result': result})
+        title, upload_date, thumbnail = get_video_info(video_url=url)
+        result = {'title': title, 'upload_date': upload_date, 'thumbnail': thumbnail}
+        res = make_response({'result': 'success', 'data': result})
         res.headers['Content-Type'] = 'application/json'
         return res
-    except:
+    except Exception as e:
+        print(e)
         res = make_response({'result': 'error'})
         res.headers['Content-Type'] = 'application/json'
         return res
+
+@app.route('/push_to_sheet', methods=['POST'])
+def push_to_sheet():
+    import requests
+    
+    data = request.get_json()
+    api_url = data['api_url']
+    
+    payload = {
+        'action': 'registerTimestamps',
+        'live_url': data['live_url'],
+        'title': data['title'],
+        'date': data['date'],
+        'thumbnail': data['thumbnail'],
+        'timestamps': data['timestamps']
+    }
+    
+    try:
+        response = requests.post(api_url, json=payload)
+        
+        # レスポンスが成功でない場合はエラーを返す
+        if response.status_code != 200:
+            return {'error': f'API request failed with status {response.status_code}', 'response': response.text}
+        
+        # レスポンステキストが空でないことを確認
+        if not response.text.strip():
+            return {'error': 'Empty response from API'}
+
+        # JSONパースを試行
+        return response.json()
+        
+    except requests.exceptions.JSONDecodeError as e:
+        print(f"JSON decode error: {e}")
+        return {'error': 'Invalid JSON response from API', 'response_text': response.text}
+    except requests.exceptions.RequestException as e:
+        print(f"Request error: {e}")
+        return {'error': 'Request failed', 'details': str(e)}
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        return {'error': 'Unexpected error occurred', 'details': str(e)}
 
 # jsonファイルのパス
 json_path = 'docs/src_list.json'
@@ -153,16 +204,96 @@ def commit_json(title, artist, url, date):
 
 def get_video_info(video_url):
     """
+    yt_dlpを使って動画のタイトルとアップロード日を取得する関数
+    """
+    # yt_dlpのオプションを設定
+    ydl_opts = {
+        'noplaylist': True,
+        'quiet': True,
+        'no_warnings': True,  # 警告を抑制
+        'extract_flat': False,  # 完全な情報を取得
+    }
+    # yt_dlpを使って動画の情報を取得
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(video_url, download=False)
+        title = result.get("title", None)
+        thumbnail = result.get("thumbnail", None)
+        upload_date = result.get("upload_date", None)
+        if upload_date:
+            upload_date = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}"
+    return title, upload_date, thumbnail
+
+def get_playlist_links():
+    """
     プレイリストの動画リンクを取得する関数
 
     Returns:
-        list: プレイリストの動画リンクのリスト
+        list: プレイリストの{タイトル,リンク,アップロード日}のリスト
     """
-    # yt-dlpのパス
-    yt_dlp_path = "yt-dlp"
-    # yt-dlpの実行
-    cmd = [yt_dlp_path, "-j", video_url]
-    result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    upload_date = json.loads(result.stdout)["release_date"]
-    upload_date = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}"
-    return upload_date
+    # yt_dlpのオプションを設定
+    ydl_opts = {
+        'extract_flat': True,  # プレイリスト内の動画情報をフラットに取得
+        'quiet': True, # 出力を抑制
+        'no_warnings': True,  # 警告を抑制
+    }
+    skip_links = [
+        "https://www.youtube.com/watch?v=3MbQvdd9V4U"
+    ]
+    playlist_links = []
+    # プレイリストのURLを取得
+    playlist_url = "https://www.youtube.com/playlist?list=PLIe6YXszMeXwO4tlvvA96q0BecjXuW1d8"
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(playlist_url, download=False)
+        for entry in result['entries']:
+            video_url = entry['url']
+            # original_url
+            if video_url not in skip_links:
+                upload_date = entry.get('release_timestamp', None)
+                playlist_links.append({
+                    'title': entry.get('title', None),
+                    'url': video_url,
+                    'upload_date': upload_date
+                })
+    return playlist_links
+
+def link_check_main(base_api_url):
+    """
+    get_playlist_links()で取得したリンクから、
+    base_api_urlのGETリクエストで取得する、
+    data[lives][url]と一致しないリンクを抽出
+
+    Args:
+        base_api_url (str): APIのベースURL
+
+    Returns:
+        list(dict): 一致しないリンクの情報を含む辞書のリスト
+    """
+    print('プレイリスト取得中...')
+    playlist_links = get_playlist_links()
+    print('プレイリスト取得完了')
+    print('ライブ情報取得中...')
+    sheet_playlist_links = []
+    response = requests.get(base_api_url)
+    if response.status_code == 200:
+        print('ライブ情報取得完了')
+        data = response.json()
+        if 'lives' in data.keys():
+            for live in data['lives']:
+                sheet_playlist_links.append(live['url'])
+    else:
+        print(f"ライブ情報の取得に失敗しました: {response.status_code}")
+        return None
+
+    results = []
+    for playlist in playlist_links:
+        found = False
+        for link in sheet_playlist_links:
+            if link == playlist['url']:
+                found = True
+                break
+        if not found:
+            results.append(playlist)
+    return results
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
