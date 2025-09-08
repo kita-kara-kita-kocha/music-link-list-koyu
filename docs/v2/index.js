@@ -1,7 +1,8 @@
 const { useState, useEffect } = React;
 
 // APIから楽曲・ライブデータを取得
-const API_URL = 'https://script.google.com/macros/s/AKfycbyK7LEJ21s5ZPTQpPIiZiP1aiRlT4m1qZdxgSGSx7XlFb_T3vFyfGW03RPAKNGid5OO/exec?name=timestamps';
+const API_ID = 'AKfycbw7t2ua6BG7l7XNbNPVD1zbCZodZTCMTx-FzMPu7JS6ice4sY435BL8ync4lPnX_hU';
+const API_URL = 'https://script.google.com/macros/s/' + API_ID + '/exec?name=timestamps';
 
 function App() {
     const [data, setData] = useState(null);
