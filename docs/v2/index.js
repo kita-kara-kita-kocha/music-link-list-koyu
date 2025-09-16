@@ -256,8 +256,23 @@ function App() {
     return (
         <div className="container">
             <div className="header">
-                <h1>🌟 星降こゆ 楽曲・ライブ管理システム</h1>
-                <p>楽曲とライブ配信の情報を管理・検索できます</p>
+                <div className="header-top">
+                    <div className="header-content">
+                        <h1>🌟 星降こゆ 楽曲・ライブ管理システム</h1>
+                        <p>楽曲とライブ配信の情報を管理・検索できます</p>
+                    </div>
+                    <div className="header-links">
+                        <a 
+                            href="https://discord.gg/fR8BDKdtzY" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="discord-link"
+                            title="小さくて大いなる流れ星を見守る会に参加"
+                        >
+                            💬 Discord
+                        </a>
+                    </div>
+                </div>
                 {pinnedPost && (
                     <div className="pinned-post-notice">
                         <button 
