@@ -263,7 +263,7 @@ function App() {
                     </div>
                     <div className="header-links">
                         <a 
-                            href="https://discord.gg/fR8BDKdtzY" 
+                            href="https://discord.gg/8c4WJcbx27" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="discord-link"
