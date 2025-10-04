@@ -7665,6 +7665,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=pBSmALHJU9Y&t=2926s",
                 "date": "2024-09-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mM84BuHLfxw&t=4587s",
+                "date": "2025-10-03"
             }
         ]
     },
@@ -11739,6 +11743,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=ZqrbWh8Vh60&t=2106s",
                 "date": "2025-04-18"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mM84BuHLfxw&t=5358s",
+                "date": "2025-10-03"
             }
         ]
     },
@@ -11977,6 +11985,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=FVbb8BMfIVc&t=1564s",
                 "date": "2025-09-08"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mM84BuHLfxw&t=3324s",
+                "date": "2025-10-03"
             }
         ]
     },
@@ -12465,6 +12477,10 @@
             {
                 "url": "https://www.youtube.com/watch?v=mz4L5RTQnXw&t=2995s",
                 "date": "2025-01-25"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=mM84BuHLfxw&t=1245s",
+                "date": "2025-10-03"
             }
         ]
     },
@@ -15493,6 +15509,26 @@
             {
                 "url": "https://www.youtube.com/watch?v=Oh4Pke0vSBY&t=1423s",
                 "date": "2025-09-14"
+            }
+        ]
+    },
+    {
+        "title": "グラスとラムレーズン",
+        "artist": "ずっと真夜中でいいのに。",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=mM84BuHLfxw&t=1989s",
+                "date": "2025-10-03"
+            }
+        ]
+    },
+    {
+        "title": "おやすみ泣き声、さよなら歌姫",
+        "artist": "クリープハイプ",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=mM84BuHLfxw&t=2652s",
+                "date": "2025-10-03"
             }
         ]
     }
