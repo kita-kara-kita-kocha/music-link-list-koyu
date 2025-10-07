@@ -15531,5 +15531,15 @@
                 "date": "2025-10-03"
             }
         ]
+    },
+    {
+        "title": " IRIS OUT",
+        "artist": "米津玄師",
+        "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=WPhMIFJY0yE&t=500s",
+                "date": "2025-10-07"
+            }
+        ]
     }
 ]
