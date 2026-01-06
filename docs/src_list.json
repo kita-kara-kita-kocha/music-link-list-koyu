@@ -957,8 +957,16 @@
                 "date": "2024-08-12"
             },
             {
+                "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=12765s",
+                "date": "2024-08-20"
+            },
+            {
                 "url": "https://www.youtube.com/watch?v=y9WRoa8Y4Zk&t=6127s",
                 "date": "2024-11-22"
+            },
+            {
+                "url": "https://www.youtube.com/watch?v=V5mLo4WBQ7g&t=2475s",
+                "date": "2025-07-13"
             }
         ]
     },
@@ -15233,20 +15241,6 @@
             {
                 "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=9529s",
                 "date": "2024-08-20"
-            }
-        ]
-    },
-    {
-        "title": "一番の宝物",
-        "artist": "LiSA",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=j5dufseIZF8&t=12765s",
-                "date": "2024-08-20"
-            },
-            {
-                "url": "https://www.youtube.com/watch?v=V5mLo4WBQ7g&t=2475s",
-                "date": "2025-07-13"
             }
         ]
     },
