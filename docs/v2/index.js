@@ -84,7 +84,13 @@ function App() {
 
         data.timestamps.forEach(timestamp => {
             if (songMap[timestamp.mng_music_id]) {
-                const live = data.lives.find(l => l.mng_live_id === timestamp.mng_live_id);
+                const live = data.lives.find(l => l.mng_live_id === timestamp.mng_live_id) || {
+                    mng_live_id: timestamp.mng_live_id,
+                    title: 'ライブ配信名不明',
+                    url: '',
+                    date: new Date().toISOString().split('T')[0],
+                    thumbnail: ''
+                };
                 songMap[timestamp.mng_music_id].timestamps.push({
                     ...timestamp,
                     live
@@ -109,7 +115,11 @@ function App() {
 
         data.timestamps.forEach(timestamp => {
             if (liveMap[timestamp.mng_live_id]) {
-                const song = data.songs.find(s => s.mng_music_id === timestamp.mng_music_id);
+                const song = data.songs.find(s => s.mng_music_id === timestamp.mng_music_id) || {
+                    mng_music_id: timestamp.mng_music_id,
+                    title: '楽曲名不明',
+                    artist: 'アーティスト不明'
+                };
                 liveMap[timestamp.mng_live_id].timestamps.push({
                     ...timestamp,
                     song
@@ -501,12 +511,12 @@ function LivesList({ lives, formatTime, openVideoModal }) {
                                         }}
                                         className="live-link"
                                     >
-                                        {ts.song.title || '楽曲名不明'}
+                                        {ts.song?.title || '楽曲名不明'}
                                     </a>
                                     <br />
                                     <small>
                                         ⏰ {formatTime(ts.start_timestamp)} - 
-                                        🎤 {ts.song.artist || 'アーティスト不明'}
+                                        🎤 {ts.song?.artist || 'アーティスト不明'}
                                     </small>
                                 </div>
                             ))}
