@@ -5943,16 +5943,6 @@
         ]
     },
     {
-        "title": "I'm Your Treasure Box *あなたは マリンせんちょうを たからばこからみつけた。",
-        "artist": "宝鐘マリン",
-        "url_date_sets": [
-            {
-                "url": "https://www.youtube.com/watch?v=d5EUhlkzKuo&t=1510s",
-                "date": "2022-08-17"
-            }
-        ]
-    },
-    {
         "title": "アドレナリン・ダメ",
         "artist": "つばきファクトリー",
         "url_date_sets": [
@@ -13420,6 +13410,10 @@
         "title": "I’m Your Treasure Box ＊あなたは マリンせんちょうを たからばこからみつけた。",
         "artist": "宝鐘マリン",
         "url_date_sets": [
+            {
+                "url": "https://www.youtube.com/watch?v=d5EUhlkzKuo&t=1510s",
+                "date": "2022-08-17"
+            },
             {
                 "url": "https://www.youtube.com/watch?v=NA5UUdFXVNc&t=5052s",
                 "date": "2022-09-30"
