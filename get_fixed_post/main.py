@@ -4,6 +4,16 @@ import os
 import json
 import time
 
+
+class ApiRequestError(Exception):
+    def __init__(self, status_code: int, response_text: str, api: str):
+        self.status_code = status_code
+        self.response_text = response_text
+        self.api = api
+        super().__init__(
+            "Request returned an error: {} {}".format(status_code, response_text)
+        )
+
 # ターミナルで以下の行を実行して環境変数を設定してください:
 # export BEARER_TOKEN='<your_bearer_token>'
 bearer_token = os.environ.get("BEARER_TOKEN")
@@ -127,11 +137,7 @@ def connect_to_endpoint(api, url, params):
         time.sleep(reset_time - time.time())
         return connect_to_endpoint(api, url, params)
     elif response.status_code != 200:
-        raise Exception(
-            "Request returned an error: {} {}".format(
-                response.status_code, response.text
-            )
-        )
+        raise ApiRequestError(response.status_code, response.text, api)
     return response
 
 def decode_string(rawstring):
@@ -267,7 +273,13 @@ def create_html(blockquotes):
         f.close()
 
 def main():
-    json_response = request_and_save_json_response(create_url_get_user_pinned_post())
+    try:
+        json_response = request_and_save_json_response(create_url_get_user_pinned_post())
+    except ApiRequestError as e:
+        if e.status_code == 402 and "CreditsDepleted" in e.response_text:
+            print("X API credits depleted. Skip update without failing workflow.")
+            return
+        raise
     # with open("get_fixed_post/get_user_pinned_post.json", "r") as f:
     #     json_response = json.load(f)
     #     f.close()
