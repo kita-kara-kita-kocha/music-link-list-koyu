@@ -276,8 +276,8 @@ def main():
     try:
         json_response = request_and_save_json_response(create_url_get_user_pinned_post())
     except ApiRequestError as e:
-        if e.status_code == 402 and "CreditsDepleted" in e.response_text:
-            print("X API credits depleted. Skip update without failing workflow.")
+        if e.api == "get_user_pinned_post" and e.status_code == 402:
+            print("X API credits depleted (402). Skip update without failing workflow.")
             return
         raise
     # with open("get_fixed_post/get_user_pinned_post.json", "r") as f:
